@@ -8,6 +8,7 @@ Rules:
 - internship/VIE detected -> tagged (no penalty, they're wanted too)
 """
 import re
+import unicodedata
 
 from .models import Offer
 
@@ -16,6 +17,15 @@ INTERNSHIP_WORDS = ("intern", "internship", "stage", "stagiaire", "alternance", 
 
 def _norm(text: str) -> str:
     return " " + (text or "").lower() + " "
+
+
+def _fold(text: str) -> str:
+    """Lowercase, remove accents, normalize apostrophes/whitespace so
+    'diplôme d'ingénieur' matches 'diplome d'ingenieur'."""
+    text = (text or "").lower().replace("\u2019", "'")
+    text = unicodedata.normalize("NFKD", text)
+    text = "".join(c for c in text if not unicodedata.combining(c))
+    return re.sub(r"\s+", " ", text)
 
 
 def _has_word(word: str, text: str) -> bool:
@@ -30,6 +40,7 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
     boost = [w.lower() for w in kw.get("boost") or []]
     exclude = [w.lower() for w in kw.get("exclude") or []]
     bad_companies = [c.lower() for c in config.get("exclude_companies") or []]
+    disqualifiers = [_fold(d) for d in config.get("disqualifiers") or []]
     preferred = [p.lower() for p in (config.get("locations") or {}).get("preferred") or []]
 
     kept: list[Offer] = []
@@ -42,6 +53,9 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
         if any(_has_word(x, title) for x in exclude):
             continue
         if any(_has_word(c, company) for c in bad_companies):
+            continue
+        folded_desc = _fold(o.description)
+        if any(d in folded_desc for d in disqualifiers):
             continue
 
         matched = [w for w in include if _has_word(w, title)]

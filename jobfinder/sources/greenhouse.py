@@ -3,12 +3,19 @@
 Greenhouse provides an official, public, read-only API for every
 company board it hosts: https://boards-api.greenhouse.io
 """
+import html as htmllib
+import re
+
 import requests
 
 from ..models import Offer
 
-API = "https://boards-api.greenhouse.io/v1/boards/{}/jobs"
+API = "https://boards-api.greenhouse.io/v1/boards/{}/jobs?content=true"
 UA = "job-dashboard (personal job search tool)"
+
+
+def _strip_html(text: str) -> str:
+    return htmllib.unescape(re.sub(r"<[^>]+>", " ", htmllib.unescape(text or ""))).strip()
 
 
 def fetch(config: dict) -> list[Offer]:
@@ -31,6 +38,7 @@ def fetch(config: dict) -> list[Offer]:
                 title=(j.get("title") or "").strip(),
                 location=((j.get("location") or {}).get("name") or "").strip(),
                 url=j.get("absolute_url") or "",
+                description=_strip_html(j.get("content") or "")[:3000],
                 date=(j.get("updated_at") or "")[:10],
             ))
     return offers

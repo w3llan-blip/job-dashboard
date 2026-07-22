@@ -62,6 +62,42 @@ keywords:
     - expert
     - confirmé
 
+# Hard requirements you DON'T meet. If an offer's description clearly
+# asks for one of these, the offer is removed (accents don't matter).
+disqualifiers:
+  # engineering degrees
+  - engineering degree
+  - degree in engineering
+  - master's degree in engineering
+  - bachelor's degree in engineering
+  - engineering school
+  - engineering background
+  - background in engineering
+  - ecole d'ingenieur
+  - diplome d'ingenieur
+  - formation d'ingenieur
+  - formation ingenieur
+  - ingenieur de formation
+  - ingenieur generaliste
+  - profil ingenieur
+  - profil technique
+  # technical / scientific degrees
+  - technical degree
+  - computer science degree
+  - degree in computer science
+  - degree in mechanical
+  - degree in electrical
+  - degree in electronics
+  - degree in acoustic
+  - degree in physics
+  - degree in chemistry
+  # other fields that aren't you
+  - medical degree
+  - pharmacien
+  - pharmacist
+  - degree in law
+  - law degree
+
 # Companies you never want to work for.
 # Matched against the employer name (so "consulting" removes any
 # company with "Consulting" in its name).

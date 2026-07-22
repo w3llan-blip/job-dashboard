@@ -35,7 +35,7 @@ def fetch(config: dict) -> list[Offer]:
                 title=(j.get("text") or "").strip(),
                 location=(cats.get("location") or "").strip(),
                 url=j.get("hostedUrl") or "",
-                description=(j.get("descriptionPlain") or "")[:1500],
+                description=(j.get("descriptionPlain") or "")[:3000],
                 contract=commitment,
             ))
     return offers

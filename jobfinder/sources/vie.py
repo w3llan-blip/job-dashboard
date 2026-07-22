@@ -73,7 +73,9 @@ def fetch(config: dict) -> list[Offer]:
                 title=(o.get("missionTitle") or "").strip(),
                 location=location,
                 url=f"{SITE}/offres/{oid}",
-                description=_strip_html(o.get("missionDescription") or "")[:1500],
+                description=_strip_html(
+                    (o.get("missionDescription") or "") + " " + (o.get("missionProfile") or "")
+                )[:4000],
                 contract=f"VIE ({o.get('missionDuration')} months)" if o.get("missionDuration") else "VIE",
                 date=(o.get("creationDate") or "")[:10],
             ))
