@@ -13,6 +13,7 @@ class Offer:
     description: str = ""   # plain-text snippet used for scoring
     contract: str = ""      # "VIE", "Internship", "Full-time", ...
     date: str = ""          # publication date if known (ISO string)
+    start_date: str = ""    # mission/job start "YYYY-MM" if known
     score: int = 0
     is_new: bool = False
     reasons: list = field(default_factory=list)  # why it scored

@@ -78,6 +78,7 @@ def fetch(config: dict) -> list[Offer]:
                 )[:4000],
                 contract=f"VIE ({o.get('missionDuration')} months)" if o.get("missionDuration") else "VIE",
                 date=(o.get("creationDate") or "")[:10],
+                start_date=(o.get("missionStartDate") or "")[:7],
             ))
         skip += PAGE_SIZE
         if skip >= total:

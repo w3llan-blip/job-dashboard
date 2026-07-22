@@ -11,6 +11,8 @@ keywords:
     - product owner
     - product operations
     - chef de projet
+    - charge de projet
+    - chargee de projet
     - product lead
     - pmo
     - business analyst
@@ -61,6 +63,15 @@ keywords:
     - chief
     - expert
     - confirmé
+
+# Only keep offers starting in this window (inclusive, format YYYY-MM).
+# keep_undated: what to do with offers that don't state a start date
+# (most company job posts are "start ASAP" and say nothing — set this
+# to true around early 2027 so those come back).
+start_window:
+  from: "2027-04"
+  to: "2027-09"
+  keep_undated: false
 
 # Hard requirements you DON'T meet. If an offer's description clearly
 # asks for one of these, the offer is removed (accents don't matter).

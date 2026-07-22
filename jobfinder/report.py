@@ -56,7 +56,7 @@ newOnly.addEventListener('change', applyFilters);
 applyFilters();
 """
 
-COLUMNS = ["", "Score", "Offer", "Company", "Location", "Contract", "Source", "Date"]
+COLUMNS = ["", "Score", "Offer", "Company", "Location", "Contract", "Start", "Source", "Date"]
 
 
 def write_reports(offers) -> Path:
@@ -79,6 +79,7 @@ def write_reports(offers) -> Path:
             f"<td>{html.escape(o.company)}</td>"
             f"<td>{html.escape(o.location)}</td>"
             f"<td>{html.escape(o.contract)}</td>"
+            f"<td>{html.escape(o.start_date or '—')}</td>"
             f"<td>{html.escape(o.source)}</td>"
             f"<td>{html.escape(o.date)}</td>"
             "</tr>"
@@ -126,10 +127,10 @@ Sorted: new first, then best score. Filters combine (AND).</p>
 
     with open(OUT_DIR / "offers.csv", "w", newline="", encoding="utf-8-sig") as f:
         w = csv.writer(f)
-        w.writerow(["New", "Score", "Title", "Company", "Location", "Contract", "Source", "Date", "Link"])
+        w.writerow(["New", "Score", "Title", "Company", "Location", "Contract", "Start", "Source", "Date", "Link"])
         for o in offers:
             w.writerow(["yes" if o.is_new else "", o.score, o.title, o.company,
-                        o.location, o.contract, o.source, o.date, o.url])
+                        o.location, o.contract, o.start_date, o.source, o.date, o.url])
 
     return html_path
 
