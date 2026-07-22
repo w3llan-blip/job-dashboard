@@ -1,0 +1,49 @@
+name: Daily job search
+
+on:
+  schedule:
+    - cron: "0 5 * * *"   # every day ~7:00 Paris time
+  workflow_dispatch: {}     # also runnable manually from the Actions tab
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Search offers
+        run: python -m jobfinder.main
+        env:
+          CI: "true"
+
+      - name: Save results to the repository
+        run: |
+          git config user.name "job-finder-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs seen_offers.json
+          git commit -m "Daily results $(date +%F)" || echo "Nothing new to commit"
+          git push
+
+      - name: Notify if there are new offers
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          COUNT=$(cat docs/new_count.txt)
+          echo "New offers: $COUNT"
+          if [ "$COUNT" -gt 0 ]; then
+            gh issue create \
+              --title "🔔 $COUNT new job offer(s) — $(date +%F)" \
+              --body-file docs/new_offers.md \
+              --repo "$GITHUB_REPOSITORY"
+          fi

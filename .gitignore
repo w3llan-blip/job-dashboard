@@ -1,0 +1,12 @@
+# Personal documents — never uploaded to GitHub
+*.docx
+*.doc
+*.pdf
+applications/
+
+# Python
+__pycache__/
+*.pyc
+
+# Old local database format
+seen_offers.db

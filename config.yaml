@@ -1,0 +1,144 @@
+# =====================================================================
+#  YOUR JOB SEARCH PREFERENCES  —  edit anything here, then re-run
+# =====================================================================
+
+# Words that make an offer relevant (title matching, case-insensitive)
+keywords:
+  include:
+    - product manager
+    - project manager
+    - program manager
+    - product owner
+    - product operations
+    - chef de projet
+    - product lead
+    - pmo
+    - business analyst
+    - strategy
+
+  # Bonus points if these appear (in the title or description)
+  boost:
+    - international
+    - strategy
+    - business development
+    - growth
+    - operations
+    - junior
+    - associate
+    - graduate
+
+  # Offers containing these in the title are dropped (tech + senior roles)
+  exclude:
+    # tech roles
+    - software engineer
+    - developer
+    - devops
+    - data scientist
+    - machine learning
+    - designer
+    - technical product
+    - engineering manager
+    - qa
+    - security
+    - sre
+    # too senior
+    - staff
+    - principal
+    - senior
+    - sr
+    - director
+    - head
+    - vp
+    - vice president
+    - chief
+    - expert
+    - confirmé
+
+# Where you want to work. Offers elsewhere are still shown but ranked lower.
+locations:
+  preferred:
+    # Western Europe
+    - France
+    - Paris
+    - Germany
+    - Berlin
+    - Munich
+    - Netherlands
+    - Amsterdam
+    - Belgium
+    - Brussels
+    - Spain
+    - Madrid
+    - Barcelona
+    - Italy
+    - Milan
+    - Switzerland
+    - Zurich
+    - Geneva
+    - United Kingdom
+    - London
+    - Ireland
+    - Dublin
+    - Portugal
+    - Lisbon
+    - Luxembourg
+    - Denmark
+    - Copenhagen
+    - Sweden
+    - Stockholm
+    # East Asia
+    - Japan
+    - Tokyo
+    - Singapore
+    - South Korea
+    - Seoul
+    - Hong Kong
+    - Taiwan
+    - Taipei
+    - China
+    - Shanghai
+    # North America
+    - United States
+    - New York
+    - San Francisco
+    - Boston
+    - Canada
+    - Toronto
+    - Montreal
+    - Vancouver
+    - Remote
+
+# Tech companies whose public job boards we check directly.
+# You can add more anytime. "greenhouse" and "lever" are the two
+# job-board systems most tech companies use (free public data).
+companies:
+  greenhouse:
+    - datadog
+    - stripe
+    - airbnb
+    - databricks
+    - figma
+    - notion
+    - duolingo
+    - doctolib
+    - backmarket
+    - alan
+    - payfit
+    - contentsquare
+    - mirakl
+    - pennylane
+    - dataiku
+    - hubspot
+    - cloudflare
+    - gitlab
+    - intercom
+    - monzo
+  lever:
+    - spotify
+    - netflix
+    - qonto
+    - swile
+    - ledger
+    - voodoo
+    - backmarket
+    - welcomejungle
