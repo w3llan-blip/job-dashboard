@@ -15,6 +15,14 @@ keywords:
     - pmo
     - business analyst
     - strategy
+    - corporate strategy
+    - internal consultant
+    - internal consulting
+    - business operations
+    - strategy analyst
+    - strategy associate
+    - strategic projects
+    - business development
 
   # Bonus points if these appear (in the title or description)
   boost:
@@ -53,6 +61,45 @@ keywords:
     - chief
     - expert
     - confirmé
+
+# Companies you never want to work for.
+# Matched against the employer name (so "consulting" removes any
+# company with "Consulting" in its name).
+exclude_companies:
+  - consulting
+  - consultants
+  - conseil
+  - accenture
+  - capgemini
+  - deloitte
+  - kpmg
+  - ey
+  - pwc
+  - mckinsey
+  - bcg
+  - boston consulting
+  - bain
+  - wavestone
+  - sia partners
+  - alten
+  - altran
+  - sopra steria
+  - cgi
+  - akkodis
+  - expleo
+  - fortil
+  - amaris
+  - talan
+  - devoteam
+  - onepoint
+  - extia
+  - davidson
+  - audensiel
+  - maltem
+  - isalys
+  - mc2i
+  - inetum
+  - "square management"
 
 # Where you want to work. Offers elsewhere are still shown but ranked lower.
 locations:

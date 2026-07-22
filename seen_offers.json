@@ -2099,6 +2099,7 @@
 "gh:figma:6117563004",
 "gh:figma:6118332004",
 "gh:figma:6119198004",
+"gh:figma:6122269004",
 "gh:gitlab:8396674002",
 "gh:gitlab:8433107002",
 "gh:gitlab:8448283002",
@@ -2670,6 +2671,7 @@
 "gh:stripe:7767063",
 "gh:stripe:7767222",
 "gh:stripe:7768979",
+"gh:stripe:7769005",
 "gh:stripe:7773621",
 "gh:stripe:7774312",
 "gh:stripe:7775314",
@@ -2972,6 +2974,7 @@
 "gh:stripe:8052814",
 "gh:stripe:8053011",
 "gh:stripe:8053417",
+"gh:stripe:8053419",
 "gh:stripe:8053517",
 "gh:stripe:8054241",
 "gh:stripe:8055050",
@@ -4139,5 +4142,6 @@
 "vie:244819",
 "vie:244820",
 "vie:244821",
-"vie:244822"
+"vie:244822",
+"vie:244825"
 ]

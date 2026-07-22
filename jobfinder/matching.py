@@ -29,6 +29,7 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
     include = [w.lower() for w in kw.get("include") or []]
     boost = [w.lower() for w in kw.get("boost") or []]
     exclude = [w.lower() for w in kw.get("exclude") or []]
+    bad_companies = [c.lower() for c in config.get("exclude_companies") or []]
     preferred = [p.lower() for p in (config.get("locations") or {}).get("preferred") or []]
 
     kept: list[Offer] = []
@@ -36,8 +37,11 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
         title = _norm(o.title)
         desc = _norm(o.description)
         loc = _norm(o.location)
+        company = _norm(o.company)
 
         if any(_has_word(x, title) for x in exclude):
+            continue
+        if any(_has_word(c, company) for c in bad_companies):
             continue
 
         matched = [w for w in include if _has_word(w, title)]
