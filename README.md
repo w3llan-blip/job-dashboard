@@ -1,13 +1,18 @@
 # Job Finder — your personal offer dashboard
 
-## How to use (2 steps)
+## Two ways to use it
 
-1. **Double-click `Find Jobs.bat`** — it fetches fresh offers, filters them
-   for you, and opens a results page in your browser.
-2. Browse the page. **NEW** = appeared since your last run.
-   Click a title to open the real offer.
+**From anywhere (recommended):** once the project is on GitHub, it runs by
+itself every morning (~7:00 Paris time) and publishes the results at your
+personal web address — open it from any phone or computer. When new offers
+appear, GitHub sends you an email notification.
 
-Run it as often as you like (every morning is a good habit).
+**From this PC:** double-click `Find Jobs.bat` — it fetches fresh offers
+right now and opens the results page in your browser.
+
+On the results page, **NEW** = appeared since the last run. Use the filter
+boxes at the top of each column (they combine), and the "New offers only"
+checkbox. Click a title to open the real offer.
 
 ## Where offers come from
 
@@ -38,11 +43,18 @@ them in the `applications/` folder — then you review and send them yourself.
 
 ## Files in this folder
 
-| File / folder      | What it is                                    |
-|--------------------|-----------------------------------------------|
-| `Find Jobs.bat`    | double-click this to search                    |
-| `config.yaml`      | your preferences (editable)                    |
-| `results/`         | the offer list (HTML page + Excel-compatible CSV) |
-| `applications/`    | tailored CVs & cover letters, one folder per offer |
-| `jobfinder/`       | the program code                               |
-| `seen_offers.db`   | memory of offers already shown (for NEW badges) |
+| File / folder       | What it is                                    |
+|---------------------|-----------------------------------------------|
+| `Find Jobs.bat`     | double-click this to search from this PC       |
+| `config.yaml`       | your preferences (editable)                    |
+| `docs/`             | the results page (published as your web dashboard) |
+| `applications/`     | tailored CVs & cover letters (private, never uploaded) |
+| `jobfinder/`        | the program code                               |
+| `seen_offers.json`  | memory of offers already shown (for NEW badges) |
+| `.github/`          | the daily automation schedule                  |
+
+## Privacy note
+
+The `.gitignore` file makes sure your CV, cover letters and the whole
+`applications/` folder stay on your computer only — they are never
+uploaded to GitHub.
