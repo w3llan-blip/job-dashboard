@@ -84,11 +84,13 @@ disqualifiers:
   - engineering school
   - engineering background
   - background in engineering
+  # "re:" lines are patterns: this one catches "formation ... ingénieur"
+  # in any phrasing (formation d'ingénieur, formation supérieure type
+  # ingénieur, ingénieur de formation...)
+  - "re:formation[^.]{0,50}ingenieur"
+  - "re:ingenieur[^.]{0,20}de formation"
   - ecole d'ingenieur
   - diplome d'ingenieur
-  - formation d'ingenieur
-  - formation ingenieur
-  - ingenieur de formation
   - ingenieur generaliste
   - profil ingenieur
   - profil technique

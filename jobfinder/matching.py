@@ -84,7 +84,13 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
     boost = [w.lower() for w in kw.get("boost") or []]
     exclude = [w.lower() for w in kw.get("exclude") or []]
     bad_companies = [c.lower() for c in config.get("exclude_companies") or []]
-    disqualifiers = [_fold(d) for d in config.get("disqualifiers") or []]
+    # disqualifiers: plain phrases, or regex patterns prefixed with "re:"
+    dq_plain, dq_regex = [], []
+    for d in config.get("disqualifiers") or []:
+        if d.startswith("re:"):
+            dq_regex.append(re.compile(_fold(d[3:])))
+        else:
+            dq_plain.append(_fold(d))
     window = config.get("start_window") or {}
     win_from = str(window.get("from") or "")
     win_to = str(window.get("to") or "")
@@ -110,7 +116,9 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
         if any(_has_word(c, company) for c in bad_companies):
             continue
         folded_desc = _fold(o.description)
-        if any(d in folded_desc for d in disqualifiers):
+        if any(d in folded_desc for d in dq_plain):
+            continue
+        if any(p.search(folded_desc) for p in dq_regex):
             continue
 
         # start-date window filter
