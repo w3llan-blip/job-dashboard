@@ -238,3 +238,20 @@ companies:
     - voodoo
     - backmarket
     - welcomejungle
+
+# LinkedIn public job search (no account used). Keep the list of
+# searches short — LinkedIn rate-limits heavy automated browsing.
+linkedin:
+  queries:
+    - keywords: "product manager"
+      location: "Paris, France"
+    - keywords: "chef de projet international"
+      location: "France"
+    - keywords: "strategy analyst"
+      location: "Paris, France"
+    - keywords: "VIE chef de projet"
+      location: ""
+    - keywords: "product manager"
+      location: "Singapore"
+    - keywords: "junior product manager"
+      location: "New York, United States"

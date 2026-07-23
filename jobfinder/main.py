@@ -9,7 +9,7 @@ import yaml
 from .matching import score_offers
 from .report import write_reports, write_new_offers_summary
 from .storage import mark_new
-from .sources import vie, greenhouse, lever
+from .sources import vie, greenhouse, lever, linkedin
 
 CONFIG_PATH = Path(__file__).resolve().parent.parent / "config.yaml"
 GRAD_PATH = Path(__file__).resolve().parent.parent / "grad_programs.yaml"
@@ -18,6 +18,7 @@ SOURCES = [
     ("VIE (Business France)", vie),
     ("Greenhouse boards", greenhouse),
     ("Lever boards", lever),
+    ("LinkedIn public search", linkedin),
 ]
 
 
@@ -35,7 +36,18 @@ def main() -> int:
         except Exception as exc:  # one broken source must not kill the run
             print(f"skipped ({exc})")
 
-    print(f"\nTotal fetched: {len(all_offers)}")
+    # drop cross-source duplicates (e.g. LinkedIn repeating a company's
+    # own job board) — direct sources are listed first, so they win
+    unique, seen_keys = [], set()
+    for o in all_offers:
+        key = (o.title.strip().lower(), o.company.strip().lower())
+        if key in seen_keys:
+            continue
+        seen_keys.add(key)
+        unique.append(o)
+    all_offers = unique
+
+    print(f"\nTotal fetched (after dedup): {len(all_offers)}")
     mark_new(all_offers)
     matches = score_offers(all_offers, config)
 
