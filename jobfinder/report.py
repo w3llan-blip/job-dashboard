@@ -59,7 +59,41 @@ applyFilters();
 COLUMNS = ["", "Score", "Offer", "Company", "Location", "Contract", "Start", "Source", "Date"]
 
 
-def write_reports(offers) -> Path:
+MONTH_NAMES = ["", "January", "February", "March", "April", "May", "June", "July",
+               "August", "September", "October", "November", "December"]
+
+
+def _grad_table(programs) -> str:
+    if not programs:
+        return ""
+    this_month = datetime.now().month
+    rows = []
+    for p in programs:
+        badge = ('<span class="badge new">OPENING NOW</span> '
+                 if p.get("opens_month") == this_month else "")
+        rows.append(
+            "<tr>"
+            f'<td>{badge}<a href="{html.escape(p.get("url") or "")}" target="_blank" rel="noopener">'
+            f'{html.escape(p.get("program") or "")}</a></td>'
+            f'<td>{html.escape(p.get("company") or "")}</td>'
+            f'<td>{html.escape(p.get("window") or MONTH_NAMES[p.get("opens_month") or 0])}</td>'
+            f'<td>{html.escape(p.get("region") or "")}</td>'
+            f'<td>{html.escape(p.get("fit") or "")}</td>'
+            "</tr>"
+        )
+    return f"""
+<h2 style="margin-top:28px">Graduate programs to track (2027 intake)</h2>
+<p class="sub">Application windows are typical patterns — verify on the page.
+You'll get a reminder notification on the 1st of each opening month.</p>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Program</th><th>Company</th><th>Applications</th><th>Region</th><th>Why you</th></tr></thead>
+<tbody>{''.join(rows)}</tbody>
+</table>
+</div>"""
+
+
+def write_reports(offers, programs=None) -> Path:
     OUT_DIR.mkdir(exist_ok=True)
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     n_new = sum(1 for o in offers if o.is_new)
@@ -119,6 +153,7 @@ Sorted: new first, then best score. Filters combine (AND).</p>
 <tbody>{''.join(rows)}</tbody>
 </table>
 </div>
+{_grad_table(programs)}
 <script>{JS}</script>
 </body></html>"""
 
@@ -135,17 +170,28 @@ Sorted: new first, then best score. Filters combine (AND).</p>
     return html_path
 
 
-def write_new_offers_summary(offers, max_items: int = 30) -> int:
+def write_new_offers_summary(offers, programs=None, max_items: int = 30) -> int:
     """Write docs/new_offers.md + docs/new_count.txt (used by the daily
-    GitHub notification). Returns the number of new offers."""
+    GitHub notification). Returns the number of notification items."""
     new = [o for o in offers if o.is_new]
-    lines = [f"**{len(new)} new offer(s) match your profile today.**", ""]
-    for o in new[:max_items]:
-        lines.append(f"- [{o.title}]({o.url}) — {o.company} — {o.location} — {o.contract}")
-    if len(new) > max_items:
-        lines.append(f"- …and {len(new) - max_items} more on the dashboard.")
+    today = datetime.now()
+    # on the 1st of a month, remind about grad programs opening that month
+    reminders = [p for p in (programs or [])
+                 if p.get("opens_month") == today.month and today.day == 1]
+
+    lines = []
+    if new:
+        lines += [f"**{len(new)} new offer(s) match your profile today.**", ""]
+        for o in new[:max_items]:
+            lines.append(f"- [{o.title}]({o.url}) — {o.company} — {o.location} — {o.contract}")
+        if len(new) > max_items:
+            lines.append(f"- …and {len(new) - max_items} more on the dashboard.")
+    if reminders:
+        lines += ["", "**📅 Graduate program applications likely opening this month — go check:**", ""]
+        for p in reminders:
+            lines.append(f"- [{p.get('company')} — {p.get('program')}]({p.get('url')}) ({p.get('window')})")
     lines += ["", "Full list: see your dashboard (GitHub Pages link in the README)."]
     OUT_DIR.mkdir(exist_ok=True)
     (OUT_DIR / "new_offers.md").write_text("\n".join(lines), encoding="utf-8")
-    (OUT_DIR / "new_count.txt").write_text(str(len(new)), encoding="utf-8")
-    return len(new)
+    (OUT_DIR / "new_count.txt").write_text(str(len(new) + len(reminders)), encoding="utf-8")
+    return len(new) + len(reminders)

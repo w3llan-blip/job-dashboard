@@ -12,6 +12,7 @@ from .storage import mark_new
 from .sources import vie, greenhouse, lever
 
 CONFIG_PATH = Path(__file__).resolve().parent.parent / "config.yaml"
+GRAD_PATH = Path(__file__).resolve().parent.parent / "grad_programs.yaml"
 
 SOURCES = [
     ("VIE (Business France)", vie),
@@ -38,8 +39,12 @@ def main() -> int:
     mark_new(all_offers)
     matches = score_offers(all_offers, config)
 
-    report = write_reports(matches)
-    n_new = write_new_offers_summary(matches)
+    programs = []
+    if GRAD_PATH.exists():
+        programs = yaml.safe_load(GRAD_PATH.read_text(encoding="utf-8")) or []
+
+    report = write_reports(matches, programs)
+    n_new = write_new_offers_summary(matches, programs)
     print(f"Matching your profile: {len(matches)} ({n_new} new)")
     print(f"\nReport saved: {report}")
 

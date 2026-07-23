@@ -1,0 +1,86 @@
+# Graduate / early-career programs worth tracking for a 2027 start.
+# opens_month = month applications typically open (1-12). On the 1st of
+# that month, the daily notification reminds you to go check.
+# Dates are typical patterns from previous years — always verify on the page.
+
+- program: APM (Associate Product Manager)
+  company: Google
+  url: https://www.google.com/about/careers/applications/jobs/results/?q=%22associate%20product%20manager%22
+  opens_month: 8
+  window: "Aug–Sep 2026 for the 2027 cohort"
+  region: US / global
+  fit: Product management (very selective, CS-friendly but open)
+
+- program: APMM (Associate Product Marketing Manager)
+  company: Google
+  url: https://www.google.com/about/careers/applications/jobs/results/?q=%22associate%20product%20marketing%20manager%22
+  opens_month: 8
+  window: "Aug–Oct 2026, multiple regions"
+  region: US / EMEA / APAC
+  fit: Great fit for business-school profile (<3 yrs experience required)
+
+- program: RPM (Rotational Product Manager)
+  company: Meta
+  url: https://www.metacareers.com/jobs?q=rotational%20product%20manager
+  opens_month: 8
+  window: "Aug–Sep 2026 for 2027 start"
+  region: US
+  fit: Product management rotations
+
+- program: Futureforce APM
+  company: Salesforce
+  url: https://careers.salesforce.com/en/students/
+  opens_month: 9
+  window: "Sep–Oct 2026"
+  region: US
+  fit: Product management for new grads
+
+- program: New grad PM / Program Manager roles
+  company: Microsoft
+  url: https://careers.microsoft.com/v2/global/en/universityrecruiting
+  opens_month: 8
+  window: "rolling from Aug 2026"
+  region: US / Europe
+  fit: Product & program management, university hiring
+
+- program: New grad Product / Program roles (+ intern return offers)
+  company: Amazon
+  url: https://amazon.jobs/en/teams/internships-for-students
+  opens_month: 9
+  window: "rolling from Sep 2026"
+  region: Global (incl. Luxembourg EU HQ)
+  fit: "You're an intern there NOW — your return offer / full-time
+    conversion is worth more than any application. Talk to your manager
+    before your internship ends."
+
+- program: Graduate Product Manager
+  company: TikTok
+  url: https://lifeattiktok.com/search?recruitment_id_list=202
+  opens_month: 8
+  window: "Aug–Oct 2026"
+  region: US / Singapore / Europe
+  fit: Product management, strong APAC presence (your Taiwan angle)
+
+- program: APM
+  company: Uber
+  url: https://www.uber.com/us/en/careers/teams/university/
+  opens_month: 8
+  window: "Aug–Sep 2026 (not every year — check)"
+  region: US
+  fit: Product management
+
+- program: Graduate programs (retail/luxury — less ideal but strong FR option)
+  company: LVMH
+  url: https://www.lvmh.com/en/join-us/our-job-offers
+  opens_month: 9
+  window: "Sep–Nov 2026"
+  region: France / global
+  fit: Strategy / project roles in a big French group, lots of VIEs too
+
+- program: Management Trainee Program
+  company: L'Oréal
+  url: https://careers.loreal.com/en_US/students
+  opens_month: 9
+  window: "Sep–Oct 2026"
+  region: France / global
+  fit: Product/brand management, business-school classic

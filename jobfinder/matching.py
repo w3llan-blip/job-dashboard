@@ -145,6 +145,9 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
             o.score += 5
             o.reasons.append("location match")
 
+        # companies sometimes advertise VIE roles on their own boards
+        if o.source != "VIE" and re.search(r"\bv\.?i\.?e\.?\b", title):
+            o.contract = "VIE"
         if not o.contract:
             o.contract = "Internship" if any(w in title for w in INTERNSHIP_WORDS) else "Full-time"
 
