@@ -82,7 +82,7 @@ keywords:
 # (most company job posts are "start ASAP" and say nothing — set this
 # to true around early 2027 so those come back).
 start_window:
-  from: "2027-04"
+  from: "2027-01"
   to: "2027-09"
   keep_undated: false
 
