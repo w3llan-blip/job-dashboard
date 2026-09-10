@@ -1,5 +1,5 @@
 **1 new offer(s) match your profile today.**
 
-- [Junior Strategy & Business Project Analyst (H/F)](https://mon-vie-via.businessfrance.fr/offres/245716) — CLS REMY COINTREAU — New York, Ny, Etats-Unis — VIE (18 months)
+- [Business Analyst H/F (H/F)](https://mon-vie-via.businessfrance.fr/offres/245666) — LAGARDERE TRAVEL RETAIL — Sydney, Australie — VIE (12 months)
 
 Full list: see your dashboard (GitHub Pages link in the README).
