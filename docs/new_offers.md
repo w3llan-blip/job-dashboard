@@ -1,7 +1,7 @@
 **3 new offer(s) match your profile today.**
 
-- [Approvisionneur / Spécialiste Supply Chain H/F (H/F)](https://mon-vie-via.businessfrance.fr/offres/245850) — ABYLSEN SIGMA — Montreal -Qc, Canada — VIE (24 months)
-- [Project Manager (H/F)](https://mon-vie-via.businessfrance.fr/offres/246524) — REVEVOL FRANCE — Milan, Italie — VIE (24 months)
-- [Financial Planning & Analysis (H/F)](https://mon-vie-via.businessfrance.fr/offres/246313) — LESAFFRE INTERNATIONAL — Milwaukee    -Wi-, Etats-Unis — VIE (18 months)
+- [CHARGÉ(E) DE PROJETS TRANSFORMATION DIGITALE (H/F)](https://mon-vie-via.businessfrance.fr/offres/246592) — HORUS DEVELOPMENT FINANCE — Brazzaville, Congo — VIE (12 months)
+- [Business Analyst Intern, London](https://job-boards.greenhouse.io/mirakl/jobs/6213022004) — Mirakl — London, England, United Kingdom — Internship
+- [CHEF DE PROJET CONSTRUCTION LOGEMENTS (H/F)](https://mon-vie-via.businessfrance.fr/offres/246528) — GROUPE OPTIMAL GESTION — Kigali, Rwanda — VIE (12 months)
 
 Full list: see your dashboard (GitHub Pages link in the README).
