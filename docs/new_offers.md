@@ -1,6 +1,35 @@
-**2 new offer(s) match your profile today.**
+**34 new offer(s) match your profile today.**
 
-- [Sales Business Operations Executive France](https://fr.linkedin.com/jobs/view/sales-business-operations-executive-france-at-apple-4474960271) — Apple — Paris, Île-de-France, France — Full-time
-- [Experience Innovation & Technology Strategist](https://fr.linkedin.com/jobs/view/experience-innovation-technology-strategist-at-decisionpoint-corporation-4473557261) — DecisionPoint Corporation — Us, Île-de-France, France — Full-time
+- [stage 6 mois support production plan transformation](https://sanofi.wd3.myworkdayjobs.com/SanofiCareers/job/Vitry-sur-Seine/stage-6-mois-support-production-plan-transformation_R2872599) — Sanofi — Vitry-sur-Seine, France — Stage
+- [Internship: Enterprise Strategy](https://nl.linkedin.com/jobs/view/internship-enterprise-strategy-at-philips-4472553219) — Philips — Amsterdam, North Holland, Netherlands — Stage
+- [Stage - Business Development Prestige - Mars 2027 - durée : 6 mois](https://pernodricard.wd3.myworkdayjobs.com/pernod-ricard/job/Marseille/Stage---Business-Development-Prestige---Mars-2027_JR-054968) — Pernod Ricard — Marseille, France — Stage
+- [Stage Chef de Projet Junior F/H](https://fr.linkedin.com/jobs/view/stage-chef-de-projet-junior-f-h-at-magnitude-4473939626) — MAGNITUDE — Puteaux, Île-de-France, France — Stage
+- [Business Development Manager - Stage (m/f/d)](https://fr.linkedin.com/jobs/view/business-development-manager-stage-m-f-d-at-egym-4475566816) — EGYM — Paris, Île-de-France, France — Stage
+- [Stage Assistant(e) Chef de Projet Packaging](https://fr.linkedin.com/jobs/view/stage-assistant-e-chef-de-projet-packaging-at-van-cleef-arpels-4454287774) — Van Cleef & Arpels — Paris, Île-de-France, France — Stage
+- [Stage - Chef de projet/Customer Success H/F](https://fr.linkedin.com/jobs/view/stage-chef-de-projet-customer-success-h-f-at-ozion-4475562393) — Ozion — Vaucresson, Île-de-France, France — Stage
+- [Global Leadership Graduate Programme (Outperformer) – Finance Track](https://dk.linkedin.com/jobs/view/global-leadership-graduate-programme-outperformer-%E2%80%93-finance-track-at-hilti-danmark-4473138734) — Hilti Danmark — Copenhagen Metropolitan Area — Graduate program
+- [Graduate Management Trainee - Shannon](https://ie.linkedin.com/jobs/view/graduate-management-trainee-shannon-at-enterprise-4465072732) — Enterprise — Shannon, County Clare, Ireland — Graduate program
+- [Global Leadership Graduate Programme (Outperformer) – Business Track](https://dk.linkedin.com/jobs/view/global-leadership-graduate-programme-outperformer-%E2%80%93-business-track-at-hilti-danmark-4473146533) — Hilti Danmark — Copenhagen Metropolitan Area — Graduate program
+- [Graduate Management Trainee - Kerry/Tralee](https://ie.linkedin.com/jobs/view/graduate-management-trainee-kerry-tralee-at-enterprise-4465074715) — Enterprise — Tralee, County Kerry, Ireland — Graduate program
+- [2027 Graduate Programme (Dundalk & Balbriggan)](https://ie.linkedin.com/jobs/view/2027-graduate-programme-dundalk-balbriggan-at-uhy-farrelly-dawe-white-limited-4473560297) — UHY Farrelly Dawe White Limited — Dundalk, County Louth, Ireland — Graduate program
+- [Corporate Finance Graduate Programme 2027](https://ie.linkedin.com/jobs/view/corporate-finance-graduate-programme-2027-at-crowe-ireland-4458170966) — Crowe Ireland — Dublin, County Dublin, Ireland — Graduate program
+- [Tax Graduate Programme 2027](https://ie.linkedin.com/jobs/view/tax-graduate-programme-2027-at-crowe-ireland-4458179764) — Crowe Ireland — Dublin, County Dublin, Ireland — Graduate program
+- [3Shape Graduate Program, Commercial](https://dk.linkedin.com/jobs/view/3shape-graduate-program-commercial-at-3shape-4472555680) — 3Shape — Copenhagen Municipality, Capital Region of Denmark, Denmark — Graduate program
+- [Kepak Energy Usage Graduate Programme 2027 - Ireland](https://ie.linkedin.com/jobs/view/kepak-energy-usage-graduate-programme-2027-ireland-at-kepak-group-4476151608) — Kepak Group — Athleague, County Roscommon, Ireland — Graduate program
+- [Junior Managers Program (Trainee) - Starte deine Leadership Journey im Bereich HR, Business und Strategy](https://de.linkedin.com/jobs/view/junior-managers-program-trainee-starte-deine-leadership-journey-im-bereich-hr-business-und-strategy-at-bosch-4473363444) — Bosch — Gerlingen, Baden-Württemberg, Germany — Graduate program
+- [Stage Chef de Projet Junior Retail (H/F)](https://fr.linkedin.com/jobs/view/stage-chef-de-projet-junior-retail-h-f-at-magnitude-4473533099) — MAGNITUDE — Puteaux, Île-de-France, France — Stage
+- [Internship - UK/Ireland Business Development M/F](https://fr.linkedin.com/jobs/view/internship-uk-ireland-business-development-m-f-at-transatel-an-ntt-company-4472616901) — TRANSATEL (an NTT company) — Courbevoie, Île-de-France, France — Stage
+- [Business Developer Junior (H/F) - Stage de fin d’étude](https://fr.linkedin.com/jobs/view/business-developer-junior-h-f-stage-de-fin-d%E2%80%99%C3%A9tude-at-intellitek-4472171792) — INTELLITEK — Lille, Hauts-de-France, France — Stage
+- [stage 6 mois  coordination innovation](https://sanofi.wd3.myworkdayjobs.com/SanofiCareers/job/Lyon/stage-6-mois--coordination-innovation_R2871944) — Sanofi — Lyon, France — Stage
+- [Stage - Assistant(e) Chef de Projet Collaborations et Partenariats (H/F)](https://fr.linkedin.com/jobs/view/stage-assistant-e-chef-de-projet-collaborations-et-partenariats-h-f-at-s%C3%A9zane-4474320225) — Sézane — Paris, Île-de-France, France — Stage
+- [Stage  | Assistant(e) Chef de Projet Radio OPS - M6 UNLIMITED](https://fr.linkedin.com/jobs/view/stage-assistant-e-chef-de-projet-radio-ops-m6-unlimited-at-m6-unlimited-4473936153) — M6 Unlimited — Neuilly-sur-Seine, Île-de-France, France — Stage
+- [Stage - Chef de projet technique - développement tirage pression H/F - Rueil Malmaison (92)](https://fr.linkedin.com/jobs/view/stage-chef-de-projet-technique-d%C3%A9veloppement-tirage-pression-h-f-rueil-malmaison-92-at-the-heineken-company-4472532337) — The HEINEKEN Company — Rueil, Île-de-France, France — Stage
+- [Stagiaire Stratégie Groupe F/H](https://fr.linkedin.com/jobs/view/stagiaire-strat%C3%A9gie-groupe-f-h-at-fives-4464880439) — Fives — Paris, Île-de-France, France — Stage
+- [BETC - Planneur stratégique (H/F/X) - Stage](https://fr.linkedin.com/jobs/view/betc-planneur-strat%C3%A9gique-h-f-x-stage-at-betc-4452427997) — BETC — Pantin, Île-de-France, France — Stage
+- [BETC - Planneur stratégique (H/F/X) - Stage](https://fr.linkedin.com/jobs/view/betc-planneur-strat%C3%A9gique-h-f-x-stage-at-betc-asia-4475877162) — BETC ASIA — Pantin, Île-de-France, France — Stage
+- [Stage Strategie et M&A - H/F](https://fr.linkedin.com/jobs/view/stage-strategie-et-m-a-h-f-at-compagnie-des-alpes-4476310848) — Compagnie des Alpes — Paris, Île-de-France, France — Stage
+- [Business Developer B2B - Stage fin d'études ESC](https://fr.linkedin.com/jobs/view/business-developer-b2b-stage-fin-d-%C3%A9tudes-esc-at-safran-de-polignac-4474122349) — Safran de Polignac — Paris, Île-de-France, France — Stage
+- [Stagiaire Développement commercial et analyse de Marché (H/F)](https://fr.linkedin.com/jobs/view/stagiaire-d%C3%A9veloppement-commercial-et-analyse-de-march%C3%A9-h-f-at-ge-vernova-4437814696) — GE Vernova — Belfort, Bourgogne-Franche-Comté, France — Stage
+- …and 4 more on the dashboard.
 
 Full list: see your dashboard (GitHub Pages link in the README).
