@@ -206,6 +206,13 @@ exclude_companies:
   - inetum
   - "square management"
 
+# Visa: as a French citizen you can work / intern anywhere in the
+# EU/EEA and Switzerland. Outside (UK, US, Asia...), an offer is only kept
+# if it's a VIE or if it explicitly says it sponsors the visa
+# ("VISA ✓" badge on the dashboard). false = show everything.
+visa:
+  non_eu_requires_sponsorship: true
+
 # Company size: you want scale-ups and large groups, not early startups.
 # Applies whenever the source knows the headcount (Welcome to the Jungle,
 # France Travail). Unknown size = kept.
@@ -325,6 +332,7 @@ workday_search:
   - graduate
   - stage strategy
   - internship strategy
+  - visa sponsorship
   - project manager
   - transformation
   - supply chain
@@ -346,6 +354,9 @@ welcome_to_the_jungle:
     - stage PMO
     - business analyst stage
     - chargé de mission stage
+    - stage 6 mois strategie
+    - internship strategy
+    - visa sponsorship graduate
 
 # France Travail (official API, needs a free key — see README).
 # cadre_only keeps managerial-level (cadre) offers only.

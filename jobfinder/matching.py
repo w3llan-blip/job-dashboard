@@ -7,12 +7,15 @@ Rules:
 - location matches a preferred place -> +5
 - start date stated and inside the window -> +3
 - company smaller than company_size.min_employees -> dropped
+- outside EU/EEA/Switzerland -> kept only if VIE or visa sponsorship is
+  stated (+4, "VISA" badge)
 - internship/VIE detected -> tagged (no penalty, they're wanted too)
 """
 import re
 import unicodedata
 
 from .models import Offer
+from .regions import region, sponsors_visa
 
 INTERNSHIP_WORDS = ("intern", "internship", "stage", "stagiaire", "alternance", "apprenticeship")
 
@@ -100,6 +103,7 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
     preferred = [p.lower() for p in (config.get("locations") or {}).get("preferred") or []]
     size_cfg = config.get("company_size") or {}
     min_emp = int(size_cfg.get("min_employees") or 0)
+    visa_rule = bool((config.get("visa") or {}).get("non_eu_requires_sponsorship", True))
 
     # fold accents everywhere so "chargé" matches "charge", etc.
     include = [_fold(w) for w in include]
@@ -127,6 +131,15 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
         if any(p.search(folded_desc) for p in dq_regex):
             continue
 
+        # visa: free to work in the EU/EEA/CH; elsewhere only VIEs or
+        # offers that say they sponsor the visa
+        is_vie = o.source == "VIE" or o.contract == "VIE" or \
+            re.search(r"\bv\.?i\.?e\.?\b", title) is not None
+        o.region = region(loc)
+        o.visa_ok = o.region == "visa" and not is_vie and sponsors_visa(folded_desc)
+        if visa_rule and o.region == "visa" and not is_vie and not o.visa_ok:
+            continue
+
         # start-date window filter
         date_fits = False
         if win_from and win_to:
@@ -150,6 +163,9 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
         if date_fits:
             o.score += 3
             o.reasons.append("start date fits")
+        if o.visa_ok:
+            o.score += 4
+            o.reasons.append("visa sponsorship mentioned")
 
         boosted = [w for w in boost if _has_word(w, title) or _has_word(w, desc)]
         o.score += 2 * len(boosted)

@@ -27,6 +27,7 @@ a{color:#0b5fff;text-decoration:none} a:hover{text-decoration:underline}
 .vie{background:#fff3d6;color:#8a6100}
 .grad{background:#e8e3ff;color:#4b2fb3}
 .nodate{background:#eef1f4;color:#5b6875}
+.visa{background:#dff1ff;color:#0b5394}
 .health td{font-size:13px} .ok{color:#137333} .ko{color:#b3261e}
 .score{font-weight:700}
 .count{font-size:13px;color:#5b6875}
@@ -140,6 +141,8 @@ def write_reports(offers, programs=None, health=None, kept_by_source=None) -> Pa
             badges += '<span class="badge vie">VIE</span> '
         if "graduate" in (o.contract + " " + o.title).lower():
             badges += '<span class="badge grad">GRAD</span> '
+        if o.visa_ok:
+            badges += '<span class="badge visa" title="Outside the EU — the offer says it sponsors the visa">VISA ✓</span> '
         if not o.start_date:
             badges += '<span class="badge nodate" title="The offer does not state a start date — check it">DATE ?</span>'
         rows.append(

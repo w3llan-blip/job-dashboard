@@ -20,4 +20,6 @@ class Offer:
     size_label: str = ""          # e.g. "250-499", "2000+" (display only)
     score: int = 0
     is_new: bool = False
+    region: str = ""        # "free" (EU/EEA/CH), "visa" or "unknown"
+    visa_ok: bool = False   # outside the EU and the offer says it sponsors
     reasons: list = field(default_factory=list)  # why it scored

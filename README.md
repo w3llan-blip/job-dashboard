@@ -34,7 +34,13 @@ at 0 is blocked or misconfigured.
 
 Offers that don't state a start date are kept with a **DATE ?** badge
 (companies rarely write it); offers whose date fits your window get a
-small bonus. Offers that say they won't sponsor a visa are removed.
+small bonus.
+
+**Visa:** offers in the EU/EEA and Switzerland are always shown (no visa
+needed for a French citizen). Outside (UK, US, Asia...), an offer is kept
+only if it's a VIE or if it explicitly says it sponsors the visa — those
+get a **VISA ✓** badge and a bonus. Turn this off with
+`visa.non_eu_requires_sponsorship: false` in `config.yaml`.
 
 ## Turning on France Travail (optional, 10 minutes)
 
