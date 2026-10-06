@@ -1,5 +1,35 @@
-**1 new offer(s) match your profile today.**
+**528 new offer(s) match your profile today.**
 
-- [V.I.E - Chef de projet IT (H/F)](https://mon-vie-via.businessfrance.fr/offres/246722) — SOGECAP — Bucarest, Roumanie — VIE (12 months)
+- [Corporate Strategy Analyst Intern](https://www.welcometothejungle.com/fr/companies/souscritoo/jobs/corporate-strategy-analyst-intern_paris) — Papernest — Paris, France — Internship
+- [STAGE - Chef de Projet Média & Planning Stratégique (H/F) - Hermès Parfum Beauté](https://www.welcometothejungle.com/fr/companies/hermes/jobs/stage-chef-de-projet-media-planning-strategique-h-f-hermes-parfum-beaute_paris_HERMS_mW2ye7J) — Hermès — Paris, France — Internship
+- [[Paris] Investment & Strategy Associate Manager](https://www.welcometothejungle.com/fr/companies/software-club/jobs/investment-strategy-associate-manager_paris) — Dedale Intelligence — Paris, France — Full Time
+- [[Madrid] Investment & Strategy Associate](https://www.welcometothejungle.com/fr/companies/software-club/jobs/lead-strategy-financial-associate_paris) — Dedale Intelligence — Madrid, Spain — Full Time
+- [[Paris] Investment & Strategy Associate](https://www.welcometothejungle.com/fr/companies/software-club/jobs/strategy-investment-associate-cdi_paris) — Dedale Intelligence — Paris, France — Full Time
+- [[Paris] PhD Investment & Strategy Associate](https://www.welcometothejungle.com/fr/companies/software-club/jobs/phd-investment-strategy-associate-ai-focus_paris_DI_0Koj8b0) — Dedale Intelligence — Paris, France — Full Time
+- [[Madrid] Investment & Strategy Associate Manager](https://www.welcometothejungle.com/fr/companies/software-club/jobs/data-engineer_paris) — Dedale Intelligence — Madrid, Spain — Full Time
+- [[Lisbon] Investment & Strategy Associate](https://www.welcometothejungle.com/fr/companies/software-club/jobs/investment-strategy-senior-associate_paris) — Dedale Intelligence — Lisbon, Portugal — Full Time
+- [ERP Project Manager for Digital Transformation (d/f/m)](https://ag.wd3.myworkdayjobs.com/Airbus/job/Getafe-Area/ERP-Project-Manager-for-Digital-Transformation--d-f-m-_JR10438089-1) — Airbus — Getafe Area — Full-time
+- [Stage Stratégie : Innovation Business et Expérimentation France F/H](https://www.welcometothejungle.com/fr/companies/mbda-france-fr/jobs/stage-strategie-innovation-business-et-experimentation-france-f-h_le-plessis-robinson) — MBDA France — Le Plessis-Robinson, France — Internship
+- [Stage Stratégie : Chargé de projet d'analyse économique F/H](https://www.welcometothejungle.com/fr/companies/mbda-france-fr/jobs/stage-strategie-charge-de-projet-d-analyse-economique-f-h_le-plessis-robinson) — MBDA France — Le Plessis-Robinson, France — Internship
+- [International Graduate Program Marketing - Sales (F/H)](https://michelinhr.wd3.myworkdayjobs.com/Michelin/job/Toute-France/International-Graduate-Program-Marketing---Sales--F-H-_R-2026018749) — Michelin — Toute France — Internship
+- [Graduate Program - Ingénieur travaux junior - Région Normandie F/H](https://www.welcometothejungle.com/fr/companies/vinci-construction-fr/jobs/graduate-program-ingenieur-travaux-junior-region-normandie-f-h_champosoult_VC_rXNYr1Z) — VINCI Construction — Champosoult, France — Full Time
+- [(Stage) Revenue Operations & Strategy](https://www.welcometothejungle.com/fr/companies/payplug/jobs/stage-revenue-operations-strategy_paris_PAYPL_8X4PJMx) — PAYPLUG — Paris, France — Internship
+- [Strategy & Operations Analyst (H/F)](https://www.welcometothejungle.com/fr/companies/hello-watt/jobs/strategy-operations-analyst-h-f-stage_paris) — Hello Watt — Paris, France — Internship
+- [Growth Digital Strategy Intern](https://www.welcometothejungle.com/fr/companies/edenred-holding/jobs/growth-marketing-intern_issy-les-moulineaux) — Edenred — Issy-Les-Moulineaux, France — Internship
+- [Strategy & Operations Analyst Intern - Paris](https://www.welcometothejungle.com/fr/companies/souscritoo/jobs/strategy-operations-analyst-intern-paris_paris) — Papernest — Paris, France — Internship
+- [Chargé d'opérations de financement immatériel, innovation et international F/H](https://www.welcometothejungle.com/fr/companies/bpi-france-digital/jobs/charge-d-operations-de-financement-immateriel-innovation-et-international-f-h_lille) — Bpifrance — Lille, France — Internship
+- [[Madrid] Investment & Strategy Analyst](https://www.welcometothejungle.com/fr/companies/software-club/jobs/talent-acquisition-career-development-internship_paris) — Dedale Intelligence — Madrid, Spain — Full Time
+- [[Lisbon] Investment & Strategy Analyst](https://www.welcometothejungle.com/fr/companies/software-club/jobs/business-development-representative-cdi_paris_DI_Rl4mJ8o) — Dedale Intelligence — Lisbon, Portugal — Full Time
+- [Sales Planning & Strategy](https://fr.linkedin.com/jobs/view/sales-planning-strategy-at-alan-4476337041) — Alan — Paris, Île-de-France, France — Full-time
+- [STAGE - Chef de Projet Stratégique H/F](https://www.welcometothejungle.com/fr/companies/groupement-les-mousquetaires/jobs/stage-chef-de-projet-strategique-h-f_vert-le-grand_GM_yrekmJ8) — Groupement Mousquetaires — Vert-Le-Grand, France — Internship
+- [Graduate Program - Asset Manager H/F](https://www.welcometothejungle.com/fr/companies/groupement-les-mousquetaires/jobs/graduate-program-asset-manager-h-f_donzere) — Groupement Mousquetaires — Donzère, France — Full Time
+- [Graduate Program Finance F/H](https://www.welcometothejungle.com/fr/companies/vinci-construction-fr/jobs/graduate-program-finance-f-h_rueil-malmaison_VC_r80VNAG) — VINCI Construction — Rueil-Malmaison, France — Full Time
+- [Graduate Program H/F - Montpellier](https://www.welcometothejungle.com/fr/companies/batibig/jobs/graduate-program-h-f-montpellier_montpellier) — BATIBIG — Montpellier, France — Graduate Program
+- [Graduate program | French market (Paris)](https://www.welcometothejungle.com/fr/companies/query-juriste/jobs/graduate-program-french-market-paris_paris) — Lexroom — Paris, France — Graduate Program
+- [Graduate Program Cadre de gestion F/H](https://www.welcometothejungle.com/fr/companies/vinci-construction-fr/jobs/graduate-program-cadre-de-gestion-f-h_orleans_VC_PgrzOe2) — VINCI Construction — Orléans, France — Full Time
+- [Graduate Program - Chef de chantier - IDF F/H](https://www.welcometothejungle.com/fr/companies/vinci-construction-fr/jobs/graduate-program-chef-de-chantier-idf-f-h_nanterre) — VINCI Construction — Nanterre, France — Full Time
+- [Graduate Program - Chef.fe de chantier - Lille F/H](https://www.welcometothejungle.com/fr/companies/vinci-construction-fr/jobs/graduate-program-chef-fe-de-chantier-lille-f-h_nanterre) — VINCI Construction — Nanterre, France — Full Time
+- [Graduate Program - Chef.fe de chantier - Grand Est F/H](https://www.welcometothejungle.com/fr/companies/vinci-construction-fr/jobs/graduate-program-chef-fe-de-chantier-grand-est-f-h_nanterre_VC_OVOJ1Kk) — VINCI Construction — Nanterre, France — Full Time
+- …and 498 more on the dashboard.
 
 Full list: see your dashboard (GitHub Pages link in the README).
