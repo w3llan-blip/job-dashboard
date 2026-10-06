@@ -42,6 +42,27 @@ only if it's a VIE or if it explicitly says it sponsors the visa — those
 get a **VISA ✓** badge and a bonus. Turn this off with
 `visa.non_eu_requires_sponsorship: false` in `config.yaml`.
 
+## Sorting offers on the dashboard
+
+Each offer has three buttons:
+
+- **☆** keeps it for later (**★ Gardées** tab)
+- **✓ Postulé** moves it to **✓ Candidatures**: a compact tracker with
+  the application date, a status (Postulé, Relancé, Entretien, Test,
+  Offre, Refusé) and a notes field. After 10 days with no news it shows
+  "À relancer". The offer stays there even once it's gone from the site.
+- **✕ Pas intéressé** hides it (**Masquées** tab, where you can restore it)
+
+Every action can be undone for 5 seconds ("Annuler"). Quick filters
+(VIE, Stage, Graduate, Europe, Visa sponsorisé...) combine with the
+search box. Keyboard: J/K to move, A applied, X not interested,
+S keep, O open, / search.
+
+Your choices are saved **in the browser** you use (they survive the
+daily update). To carry them to another device, use **Exporter** at the
+bottom of the page, then **Importer** on the other one. The online
+dashboard and the local `Find Jobs.bat` page don't share choices.
+
 ## Turning on France Travail (optional, 10 minutes)
 
 1. Create an account on https://francetravail.io
