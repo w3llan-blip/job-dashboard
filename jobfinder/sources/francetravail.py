@@ -16,6 +16,7 @@ import time
 import requests
 
 from ..models import Offer
+from ..salary import monthly_from_text, label as salary_label
 
 TOKEN_URL = ("https://entreprise.francetravail.fr/connexion/oauth2/access_token"
              "?realm=%2Fpartenaire")
@@ -81,6 +82,17 @@ def fetch(config: dict) -> list[Offer]:
                 date=(r.get("dateCreation") or "")[:10],
                 employees=employees,
                 size_label=size_label.replace(" salariés", ""),
+                lang="fr",
             )
+            pay = ((r.get("salaire") or {}).get("libelle") or "").lower()
+            # "Annuel de 35000.0 Euros à 40000.0 Euros" / "Mensuel de 1800 Euros"
+            m = re.search(r"(annuel|mensuel|horaire)\D*(\d+(?:[.,]\d+)?)", pay)
+            if m:
+                amount = float(m.group(2).replace(",", "."))
+                monthly = {"annuel": amount / 12, "mensuel": amount,
+                           "horaire": amount * 151}[m.group(1)]
+                if 300 <= monthly <= 20000:
+                    offers[f"ft:{oid}"].salary_month = int(monthly)
+                    offers[f"ft:{oid}"].salary_label = salary_label(int(monthly))
         time.sleep(0.2)   # API allows a few calls per second
     return list(offers.values())

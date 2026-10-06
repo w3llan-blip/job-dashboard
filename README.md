@@ -36,11 +36,22 @@ Offers that don't state a start date are kept with a **DATE ?** badge
 (companies rarely write it); offers whose date fits your window get a
 small bonus.
 
-**Visa:** offers in the EU/EEA and Switzerland are always shown (no visa
-needed for a French citizen). Outside (UK, US, Asia...), an offer is kept
-only if it's a VIE or if it explicitly says it sponsors the visa — those
-get a **VISA ✓** badge and a bonus. Turn this off with
-`visa.non_eu_requires_sponsorship: false` in `config.yaml`.
+**Where:** Western & Northern Europe always; Southern Europe (Spain,
+Italy, Portugal, Greece...) only if a decent salary is shown (thresholds
+in `salary:`; VIEs always pass); Eastern Europe never; outside Europe
+only VIEs or offers that say they sponsor the visa (**VISA ✓** badge).
+
+**Languages:** offers asking for a language other than French/English
+(Spanish only as an extra), or written in another language, are removed
+(`languages.enabled`). Marketing roles are excluded (`keywords.exclude`).
+
+**Ranking:** every offer gets a score out of 100 — role (35, your core
+roles are in `keywords.priority`), level/contract (20: VIE, graduate,
+internship, junior; minus points if 3+ years of experience are asked),
+start date (10), company size (10), location (10), salary shown (8),
+freshness (7), bonus words (5). Open "Détails" on an offer to see why it
+got its score. The "Sources" tab also lists how many offers each filter
+removed.
 
 ## Sorting offers on the dashboard
 

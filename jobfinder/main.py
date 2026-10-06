@@ -6,7 +6,7 @@ from pathlib import Path
 
 import yaml
 
-from .matching import score_offers
+from .matching import score_offers, LAST_DROPS
 from .report import write_reports, write_new_offers_summary
 from .storage import mark_new
 from .sources import vie, greenhouse, lever, ashby, workday, wttj, francetravail, linkedin
@@ -65,7 +65,7 @@ def main() -> int:
     if GRAD_PATH.exists():
         programs = yaml.safe_load(GRAD_PATH.read_text(encoding="utf-8")) or []
 
-    report = write_reports(matches, programs, health, kept_by_source)
+    report = write_reports(matches, programs, health, kept_by_source, dict(LAST_DROPS))
     n_new = write_new_offers_summary(matches, programs)
     print(f"Matching your profile: {len(matches)} ({n_new} new)")
     print(f"\nReport saved: {report}")

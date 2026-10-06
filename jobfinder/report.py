@@ -63,7 +63,10 @@ nav.tabs .n{display:inline-block;min-width:20px;padding:0 6px;margin-left:4px;bo
 .offer .main{flex:1;min-width:0}
 .line1{display:flex;gap:6px;align-items:baseline;flex-wrap:wrap}
 .title{font-weight:600;font-size:15px}
-.score{font-weight:700;font-size:12px;color:var(--muted);min-width:22px}
+.score{font-weight:800;font-size:12px;min-width:30px;text-align:center;border-radius:6px;padding:1px 5px;background:var(--chip);color:var(--muted)}
+.score.s-hi{background:var(--new-bg);color:var(--new)} .score.s-mid{background:var(--vie-bg);color:var(--vie)}
+.pay{color:var(--ok);font-weight:600}
+.prep{font-size:12px;margin-top:6px}
 .meta{color:var(--muted);font-size:13px;margin-top:3px;display:flex;flex-wrap:wrap;gap:0 10px}
 .meta b{color:var(--ink);font-weight:600}
 details.why{margin-top:4px}
@@ -168,7 +171,9 @@ var CHIPS = [
   ['vie', 'VIE', function(o){ return o.vie; }],
   ['stage', 'Stage', function(o){ return /intern|stage|stagiaire/i.test(o.ct + ' ' + o.t); }],
   ['grad', 'Graduate', function(o){ return o.grad; }],
-  ['eu', 'Europe (sans visa)', function(o){ return o.reg === 'free'; }],
+  ['eu', 'Europe (sans visa)', function(o){ return o.reg === 'west' || o.reg === 'south'; }],
+  ['sal', 'Salaire affiché', function(o){ return !!o.sal; }],
+  ['top', 'Score ≥ 70', function(o){ return o.sc >= 70; }],
   ['visa', 'Visa sponsorisé', function(o){ return o.visa; }],
   ['dated', 'Date de début connue', function(o){ return !!o.st; }]
 ];
@@ -182,7 +187,8 @@ function normQ(q){ return (q || '').toLowerCase().normalize('NFD').replace(/[̀-
 function sorter(a, b){
   if (UI.sort === 'recent') return (b.d || '').localeCompare(a.d || '');
   if (UI.sort === 'start') return (a.st || '9999').localeCompare(b.st || '9999') || b.sc - a.sc;
-  return (b.n - a.n) || (b.sc - a.sc);
+  if (UI.sort === 'new') return (b.n - a.n) || (b.sc - a.sc);
+  return b.sc - a.sc;
 }
 
 // ---------- rendering ----------
@@ -202,16 +208,18 @@ function offerCard(o){
   if (o.l) meta.push('📍 ' + esc(o.l));
   if (o.ct) meta.push(esc(o.ct));
   if (o.st) meta.push('Début ' + esc(o.st));
+  if (o.sal) meta.push('<span class="pay">💶 ' + esc(o.sal) + '</span>');
   if (o.src !== 'VIE') meta.push(esc(o.src));
   if (o.d) meta.push('<span title="' + esc(o.d) + '">' + esc(ago(o.d)) + '</span>');
   var why = (o.why || []).map(function(r){ return '<span>' + esc(r) + '</span>'; }).join('');
   return '<article class="offer" data-id="' + esc(o.id) + '">' +
-    '<div class="main"><div class="line1"><span class="score" title="Score">' + o.sc + '</span>' + badges(o) +
+    '<div class="main"><div class="line1"><span class="score ' + (o.sc >= 70 ? 's-hi' : o.sc >= 55 ? 's-mid' : '') + '" title="Score sur 100 — détail dans « Détails »">' + o.sc + '</span>' + badges(o) +
     '<a class="title" href="' + esc(o.u) + '" target="_blank" rel="noopener">' + esc(o.t) + '</a></div>' +
     '<div class="meta">' + meta.map(function(m){ return '<span>' + m + '</span>'; }).join('') + '</div>' +
     ((why || o.desc) ? '<details class="why"><summary>Détails</summary>' +
       (why ? '<p class="reasons">' + why + '</p>' : '') +
-      (o.desc ? '<p>' + esc(o.desc) + '…</p>' : '') + '</details>' : '') +
+      (o.desc ? '<p>' + esc(o.desc) + '…</p>' : '') +
+      '<p class="prep"><button class="btn" data-prep="1">📝 Préparer ma candidature</button></p></details>' : '') +
     '</div><div class="actions">' +
     '<button class="btn star' + (s === 'saved' ? ' on' : '') + '" data-act="saved" title="À garder (raccourci S)">' + (s === 'saved' ? '★' : '☆') + '</button>' +
     '<button class="btn primary" data-act="applied" title="Raccourci A">✓ Postulé</button>' +
@@ -313,6 +321,13 @@ document.addEventListener('click', function(e){
   var chip = e.target.closest('[data-chip]');
   if (chip){ var k = chip.dataset.chip, i = UI.chips.indexOf(k);
     if (i >= 0) UI.chips.splice(i, 1); else UI.chips.push(k); render(); return; }
+  var prep = e.target.closest('[data-prep]');
+  if (prep){ var po = byId[prep.closest('[data-id]').dataset.id];
+    var txt = 'Prépare ma candidature (CV + lettre de motivation adaptés) pour cette offre : ' + po.t + ' — ' + po.c + ' — ' + po.u;
+    (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(function(){
+      toast('Copié — colle-le dans Claude (projet Stage)', function(){}); },
+      function(){ prompt('Copie ce texte et colle-le dans Claude :', txt); });
+    return; }
   var act = e.target.closest('[data-act]');
   if (act){ var id = act.closest('[data-id]').dataset.id, a = act.dataset.act;
     setState(id, a === 'reset' ? null : a); return; }
@@ -387,6 +402,7 @@ def _offer_dict(o) -> dict:
         "grad": "graduate" in kind or "trainee" in kind,
         "visa": bool(getattr(o, "visa_ok", False)),
         "reg": getattr(o, "region", ""),
+        "sal": getattr(o, "salary_label", ""),
         "why": list(o.reasons or []), "desc": _snippet(o.description),
     }
 
@@ -422,6 +438,17 @@ Rappel par notification le 1er du mois d'ouverture. Les lignes grisées demanden
 </table></div>"""
 
 
+def _drops_table(drops) -> str:
+    if not drops:
+        return ""
+    rows = "".join(f"<tr><td>{html.escape(k)}</td><td>{v}</td></tr>"
+                   for k, v in sorted(drops.items(), key=lambda kv: -kv[1]))
+    return f"""
+<h3 style="margin:22px 0 8px">Offres écartées par tes filtres</h3>
+<div class="tablewrap"><table class="compact">
+<thead><tr><th>Motif</th><th>Offres</th></tr></thead><tbody>{rows}</tbody></table></div>"""
+
+
 def _health_table(health, kept_by_source) -> str:
     """For each source: offers returned today and how many survived your
     filters — a source stuck at 0 is broken or blocked."""
@@ -445,7 +472,7 @@ def _health_table(health, kept_by_source) -> str:
 </table></div>"""
 
 
-def write_reports(offers, programs=None, health=None, kept_by_source=None) -> Path:
+def write_reports(offers, programs=None, health=None, kept_by_source=None, drops=None) -> Path:
     OUT_DIR.mkdir(exist_ok=True)
     stamp = datetime.now().strftime("%d/%m/%Y à %H:%M")
     n_new = sum(1 for o in offers if o.is_new)
@@ -460,7 +487,8 @@ def write_reports(offers, programs=None, health=None, kept_by_source=None) -> Pa
 <body><div class="wrap">
 <header>
   <h1>Mes offres</h1>
-  <p class="sub">{len(offers)} offres correspondent à ton profil, dont {n_new} nouvelles — mis à jour le {stamp}.</p>
+  <p class="sub">{len(offers)} offres correspondent à ton profil, dont {n_new} nouvelles — mis à jour le {stamp}.
+  Classées de la meilleure à la moins bonne (score sur 100).</p>
 </header>
 <nav class="tabs">
   <button data-tab="todo">À voir<span class="n"></span></button>
@@ -475,7 +503,8 @@ def write_reports(offers, programs=None, health=None, kept_by_source=None) -> Pa
   <div class="toolbar">
     <input id="q" type="search" placeholder="Rechercher (titre, entreprise, ville…)  —  touche /" aria-label="Rechercher">
     <select id="sort" aria-label="Trier">
-      <option value="score">Tri : nouveautés puis pertinence</option>
+      <option value="score">Tri : meilleures offres</option>
+      <option value="new">Tri : nouveautés d'abord</option>
       <option value="recent">Tri : plus récentes</option>
       <option value="start">Tri : date de début</option>
     </select>
@@ -501,7 +530,7 @@ def write_reports(offers, programs=None, health=None, kept_by_source=None) -> Pa
 </section>
 
 <section data-view="programs" class="hidden">{_grad_table(programs)}</section>
-<section data-view="sources" class="hidden">{_health_table(health, kept_by_source or {})}</section>
+<section data-view="sources" class="hidden">{_health_table(health, kept_by_source or {})}{_drops_table(drops)}</section>
 
 <footer>
   <span>Tes choix sont enregistrés dans ce navigateur. Pour les passer sur un autre appareil :</span>

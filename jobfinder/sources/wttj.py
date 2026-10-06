@@ -20,6 +20,7 @@ from pathlib import Path
 import requests
 
 from ..models import Offer
+from ..salary import monthly_from_fields, label as salary_label
 
 SITE = "https://www.welcometothejungle.com"
 ALGOLIA_APP = "CSEKHVMS53"
@@ -119,6 +120,28 @@ def _org_size(session, key, slug, name, cache) -> int | None:
     return size
 
 
+def _salary(hit) -> int | None:
+    """WTTJ salary fields: names vary (salary_minimum, salary_yearly_minimum,
+    salary_period...), so look for them by name."""
+    mins, maxs, period = None, None, ""
+    for k, v in hit.items():
+        lk = k.lower()
+        if "salary" not in lk:
+            continue
+        if isinstance(v, (int, float)) and v > 0:
+            if "min" in lk and mins is None:
+                mins = v
+            elif "max" in lk and maxs is None:
+                maxs = v
+            if "year" in lk:
+                period = period or "yearly"
+            elif "month" in lk:
+                period = period or "monthly"
+        elif isinstance(v, str) and "period" in lk:
+            period = v
+    return monthly_from_fields(mins, maxs, period)
+
+
 def _text(hit, *keys) -> str:
     parts = []
     for k in keys:
@@ -187,6 +210,9 @@ def fetch(config: dict) -> list[Offer]:
             start_date=(h.get("start_date") or "")[:7] if isinstance(h.get("start_date"), str) else "",
             employees=employees,
             size_label=f"{employees}" if employees else "",
+            salary_month=(sal := _salary(h)),
+            salary_label=salary_label(sal),
+            lang=(h.get("language") or "")[:2].lower() if isinstance(h.get("language"), str) else "",
         ))
 
     try:

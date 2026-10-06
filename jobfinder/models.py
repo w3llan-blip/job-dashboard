@@ -20,6 +20,9 @@ class Offer:
     size_label: str = ""          # e.g. "250-499", "2000+" (display only)
     score: int = 0
     is_new: bool = False
-    region: str = ""        # "free" (EU/EEA/CH), "visa" or "unknown"
+    region: str = ""        # "west", "south", "east", "visa" or "unknown"
     visa_ok: bool = False   # outside the EU and the offer says it sponsors
+    salary_month: int | None = None  # monthly gross pay if stated (EUR)
+    salary_label: str = ""  # e.g. "1 200 €/mois", "38 k€/an"
+    lang: str = ""          # posting language if the source says it ("fr", "en"...)
     reasons: list = field(default_factory=list)  # why it scored

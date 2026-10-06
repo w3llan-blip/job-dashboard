@@ -13,7 +13,6 @@ keywords:
     - chef de projet
     - charge de projet
     - chargee de projet
-    - product lead
     - pmo
     - business analyst
     - strategy
@@ -43,7 +42,6 @@ keywords:
     - strategie
     - strategique
     - strategic
-    - chef de produit
     - charge de mission
     - charge d'affaires
     - consultant interne
@@ -52,6 +50,31 @@ keywords:
     - digital
     - innovation
 
+
+  # Your core target roles: they rank highest (35/35 for the role).
+  # Other "include" words are compatible roles (20/35).
+  priority:
+    - strategy
+    - strategie
+    - strategique
+    - strategic
+    - corporate strategy
+    - corporate development
+    - internal consulting
+    - internal consultant
+    - consultant interne
+    - strategic projects
+    - transformation
+    - business development
+    - business developer
+    - developpement commercial
+    - pmo
+    - program manager
+    - chef de projet
+    - charge de mission
+    - graduate program
+    - graduate programme
+    - management trainee
 
   # Bonus points if these appear (in the title or description)
   boost:
@@ -91,6 +114,18 @@ keywords:
     - engineer
     - ingenieur
     - account manager
+    # marketing (not wanted)
+    - marketing
+    - brand
+    - branding
+    - marque
+    - communication
+    - social media
+    - community manager
+    - content
+    - growth marketing
+    - seo
+    - crm
     # too senior
     - experienced
     - lead
@@ -218,6 +253,19 @@ exclude_companies:
 # ("VISA ✓" badge on the dashboard). false = show everything.
 visa:
   non_eu_requires_sponsorship: true
+
+# Southern Europe (Spain, Italy, Portugal, Greece...) is only kept if the
+# offer shows a salary at least this high (gross, per month). VIEs always
+# pass: their allowance is set by Business France.
+salary:
+  south_europe_min_internship_month: 1000   # internships
+  south_europe_min_month: 2500              # other jobs (≈ 30 k€/year)
+
+# Languages: offers that require a language other than French/English/
+# Spanish, or Spanish only, or that are written in another language,
+# are removed. false = keep everything.
+languages:
+  enabled: true
 
 # Company size: you want scale-ups and large groups, not early startups.
 # Applies whenever the source knows the headcount (Welcome to the Jungle,

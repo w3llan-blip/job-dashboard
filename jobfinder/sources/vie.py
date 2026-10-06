@@ -35,6 +35,19 @@ def _strip_html(text: str) -> str:
     return htmllib.unescape(re.sub(r"<[^>]+>", " ", text or "")).strip()
 
 
+def _allowance(o: dict) -> int | None:
+    """Monthly VIE allowance if the record carries it (field name varies)."""
+    for k, v in o.items():
+        if "indemn" in k.lower() or "allowance" in k.lower():
+            try:
+                value = float(str(v).replace(",", ".").replace(" ", ""))
+            except ValueError:
+                continue
+            if 500 <= value <= 10000:
+                return int(value)
+    return None
+
+
 def fetch(config: dict) -> list[Offer]:
     session = requests.Session()
     session.headers["User-Agent"] = UA
@@ -79,6 +92,9 @@ def fetch(config: dict) -> list[Offer]:
                 contract=f"VIE ({o.get('missionDuration')} months)" if o.get("missionDuration") else "VIE",
                 date=(o.get("creationDate") or "")[:10],
                 start_date=(o.get("missionStartDate") or "")[:7],
+                salary_month=_allowance(o),
+                salary_label=(f"{_allowance(o):,} €/mois (indemnité VIE)".replace(",", " ")
+                              if _allowance(o) else "Indemnité VIE"),
             ))
         skip += PAGE_SIZE
         if skip >= total:
