@@ -15,6 +15,8 @@ UA = "job-dashboard (personal job search tool)"
 
 def fetch(config: dict) -> list[Offer]:
     companies = (config.get("companies") or {}).get("ashby") or []
+    if not companies:
+        raise RuntimeError("aucune entreprise configurée (companies.ashby dans config.yaml)")
     offers: list[Offer] = []
     for slug in companies:
         try:

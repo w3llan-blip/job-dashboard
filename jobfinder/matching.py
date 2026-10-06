@@ -133,8 +133,9 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
 
         # visa: free to work in the EU/EEA/CH; elsewhere only VIEs or
         # offers that say they sponsor the visa
-        is_vie = o.source == "VIE" or o.contract == "VIE" or \
-            re.search(r"\bv\.?i\.?e\.?\b", title) is not None
+        # "VIE" must be written in capitals: "Assurance Vie" is not a VIE
+        vie_in_title = re.search(r"\bV\.?I\.?E\b", o.title) is not None
+        is_vie = o.source == "VIE" or o.contract == "VIE" or vie_in_title
         o.region = region(loc)
         o.visa_ok = o.region == "visa" and not is_vie and sponsors_visa(folded_desc)
         if visa_rule and o.region == "visa" and not is_vie and not o.visa_ok:
@@ -152,7 +153,7 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
             elif not keep_undated:
                 continue
 
-        is_vie_title = re.search(r"\bv\.?i\.?e\.?\b", title) is not None
+        is_vie_title = vie_in_title
         matched = [w for w in include if _has_word(w, title)]
         if is_vie_title:
             matched.append("vie")

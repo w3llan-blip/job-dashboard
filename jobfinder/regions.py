@@ -52,14 +52,19 @@ VISA = [
     "afrique du sud", "nigeria", "kenya", "senegal", "cote d'ivoire",
     "dominican", "dominicaine", "congo", "rwanda", "cameroun", "cameroon",
     "ghana", "algeria", "algerie", "panama", "costa rica", "guatemala",
+    "cairo", "le caire", "ho chi minh", "hanoi", "bangkok", "jakarta",
+    "kuala lumpur", "manila", "shenzhen", "guangzhou", "osaka", "abu dhabi",
+    "riyadh", "doha", "istanbul", "casablanca", "tunis", "lagos", "nairobi",
+    "johannesburg", "bogota", "lima", "santiago", "buenos aires", "rio de janeiro",
     "vietnam", "thailand", "thailande", "indonesia", "indonesie", "malaysia",
     "malaisie", "philippines", "ukraine", "serbia", "serbie",
 ]
 
 # US state codes as written by many boards: "Austin, TX" / "-Ny-"
 _US_STATE = re.compile(
-    r"(?:,\s*|-)(?:al|ak|az|ar|ca|co|ct|dc|fl|ga|il|in|ma|md|mi|mn|mo|nc|nj|"
-    r"ny|oh|or|pa|tn|tx|ut|va|wa|wi)(?:-|\s*$|\s*,)")
+    r"(?:,\s*|-)(?:al|ak|az|ar|ca|co|ct|dc|de|fl|ga|hi|ia|id|il|in|ks|ky|la|ma|md|"
+    r"me|mi|mn|mo|ms|mt|nc|nd|ne|nh|nj|nm|nv|ny|oh|ok|or|pa|ri|sc|sd|tn|tx|ut|va|"
+    r"vt|wa|wi|wv|wy)(?:-|\s*$|\s*,)")
 
 
 def _has(words, text):
