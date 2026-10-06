@@ -171,7 +171,7 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
         vie_in_title = re.search(r"\bV\.?I\.?E\b", o.title) is not None
         is_vie = o.source == "VIE" or o.contract == "VIE" or vie_in_title
         matched = [w for w in include if _has_word(w, title)]
-        if not matched and not vie_in_title:
+        if not matched:   # a VIE must also be in one of your roles
             _drop("titre hors de tes métiers")
             continue
         if any(_has_word(c, company) for c in bad_companies):
@@ -278,8 +278,6 @@ def _rank(o, title, desc, loc, matched, priority, boost, preferred,
         add(35 if len(set(matched)) > 1 else 32, "métier cœur de cible : " + ", ".join(dict.fromkeys(top)))
     elif matched:
         add(22 if len(set(matched)) > 1 else 20, "métier compatible : " + ", ".join(dict.fromkeys(matched)))
-    else:
-        add(18, "VIE")
 
     # 2. level / contract (20)
     kind = (o.contract + " " + title).lower()
