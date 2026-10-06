@@ -11,6 +11,8 @@ Filters (offer dropped):
 - another language required / Spanish only / offer written in another
   language (see languages.py)
 - start date outside the window; 5+ years of experience asked
+- not a VIE, an internship or a graduate program (the only contracts
+  your school accepts to validate the master's) — apprenticeships too
 
 Ranking (see _rank): role 35, level/contract 20, start date 10,
 company 10, location 10, salary 8, freshness 7, bonus words up to 5.
@@ -97,7 +99,17 @@ _EXP = re.compile(
     r"(\d{1,2})\s*(?:\+|plus)?\s*(?:-|a|to|à)?\s*(?:\d{1,2}\s*)?"
     r"(?:years?|yrs?|ans|anos|annees)\s*(?:minimum\s*)?(?:of\s*|d\s*'?\s*|de\s*)?"
     r"(?:relevant\s*|professional\s*|work\s*)?(?:experience|exp)")
-INTERN_RE = re.compile(r"intern|stage|stagiaire|praktik|practicas|tirocinio|apprenti|alternance")
+INTERN_RE = re.compile(r"intern\b|internship|\bstage\b|stagiaire|praktik|practicas|tirocinio|"
+                       r"becario|stagiair")
+# internship stated only in the description ("stage de fin d'études"...)
+INTERN_DESC_RE = re.compile(r"stage de fin d.?etudes|end.of.studies internship|"
+                            r"\b[4-6].?(?:month|mois) internship|stage de [4-6] mois|"
+                            r"internship of [4-6] months|convention de stage")
+GRAD_RE = re.compile(r"graduate|trainee|rotational|leadership (?:development )?program|"
+                     r"programme? jeunes? diplomes?|young graduate|early careers? program")
+# apprenticeships don't validate the master's degree
+APPRENTICE_RE = re.compile(r"alternan|apprenti|work.study|contrat pro|werkstudent|"
+                           r"working student|dual study|duales studium")
 
 
 def _years_asked(desc: str) -> int:
@@ -144,6 +156,7 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
     south_min_intern = int(sal.get("south_europe_min_internship_month") or 1000)
     south_min = int(sal.get("south_europe_min_month") or 2500)
     lang_rule = bool((config.get("languages") or {}).get("enabled", True))
+    only_school_ok = bool((config.get("contracts") or {}).get("only_vie_internship_graduate", True))
 
     kept: list[Offer] = []
     for o in offers:
@@ -179,7 +192,16 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
         if not o.salary_month:
             o.salary_month = monthly_from_text(desc)
             o.salary_label = salary_label(o.salary_month)
-        is_intern = bool(INTERN_RE.search(_fold(o.contract) + " " + title))
+        kind = _fold(o.contract) + " " + title
+        is_intern = bool(INTERN_RE.search(kind) or INTERN_DESC_RE.search(desc[:1500]))
+        is_grad = bool(GRAD_RE.search(kind))
+        if only_school_ok:
+            if APPRENTICE_RE.search(kind) and not is_vie:
+                _drop("alternance (non acceptée par l'école)")
+                continue
+            if not (is_vie or is_intern or is_grad):
+                _drop("emploi (ni VIE, ni stage, ni graduate program)")
+                continue
 
         # where
         o.region = region(loc)
@@ -222,8 +244,12 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
 
         if o.source != "VIE" and vie_in_title:
             o.contract = "VIE"
-        if not o.contract:
-            o.contract = "Internship" if is_intern else "Full-time"
+        if is_intern and not is_vie and not is_grad:
+            o.contract = "Stage"
+        elif is_grad and not is_vie:
+            o.contract = "Graduate program"
+        elif not o.contract:
+            o.contract = "Full-time"
 
         _rank(o, title, desc, loc, matched, priority, boost, preferred,
               is_vie, is_intern, date_fits, years, south_min_intern, south_min)
@@ -259,14 +285,12 @@ def _rank(o, title, desc, loc, matched, priority, boost, preferred,
     kind = (o.contract + " " + title).lower()
     if is_vie:
         add(20, "VIE")
-    elif "graduate" in kind or "trainee" in kind or "rotational" in kind:
+    elif GRAD_RE.search(_fold(kind)):
         add(20, "graduate program")
     elif is_intern:
         add(18, "stage")
-    elif re.search(r"junior|associate|analyst|analyste|entry|jeune diplome|new grad", title + " " + desc[:600]):
-        add(14, "poste junior")
     else:
-        add(8, "CDI (niveau non précisé)")
+        add(8, "contrat non précisé")
     if years >= 3:
         add(-18, f"{years} ans d'expérience demandés")
     elif years == 2:

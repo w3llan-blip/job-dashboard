@@ -259,6 +259,11 @@ exclude_companies:
 visa:
   non_eu_requires_sponsorship: true
 
+# Your school only validates the master's with a VIE, an internship or a
+# graduate program: everything else (CDI, CDD, apprenticeship) is removed.
+contracts:
+  only_vie_internship_graduate: true
+
 # Southern Europe (Spain, Italy, Portugal, Greece...) is only kept if the
 # offer shows a salary at least this high (gross, per month). VIEs always
 # pass: their allowance is set by Business France.
@@ -388,13 +393,13 @@ workday:
 # Words searched on each Workday site (each = up to 60 offers per company)
 workday_search:
   - VIE
+  - V.I.E
   - graduate
-  - stage strategy
-  - internship strategy
-  - visa sponsorship
-  - project manager
-  - transformation
-  - supply chain
+  - stage
+  - internship
+  - intern
+  - stage 2027
+  - trainee
 
 # Welcome to the Jungle: one search per line, like in the site's search
 # bar. Companies under company_size.min_employees are dropped.
@@ -418,31 +423,30 @@ welcome_to_the_jungle:
     - visa sponsorship graduate
 
 # France Travail (official API, needs a free key — see README).
-# cadre_only keeps managerial-level (cadre) offers only.
 france_travail:
-  cadre_only: true
+  cadre_only: false       # internships are not "cadre" positions
   queries:
-    - chef de projet junior
-    - chargé de mission strategie
-    - business developer junior
-    - analyste strategie
-    - PMO junior
-    - supply chain analyst
+    - stage strategie
+    - stage chef de projet
+    - stage business developer
+    - stage PMO
+    - stage transformation
+    - stage supply chain
     - graduate programme
 
 # LinkedIn public job search (no account used). Keep the list of
 # searches short — LinkedIn rate-limits heavy automated browsing.
 linkedin:
   queries:
-    - keywords: "product manager"
-      location: "Paris, France"
-    - keywords: "chef de projet international"
+    - keywords: "stage strategie"
       location: "France"
-    - keywords: "strategy analyst"
+    - keywords: "stage chef de projet"
       location: "Paris, France"
-    - keywords: "VIE chef de projet"
+    - keywords: "stage business development"
+      location: "France"
+    - keywords: "strategy intern"
+      location: "European Union"
+    - keywords: "VIE"
       location: ""
-    - keywords: "product manager"
-      location: "Singapore"
-    - keywords: "junior product manager"
-      location: "New York, United States"
+    - keywords: "graduate programme"
+      location: "European Union"

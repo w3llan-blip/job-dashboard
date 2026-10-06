@@ -36,6 +36,11 @@ Offers that don't state a start date are kept with a **DATE ?** badge
 (companies rarely write it); offers whose date fits your window get a
 small bonus.
 
+**Contracts:** only VIE, internships and graduate programs (the only
+contracts your school accepts to validate the master's). Full-time jobs,
+fixed-term contracts and apprenticeships are removed
+(`contracts.only_vie_internship_graduate`).
+
 **Where:** Western & Northern Europe always; Southern Europe (Spain,
 Italy, Portugal, Greece...) only if a decent salary is shown (thresholds
 in `salary:`; VIEs always pass); Eastern Europe never; outside Europe
