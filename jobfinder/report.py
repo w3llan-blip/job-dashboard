@@ -25,6 +25,9 @@ a{color:#0b5fff;text-decoration:none} a:hover{text-decoration:underline}
 .badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600}
 .new{background:#e1f7e7;color:#137333}
 .vie{background:#fff3d6;color:#8a6100}
+.grad{background:#e8e3ff;color:#4b2fb3}
+.nodate{background:#eef1f4;color:#5b6875}
+.health td{font-size:13px} .ok{color:#137333} .ko{color:#b3261e}
 .score{font-weight:700}
 .count{font-size:13px;color:#5b6875}
 """
@@ -56,7 +59,7 @@ newOnly.addEventListener('change', applyFilters);
 applyFilters();
 """
 
-COLUMNS = ["", "Score", "Offer", "Company", "Location", "Contract", "Start", "Source", "Date"]
+COLUMNS = ["", "Score", "Offer", "Company", "Size", "Location", "Contract", "Start", "Source", "Date"]
 
 
 MONTH_NAMES = ["", "January", "February", "March", "April", "May", "June", "July",
@@ -68,32 +71,62 @@ def _grad_table(programs) -> str:
         return ""
     this_month = datetime.now().month
     rows = []
+    # programs you can actually join (no visa sponsorship needed) first
+    programs = sorted(programs, key=lambda p: bool(p.get("needs_sponsorship")))
     for p in programs:
         badge = ('<span class="badge new">OPENING NOW</span> '
                  if p.get("opens_month") == this_month else "")
+        style = ' style="opacity:.55"' if p.get("needs_sponsorship") else ""
         rows.append(
-            "<tr>"
+            f"<tr{style}>"
             f'<td>{badge}<a href="{html.escape(p.get("url") or "")}" target="_blank" rel="noopener">'
             f'{html.escape(p.get("program") or "")}</a></td>'
             f'<td>{html.escape(p.get("company") or "")}</td>'
             f'<td>{html.escape(p.get("window") or MONTH_NAMES[p.get("opens_month") or 0])}</td>'
             f'<td>{html.escape(p.get("region") or "")}</td>'
+            f'<td>{html.escape(p.get("visa") or "")}</td>'
             f'<td>{html.escape(p.get("fit") or "")}</td>'
             "</tr>"
         )
     return f"""
 <h2 style="margin-top:28px">Graduate programs to track (2027 intake)</h2>
 <p class="sub">Application windows are typical patterns — verify on the page.
-You'll get a reminder notification on the 1st of each opening month.</p>
+You'll get a reminder notification on the 1st of each opening month.
+Greyed-out rows need a work visa the company is unlikely to sponsor (no reminders for those).</p>
 <div class="tablewrap">
 <table>
-<thead><tr><th>Program</th><th>Company</th><th>Applications</th><th>Region</th><th>Why you</th></tr></thead>
+<thead><tr><th>Program</th><th>Company</th><th>Applications</th><th>Region</th><th>Visa</th><th>Why you</th></tr></thead>
 <tbody>{''.join(rows)}</tbody>
 </table>
 </div>"""
 
 
-def write_reports(offers, programs=None) -> Path:
+def _health_table(health, kept_by_source) -> str:
+    """Show, for each source, how many offers it returned today and how
+    many survived your filters — a source stuck at 0 is broken or blocked."""
+    if not health:
+        return ""
+    rows = []
+    for name, label, fetched, error in health:
+        if fetched is None:
+            status = f'<span class="ko">skipped — {html.escape(error)}</span>'
+        elif fetched == 0:
+            status = '<span class="ko">0 results — blocked or misconfigured?</span>'
+        else:
+            status = '<span class="ok">OK</span>'
+        rows.append(f"<tr><td>{html.escape(name)}</td><td>{'' if fetched is None else fetched}</td>"
+                    f"<td>{kept_by_source.get(label, 0)}</td><td>{status}</td></tr>")
+    return f"""
+<h2 style="margin-top:28px">Sources today</h2>
+<div class="tablewrap health">
+<table style="min-width:0">
+<thead><tr><th>Source</th><th>Fetched</th><th>Kept</th><th>Status</th></tr></thead>
+<tbody>{''.join(rows)}</tbody>
+</table>
+</div>"""
+
+
+def write_reports(offers, programs=None, health=None, kept_by_source=None) -> Path:
     OUT_DIR.mkdir(exist_ok=True)
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     n_new = sum(1 for o in offers if o.is_new)
@@ -103,14 +136,19 @@ def write_reports(offers, programs=None) -> Path:
         badges = ""
         if o.is_new:
             badges += '<span class="badge new">NEW</span> '
-        if o.source == "VIE":
-            badges += '<span class="badge vie">VIE</span>'
+        if o.source == "VIE" or o.contract == "VIE":
+            badges += '<span class="badge vie">VIE</span> '
+        if "graduate" in (o.contract + " " + o.title).lower():
+            badges += '<span class="badge grad">GRAD</span> '
+        if not o.start_date:
+            badges += '<span class="badge nodate" title="The offer does not state a start date — check it">DATE ?</span>'
         rows.append(
             f'<tr data-new="{1 if o.is_new else 0}">'
             f"<td>{badges}</td>"
             f'<td class="score">{o.score}</td>'
             f'<td><a href="{html.escape(o.url)}" target="_blank" rel="noopener">{html.escape(o.title)}</a></td>'
             f"<td>{html.escape(o.company)}</td>"
+            f"<td>{html.escape(o.size_label)}</td>"
             f"<td>{html.escape(o.location)}</td>"
             f"<td>{html.escape(o.contract)}</td>"
             f"<td>{html.escape(o.start_date or '—')}</td>"
@@ -154,6 +192,7 @@ Sorted: new first, then best score. Filters combine (AND).</p>
 </table>
 </div>
 {_grad_table(programs)}
+{_health_table(health, kept_by_source or {})}
 <script>{JS}</script>
 </body></html>"""
 
@@ -162,9 +201,9 @@ Sorted: new first, then best score. Filters combine (AND).</p>
 
     with open(OUT_DIR / "offers.csv", "w", newline="", encoding="utf-8-sig") as f:
         w = csv.writer(f)
-        w.writerow(["New", "Score", "Title", "Company", "Location", "Contract", "Start", "Source", "Date", "Link"])
+        w.writerow(["New", "Score", "Title", "Company", "Size", "Location", "Contract", "Start", "Source", "Date", "Link"])
         for o in offers:
-            w.writerow(["yes" if o.is_new else "", o.score, o.title, o.company,
+            w.writerow(["yes" if o.is_new else "", o.score, o.title, o.company, o.size_label,
                         o.location, o.contract, o.start_date, o.source, o.date, o.url])
 
     return html_path
@@ -177,7 +216,8 @@ def write_new_offers_summary(offers, programs=None, max_items: int = 30) -> int:
     today = datetime.now()
     # on the 1st of a month, remind about grad programs opening that month
     reminders = [p for p in (programs or [])
-                 if p.get("opens_month") == today.month and today.day == 1]
+                 if p.get("opens_month") == today.month and today.day == 1
+                 and not p.get("needs_sponsorship")]
 
     lines = []
     if new:

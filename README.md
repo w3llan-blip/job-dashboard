@@ -17,8 +17,33 @@ checkbox. Click a title to open the real offer.
 ## Where offers come from
 
 - **VIE / VIA** — the official Business France site (your priority)
-- **Greenhouse & Lever** — the public job boards of ~30 tech companies
+- **Greenhouse, Lever & Ashby** — the public job boards of tech scale-ups
   (Datadog, Stripe, Spotify, Doctolib, Back Market, Qonto, Figma...)
+- **Workday** — the career sites of large groups (Sanofi, Airbus,
+  Michelin, Pernod Ricard...). Add more under `workday:` in `config.yaml`.
+- **Welcome to the Jungle** — searches listed in `config.yaml`;
+  companies under 200 people are dropped (`company_size`), so you get
+  scale-ups and large groups, not early startups.
+- **France Travail** — the official public-employment API (optional,
+  needs a free key, see below)
+- **LinkedIn** — public search (often blocked from GitHub's servers)
+
+At the bottom of the dashboard, **Sources today** shows how many offers
+each source returned and how many passed your filters. A source stuck
+at 0 is blocked or misconfigured.
+
+Offers that don't state a start date are kept with a **DATE ?** badge
+(companies rarely write it); offers whose date fits your window get a
+small bonus. Offers that say they won't sponsor a visa are removed.
+
+## Turning on France Travail (optional, 10 minutes)
+
+1. Create an account on https://francetravail.io
+2. Create an application and subscribe it to the **Offres d'emploi** API
+3. On GitHub: your repo → Settings → Secrets and variables → Actions →
+   add `FT_CLIENT_ID` and `FT_CLIENT_SECRET` with the values shown there.
+
+Without the key, that source is simply skipped.
 
 ## Tune your results
 
@@ -29,6 +54,9 @@ Open `config.yaml` (right-click → Open with Notepad) and edit:
 - `keywords.boost` — words that push an offer up the ranking
 - `locations.preferred` — places that get bonus points
 - `companies` — add/remove companies to watch
+- `workday` — large groups' career sites to watch
+- `welcome_to_the_jungle.queries` / `france_travail.queries` — searches to run
+- `company_size.min_employees` — minimum company size (default 200)
 
 Save the file and re-run `Find Jobs.bat`.
 
@@ -51,6 +79,7 @@ them in the `applications/` folder — then you review and send them yourself.
 | `applications/`     | tailored CVs & cover letters (private, never uploaded) |
 | `jobfinder/`        | the program code                               |
 | `seen_offers.json`  | memory of offers already shown (for NEW badges) |
+| `org_sizes.json`    | cached company sizes from Welcome to the Jungle |
 | `.github/`          | the daily automation schedule                  |
 
 ## Privacy note

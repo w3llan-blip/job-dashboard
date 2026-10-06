@@ -25,15 +25,29 @@ keywords:
     - strategy associate
     - strategic projects
     - business development
-    - supply chain  
     - supply chain
     - planning
     - industrial planning
     - operations
     - process improvement
     - transformation
-    - process- graduate program
+    - process
+    - graduate program
     - graduate programme
+    - graduate
+    - management trainee
+    - rotational
+    - leadership program
+    - business developer
+    - developpement commercial
+    - strategie
+    - strategique
+    - strategic
+    - chef de produit
+    - charge de mission
+    - charge d'affaires
+    - consultant interne
+    - project officer
     - technology
     - digital
     - innovation
@@ -54,7 +68,16 @@ keywords:
   exclude:
     # tech roles
     - software engineer
-    - developer
+    # "developer" alone would also remove "Business Developer"
+    - software developer
+    - web developer
+    - developpeur
+    - full stack
+    - fullstack
+    - frontend
+    - front-end
+    - backend
+    - back-end
     - devops
     - data scientist
     - machine learning
@@ -84,7 +107,10 @@ keywords:
 start_window:
   from: "2027-01"
   to: "2027-09"
-  keep_undated: false
+  # true = offers that don't state a start date are KEPT (shown with a
+  # "DATE ?" badge, ranked below offers whose date fits). With false, you
+  # lose almost every non-VIE offer, because companies rarely write it.
+  keep_undated: true
 
 # Hard requirements you DON'T meet. If an offer's description clearly
 # asks for one of these, the offer is removed (accents don't matter).
@@ -123,6 +149,23 @@ disqualifiers:
   - pharmacist
   - degree in law
   - law degree
+  # visa: offers abroad that say they won't sponsor a work permit
+  # (delete these lines if you get the right to work there)
+  - no visa sponsorship
+  - not able to sponsor
+  - unable to sponsor
+  - will not sponsor
+  - cannot sponsor
+  - can't sponsor
+  - does not sponsor
+  - do not sponsor
+  - without sponsorship
+  - sponsorship is not available
+  - not offer visa sponsorship
+  - "re:sponsorship[^.]{0,40}not (?:be )?(?:available|provided|offered)"
+  - must have the right to work in the uk
+  - us citizens only
+  - "re:must be (?:a )?(?:us|u\\.s\\.) citizen"
 
 # Companies you never want to work for.
 # Matched against the employer name (so "consulting" removes any
@@ -162,6 +205,13 @@ exclude_companies:
   - mc2i
   - inetum
   - "square management"
+
+# Company size: you want scale-ups and large groups, not early startups.
+# Applies whenever the source knows the headcount (Welcome to the Jungle,
+# France Travail). Unknown size = kept.
+company_size:
+  min_employees: 200
+  keep_unknown: true
 
 # Where you want to work. Offers elsewhere are still shown but ranked lower.
 locations:
@@ -242,6 +292,10 @@ companies:
     - gitlab
     - intercom
     - monzo
+  # Ashby: many scale-ups moved there. The slug is the end of the
+  # board address https://jobs.ashbyhq.com/<slug>. Add the ones you like;
+  # a wrong slug just shows "not found" in the run log.
+  ashby: []
   lever:
     - spotify
     - netflix
@@ -251,6 +305,60 @@ companies:
     - voodoo
     - backmarket
     - welcomejungle
+
+# Large groups' Workday career sites (Workday = the job system most big
+# corporates use). Open the company's job site; if the address looks like
+# https://xxx.wdN.myworkdayjobs.com/SiteName, copy it here.
+workday:
+  - name: Sanofi
+    url: https://sanofi.wd3.myworkdayjobs.com/SanofiCareers
+  - name: Airbus
+    url: https://ag.wd3.myworkdayjobs.com/Airbus
+  - name: Michelin
+    url: https://michelinhr.wd3.myworkdayjobs.com/Michelin
+  - name: Pernod Ricard
+    url: https://pernodricard.wd3.myworkdayjobs.com/pernod-ricard
+
+# Words searched on each Workday site (each = up to 60 offers per company)
+workday_search:
+  - VIE
+  - graduate
+  - stage strategy
+  - internship strategy
+  - project manager
+  - transformation
+  - supply chain
+
+# Welcome to the Jungle: one search per line, like in the site's search
+# bar. Companies under company_size.min_employees are dropped.
+welcome_to_the_jungle:
+  pages_per_query: 2      # 100 offers per page
+  queries:
+    - VIE
+    - graduate program
+    - stage strategie
+    - stage strategy
+    - stage business developer
+    - stage chef de projet
+    - stage product manager
+    - stage transformation
+    - stage supply chain
+    - stage PMO
+    - business analyst stage
+    - chargé de mission stage
+
+# France Travail (official API, needs a free key — see README).
+# cadre_only keeps managerial-level (cadre) offers only.
+france_travail:
+  cadre_only: true
+  queries:
+    - chef de projet junior
+    - chargé de mission strategie
+    - business developer junior
+    - analyste strategie
+    - PMO junior
+    - supply chain analyst
+    - graduate programme
 
 # LinkedIn public job search (no account used). Keep the list of
 # searches short — LinkedIn rate-limits heavy automated browsing.

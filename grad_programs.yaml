@@ -2,85 +2,145 @@
 # opens_month = month applications typically open (1-12). On the 1st of
 # that month, the daily notification reminds you to go check.
 # Dates are typical patterns from previous years — always verify on the page.
+# visa = what it means for a work permit. needs_sponsorship: true = the
+# program is greyed out on the dashboard and gets no reminder.
+
+- program: CVthèque VIE (be visible to companies)
+  company: Business France
+  url: https://mon-vie-via.businessfrance.fr
+  opens_month: 10
+  window: Anytime — create your profile now
+  region: Worldwide
+  visa: VIE — visa handled by Business France
+  fit: 'Many VIEs are filled without a public ad: companies search the candidate database'
+
+- program: VIE & graduate roles
+  company: Sanofi
+  url: https://sanofi.wd3.myworkdayjobs.com/SanofiCareers
+  opens_month: 9
+  window: Rolling — check the page
+  region: France / global
+  visa: VIE or France-based — no sponsorship issue
+  fit: Big VIE recruiter (already in your VIE results); also tracked daily via Workday
+
+- program: Graduate & VIE roles
+  company: Pernod Ricard
+  url: https://pernodricard.wd3.myworkdayjobs.com/pernod-ricard
+  opens_month: 9
+  window: Rolling — check the page
+  region: France / global
+  visa: VIE or France-based — no sponsorship issue
+  fit: Strategy / business roles in a French group; tracked daily via Workday
+
+- program: Graduate, VIE & internship roles
+  company: Airbus
+  url: https://ag.wd3.myworkdayjobs.com/Airbus
+  opens_month: 9
+  window: Rolling — check the page
+  region: France / Germany / Spain / UK
+  visa: EU-based roles — no sponsorship issue
+  fit: Programme management, PMO, supply chain; tracked daily via Workday
+
+- program: Graduate, VIE & internship roles
+  company: Michelin
+  url: https://michelinhr.wd3.myworkdayjobs.com/Michelin
+  opens_month: 9
+  window: Rolling — check the page
+  region: France / global
+  visa: VIE or France-based — no sponsorship issue
+  fit: Supply chain, strategy, transformation; tracked daily via Workday
 
 - program: APM (Associate Product Manager)
   company: Google
   url: https://www.google.com/about/careers/applications/jobs/results/?q=%22associate%20product%20manager%22
   opens_month: 8
-  window: "Aug–Sep 2026 for the 2027 cohort"
+  window: Aug–Sep 2026 for the 2027 cohort
   region: US / global
   fit: Product management (very selective, CS-friendly but open)
+  visa: US only — work visa needed, rarely sponsored for new grads
+  needs_sponsorship: true
 
 - program: APMM (Associate Product Marketing Manager)
   company: Google
   url: https://www.google.com/about/careers/applications/jobs/results/?q=%22associate%20product%20marketing%20manager%22
   opens_month: 8
-  window: "Aug–Oct 2026, multiple regions"
+  window: Aug–Oct 2026, multiple regions
   region: US / EMEA / APAC
   fit: Great fit for business-school profile (<3 yrs experience required)
+  visa: Mixed — target the France/EU roles, US ones need a visa
 
 - program: RPM (Rotational Product Manager)
   company: Meta
   url: https://www.metacareers.com/jobs?q=rotational%20product%20manager
   opens_month: 8
-  window: "Aug–Sep 2026 for 2027 start"
+  window: Aug–Sep 2026 for 2027 start
   region: US
   fit: Product management rotations
+  visa: US only — work visa needed, rarely sponsored for new grads
+  needs_sponsorship: true
 
 - program: Futureforce APM
   company: Salesforce
   url: https://careers.salesforce.com/en/students/
   opens_month: 9
-  window: "Sep–Oct 2026"
+  window: Sep–Oct 2026
   region: US
   fit: Product management for new grads
+  visa: US only — work visa needed, rarely sponsored for new grads
+  needs_sponsorship: true
 
 - program: New grad PM / Program Manager roles
   company: Microsoft
   url: https://careers.microsoft.com/v2/global/en/universityrecruiting
   opens_month: 8
-  window: "rolling from Aug 2026"
+  window: rolling from Aug 2026
   region: US / Europe
   fit: Product & program management, university hiring
+  visa: Mixed — target the France/EU roles, US ones need a visa
 
 - program: New grad Product / Program roles (+ intern return offers)
   company: Amazon
   url: https://amazon.jobs/en/teams/internships-for-students
   opens_month: 9
-  window: "rolling from Sep 2026"
+  window: rolling from Sep 2026
   region: Global (incl. Luxembourg EU HQ)
-  fit: "You're an intern there NOW — your return offer / full-time
-    conversion is worth more than any application. Talk to your manager
-    before your internship ends."
+  fit: You're an intern there NOW — your return offer / full-time conversion is worth more than any application.
+    Talk to your manager before your internship ends.
+  visa: Mixed — target the France/EU roles, US ones need a visa
 
 - program: Graduate Product Manager
   company: TikTok
   url: https://lifeattiktok.com/search?recruitment_id_list=202
   opens_month: 8
-  window: "Aug–Oct 2026"
+  window: Aug–Oct 2026
   region: US / Singapore / Europe
   fit: Product management, strong APAC presence (your Taiwan angle)
+  visa: Mixed — target the France/EU roles, US ones need a visa
 
 - program: APM
   company: Uber
   url: https://www.uber.com/us/en/careers/teams/university/
   opens_month: 8
-  window: "Aug–Sep 2026 (not every year — check)"
+  window: Aug–Sep 2026 (not every year — check)
   region: US
   fit: Product management
+  visa: US only — work visa needed, rarely sponsored for new grads
+  needs_sponsorship: true
 
 - program: Graduate programs (retail/luxury — less ideal but strong FR option)
   company: LVMH
   url: https://www.lvmh.com/en/join-us/our-job-offers
   opens_month: 9
-  window: "Sep–Nov 2026"
+  window: Sep–Nov 2026
   region: France / global
   fit: Strategy / project roles in a big French group, lots of VIEs too
+  visa: Recruits from France — no sponsorship issue for France-based roles
 
 - program: Management Trainee Program
   company: L'Oréal
   url: https://careers.loreal.com/en_US/students
   opens_month: 9
-  window: "Sep–Oct 2026"
+  window: Sep–Oct 2026
   region: France / global
   fit: Product/brand management, business-school classic
+  visa: Recruits from France — no sponsorship issue for France-based roles

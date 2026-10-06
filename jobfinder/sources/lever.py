@@ -18,6 +18,7 @@ def fetch(config: dict) -> list[Offer]:
         try:
             resp = requests.get(API.format(slug), timeout=20, headers={"User-Agent": UA})
             if resp.status_code == 404:
+                print(f"[Lever {slug}: not found]", end=" ")
                 continue
             resp.raise_for_status()
             jobs = resp.json()

@@ -5,6 +5,8 @@ Rules:
 - an "include" word in the title  -> +10 each (at least one required)
 - a "boost" word in title/descr.  -> +2 each
 - location matches a preferred place -> +5
+- start date stated and inside the window -> +3
+- company smaller than company_size.min_employees -> dropped
 - internship/VIE detected -> tagged (no penalty, they're wanted too)
 """
 import re
@@ -96,6 +98,8 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
     win_to = str(window.get("to") or "")
     keep_undated = bool(window.get("keep_undated"))
     preferred = [p.lower() for p in (config.get("locations") or {}).get("preferred") or []]
+    size_cfg = config.get("company_size") or {}
+    min_emp = int(size_cfg.get("min_employees") or 0)
 
     # fold accents everywhere so "chargé" matches "charge", etc.
     include = [_fold(w) for w in include]
@@ -115,6 +119,8 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
             continue
         if any(_has_word(c, company) for c in bad_companies):
             continue
+        if o.employees is not None and o.employees < min_emp:
+            continue  # too small (startup)
         folded_desc = _fold(o.description)
         if any(d in folded_desc for d in dq_plain):
             continue
@@ -122,20 +128,28 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
             continue
 
         # start-date window filter
+        date_fits = False
         if win_from and win_to:
             if not o.start_date:
                 o.start_date = extract_start_date(o.description)
             if o.start_date:
                 if not (win_from <= o.start_date <= win_to):
                     continue
+                date_fits = True
             elif not keep_undated:
                 continue
 
+        is_vie_title = re.search(r"\bv\.?i\.?e\.?\b", title) is not None
         matched = [w for w in include if _has_word(w, title)]
+        if is_vie_title:
+            matched.append("vie")
         if not matched:
             continue
         o.score = 10 * len(matched)
         o.reasons = [f"title: {w}" for w in matched]
+        if date_fits:
+            o.score += 3
+            o.reasons.append("start date fits")
 
         boosted = [w for w in boost if _has_word(w, title) or _has_word(w, desc)]
         o.score += 2 * len(boosted)
@@ -146,7 +160,7 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
             o.reasons.append("location match")
 
         # companies sometimes advertise VIE roles on their own boards
-        if o.source != "VIE" and re.search(r"\bv\.?i\.?e\.?\b", title):
+        if o.source != "VIE" and is_vie_title:
             o.contract = "VIE"
         if not o.contract:
             o.contract = "Internship" if any(w in title for w in INTERNSHIP_WORDS) else "Full-time"

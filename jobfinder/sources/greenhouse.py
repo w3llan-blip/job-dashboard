@@ -25,6 +25,7 @@ def fetch(config: dict) -> list[Offer]:
         try:
             resp = requests.get(API.format(slug), timeout=20, headers={"User-Agent": UA})
             if resp.status_code == 404:
+                print(f"[Greenhouse {slug}: not found]", end=" ")
                 continue  # company not on Greenhouse (or renamed slug)
             resp.raise_for_status()
             jobs = resp.json().get("jobs") or []
