@@ -155,7 +155,8 @@ keywords:
 # (most company job posts are "start ASAP" and say nothing — set this
 # to true around early 2027 so those come back).
 start_window:
-  from: "2027-01"
+  from: "2027-01"          # VIE and graduate programs
+  internship_from: "2027-03"   # internships: master's ends in April
   to: "2027-09"
   # true = offers that don't state a start date are KEPT (shown with a
   # "DATE ?" badge, ranked below offers whose date fits). With false, you

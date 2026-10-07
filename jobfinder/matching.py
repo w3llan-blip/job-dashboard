@@ -151,6 +151,7 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
             dq_plain.append(_fold(d))
     window = config.get("start_window") or {}
     win_from, win_to = str(window.get("from") or ""), str(window.get("to") or "")
+    intern_from = str(window.get("internship_from") or win_from)
     keep_undated = bool(window.get("keep_undated"))
     preferred = fold_all((config.get("locations") or {}).get("preferred"))
     min_emp = int((config.get("company_size") or {}).get("min_employees") or 0)
@@ -236,8 +237,10 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
         if win_from and win_to:
             if not o.start_date:
                 o.start_date = extract_start_date(o.description)
+            # internships start later (end of the master's); VIE / grad keep win_from
+            start_min = intern_from if (is_intern and not is_vie and not is_grad) else win_from
             if o.start_date:
-                if not (win_from <= o.start_date <= win_to):
+                if not (start_min <= o.start_date <= win_to):
                     _drop("date de début hors de ta fenêtre")
                     continue
                 date_fits = True
