@@ -1,137 +1,222 @@
-# Graduate / early-career programs worth tracking for a 2027 start.
-# opens_month = month applications typically open (1-12). On the 1st of
-# that month, the daily notification reminds you to go check.
-# Dates are typical patterns from previous years — always verify on the page.
-# visa = what it means for a work permit. needs_sponsorship: true = the
-# program is greyed out on the dashboard and gets no reminder.
+# Graduate programs précis à suivre pour une arrivée en 2027.
+# opens_month = mois d'ouverture des candidatures (1-12) : le 1er de ce mois,
+# la notification du jour te rappelle d'aller postuler.
+# window commence par "Vérifié" quand les dates 2027 ont été lues sur la page
+# officielle (octobre 2026) ; sinon c'est la tendance des années précédentes.
+# Écartés volontairement : programmes marketing, programmes réservés aux
+# ingénieurs, et programmes hors UE sans sponsoring de visa (UK, US).
 
-- program: CVthèque VIE (be visible to companies)
+# ---------------------------------------------------------------- dates vérifiées
+
+- program: Graduate Management Traineeship (GMT) — France
+  company: AB InBev
+  url: https://europecareers.ab-inbev.com/programmes/graduate-management-traineeship
+  opens_month: 9
+  window: "Vérifié : ouvert maintenant, jusqu'à novembre 2026 (places pourvues au fil de l'eau). Début août 2027, 10 mois"
+  region: France (aussi Belgique, Pays-Bas, Allemagne, Italie)
+  visa: UE — aucun visa
+  fit: "3 rotations Sales / Commercial / Supply Chain / Transformation digitale. Anglais + français. À faire en premier : c'est ouvert et ça se remplit vite"
+
+- program: Graduate Programmes (Commercial Business, Technology & Business, Procurement & Supply Chain, Global Finance)
+  company: Novo Nordisk
+  url: https://www.novonordisk.com/careers/early-career-programmes/graduate.html
+  opens_month: 12
+  window: "Vérifié : du 6 décembre 2026 au 5 janvier 2027. Début 1er septembre 2027, 2 ans"
+  region: Danemark (siège) + rotations à l'international
+  visa: UE — aucun visa
+  fit: "Anglais seulement, danois non requis. Master 2026/2027, moins d'1 an d'expérience, expérience internationale demandée : ton profil coche tout"
+
+- program: Global Graduate Program (Commerce, Finance, Supply Chain)
+  company: Heineken Pays-Bas
+  url: https://theheinekencompany-rmk.jobs.hr.cloud.sap/TheNetherlands/go/Traineeships-The-Netherlands/9195101/
+  opens_month: 9
+  window: "Vérifié : candidatures au 2nd semestre 2026, début mars 2027 — trop tôt si ton master finit en avril, à vérifier avec eux"
+  region: Pays-Bas + une rotation à l'étranger
+  visa: UE — aucun visa
+  fit: "3 ans : 3 rotations de 6 mois puis un poste. Langue (néerlandais ?) non précisée : à vérifier"
+
+# ---------------------------------------------------------------- France (dates à confirmer)
+
+- program: Graduate programs Stratégie & Audit, Supply Chain, Logistique, Finance
+  company: Renault Group
+  url: https://www.renaultgroup.com/en/talent/students/graduate-programs/
+  opens_month: 10
+  window: Automne (tendance) — vérifie dès maintenant
+  region: France
+  visa: France — aucun visa
+  fit: "Un vrai track Stratégie, ce qui est rare en graduate program ; Supply Chain en plan B"
+
+- program: SeedZ Management Trainee — Operations, Finance, Digital, IT-Tech
+  company: L'Oréal
+  url: https://careers.loreal.com/fr_FR/content/FranceGradOpp
+  opens_month: 9
+  window: Septembre–octobre (tendance)
+  region: France / international
+  visa: France — aucun visa
+  fit: "Vise les tracks Operations ou Digital, pas Marketing/Commerce"
+
+- program: Kering Keys Management
+  company: Kering
+  url: https://www.kering.com/fr/talent/exprimez-votre-talent/les-programmes-kering-keys/
+  opens_month: 9
+  window: Automne (tendance)
+  region: France / international
+  visa: France — aucun visa
+  fit: "Programme management du luxe (pas le track Retail)"
+
+- program: Orange Graduate Programme
+  company: Orange
+  url: https://orange.jobs/site/fr-orange-graduate-programme/index.htm
+  opens_month: 10
+  window: Automne (tendance)
+  region: France
+  visa: France — aucun visa
+  fit: "Rotations dans la tech et le business d'un opérateur : proche du product/transformation"
+
+- program: Graduate programmes Tech & Transformation / Métiers transverses
+  company: BNP Paribas
+  url: https://group.bnpparibas/emploi-carriere/candidat-jeune-professionnel/graduate-programmes
+  opens_month: 10
+  window: Automne (tendance)
+  region: France / Europe
+  visa: France — aucun visa
+  fit: "Tracks transformation et projets, pas la finance de marché"
+
+- program: AXA Global Graduate Program
+  company: AXA
+  url: https://recrutement.axa.fr/etudiants/graduate-program
+  opens_month: 10
+  window: Automne (tendance)
+  region: France / international
+  visa: France — aucun visa
+  fit: "Rotations stratégie, transformation, data dans un groupe international"
+
+- program: Graduate programme Executive
+  company: Carrefour
+  url: https://recrute.carrefour.fr/nos-parcours-pour-les-jeunes/graduate-programmes/
+  opens_month: 10
+  window: Automne (tendance)
+  region: France
+  visa: France — aucun visa
+  fit: "Le parcours Executive (siège), pas Directeur de magasin"
+
+- program: Graduate program Supply Chain
+  company: Schneider Electric
+  url: https://www.se.com/uk/en/about-us/careers/students-young-professionals.jsp
+  opens_month: 10
+  window: Automne (tendance)
+  region: France / Europe
+  visa: UE — aucun visa
+  fit: "Supply chain dans un groupe industriel tech"
+
+- program: Management Trainee Program
+  company: Danone
+  url: https://careers.danone.com/isea/en/students-and-graduates.html
+  opens_month: 9
+  window: Septembre–octobre (tendance)
+  region: France / Europe
+  visa: UE — aucun visa
+  fit: "Vise Supply Chain ou Finance, pas Marketing"
+
+# ---------------------------------------------------------------- Europe (dates à confirmer)
+
+- program: Graduate Development Program EMEA (Supply Chain, Operations, Finance)
+  company: Philips
+  url: https://www.careers.philips.com/student/emea/en/graduate-development-program-emea
+  opens_month: 10
+  window: Automne (tendance)
+  region: Pays-Bas / Europe
+  visa: UE — aucun visa
+  fit: "2 rôles de 12 mois. Évite le track Marketing"
+
+- program: Junior Managers Program (tracks Strategy, Business)
+  company: Bosch
+  url: https://jobs.bosch.com/
+  opens_month: 9
+  window: Candidatures toute l'année
+  region: Allemagne principalement
+  visa: UE — aucun visa
+  fit: "Attention : l'allemand est souvent demandé — ne garde que les offres en anglais"
+
+- program: International Traineeship (Finance, IT)
+  company: Ahold Delhaize
+  url: https://careers.aholddelhaize.com/young-professionals/traineeships
+  opens_month: 3
+  window: "Vérifié : réouverture prévue en mars 2027"
+  region: Pays-Bas + un an à l'étranger
+  visa: UE — aucun visa
+  fit: "Fit moyen (tracks Finance / IT / RH / Retail Media), à garder en réserve"
+
+# ---------------------------------------------------------------- groupes déjà suivis + tech
+
+- program: CVthèque VIE (être visible des entreprises)
   company: Business France
   url: https://mon-vie-via.businessfrance.fr
   opens_month: 10
-  window: Anytime — create your profile now
-  region: Worldwide
-  visa: VIE — visa handled by Business France
-  fit: 'Many VIEs are filled without a public ad: companies search the candidate database'
+  window: Toute l'année — complète ton profil
+  region: Monde
+  visa: VIE — visa géré par Business France
+  fit: "Beaucoup de VIE sont pourvus sans annonce publique : les entreprises cherchent dans la CVthèque"
 
 - program: VIE & graduate roles
   company: Sanofi
   url: https://sanofi.wd3.myworkdayjobs.com/SanofiCareers
   opens_month: 9
-  window: Rolling — check the page
-  region: France / global
-  visa: VIE or France-based — no sponsorship issue
-  fit: Big VIE recruiter (already in your VIE results); also tracked daily via Workday
+  window: Au fil de l'eau
+  region: France / monde
+  visa: VIE ou France — aucun visa
+  fit: "Gros recruteur de VIE ; suivi chaque jour dans le dashboard (Workday)"
 
-- program: Graduate & VIE roles
+- program: International graduate & VIE
   company: Pernod Ricard
   url: https://pernodricard.wd3.myworkdayjobs.com/pernod-ricard
   opens_month: 9
-  window: Rolling — check the page
-  region: France / global
-  visa: VIE or France-based — no sponsorship issue
-  fit: Strategy / business roles in a French group; tracked daily via Workday
+  window: Au fil de l'eau
+  region: France / monde
+  visa: VIE ou France — aucun visa
+  fit: "Rôles stratégie/business ; suivi chaque jour dans le dashboard (Workday)"
 
-- program: Graduate, VIE & internship roles
-  company: Airbus
-  url: https://ag.wd3.myworkdayjobs.com/Airbus
-  opens_month: 9
-  window: Rolling — check the page
-  region: France / Germany / Spain / UK
-  visa: EU-based roles — no sponsorship issue
-  fit: Programme management, PMO, supply chain; tracked daily via Workday
-
-- program: Graduate, VIE & internship roles
+- program: Graduate & VIE (hors Marketing/Sales)
   company: Michelin
   url: https://michelinhr.wd3.myworkdayjobs.com/Michelin
   opens_month: 9
-  window: Rolling — check the page
-  region: France / global
-  visa: VIE or France-based — no sponsorship issue
-  fit: Supply chain, strategy, transformation; tracked daily via Workday
+  window: Au fil de l'eau
+  region: France / monde
+  visa: VIE ou France — aucun visa
+  fit: "Supply chain, transformation ; suivi chaque jour dans le dashboard (Workday)"
 
-- program: APM (Associate Product Manager)
-  company: Google
-  url: https://www.google.com/about/careers/applications/jobs/results/?q=%22associate%20product%20manager%22
-  opens_month: 8
-  window: Aug–Sep 2026 for the 2027 cohort
-  region: US / global
-  fit: Product management (very selective, CS-friendly but open)
-  visa: US only — work visa needed, rarely sponsored for new grads
-  needs_sponsorship: true
-
-- program: RPM (Rotational Product Manager)
-  company: Meta
-  url: https://www.metacareers.com/jobs?q=rotational%20product%20manager
-  opens_month: 8
-  window: Aug–Sep 2026 for 2027 start
-  region: US
-  fit: Product management rotations
-  visa: US only — work visa needed, rarely sponsored for new grads
-  needs_sponsorship: true
-
-- program: Futureforce APM
-  company: Salesforce
-  url: https://careers.salesforce.com/en/students/
-  opens_month: 9
-  window: Sep–Oct 2026
-  region: US
-  fit: Product management for new grads
-  visa: US only — work visa needed, rarely sponsored for new grads
-  needs_sponsorship: true
-
-- program: New grad PM / Program Manager roles
-  company: Microsoft
-  url: https://careers.microsoft.com/v2/global/en/universityrecruiting
-  opens_month: 8
-  window: rolling from Aug 2026
-  region: US / Europe
-  fit: Product & program management, university hiring
-  visa: Mixed — target the France/EU roles, US ones need a visa
-
-- program: New grad Product / Program roles (+ intern return offers)
-  company: Amazon
-  url: https://amazon.jobs/en/teams/internships-for-students
-  opens_month: 9
-  window: rolling from Sep 2026
-  region: Global (incl. Luxembourg EU HQ)
-  fit: You're an intern there NOW — your return offer / full-time conversion is worth more than any application.
-    Talk to your manager before your internship ends.
-  visa: Mixed — target the France/EU roles, US ones need a visa
-
-- program: Graduate Product Manager
-  company: TikTok
-  url: https://lifeattiktok.com/search?recruitment_id_list=202
-  opens_month: 8
-  window: Aug–Oct 2026
-  region: US / Singapore / Europe
-  fit: Product management, strong APAC presence (your Taiwan angle)
-  visa: Mixed — target the France/EU roles, US ones need a visa
-
-- program: APM
-  company: Uber
-  url: https://www.uber.com/us/en/careers/teams/university/
-  opens_month: 8
-  window: Aug–Sep 2026 (not every year — check)
-  region: US
-  fit: Product management
-  visa: US only — work visa needed, rarely sponsored for new grads
-  needs_sponsorship: true
-
-- program: Graduate programs (retail/luxury — less ideal but strong FR option)
+- program: Programmes jeunes diplômés et VIE des Maisons
   company: LVMH
   url: https://www.lvmh.com/en/join-us/our-job-offers
   opens_month: 9
-  window: Sep–Nov 2026
-  region: France / global
-  fit: Strategy / project roles in a big French group, lots of VIEs too
-  visa: Recruits from France — no sponsorship issue for France-based roles
+  window: Septembre–novembre (tendance)
+  region: France / monde
+  visa: France — aucun visa
+  fit: "Rôles stratégie/projets dans les Maisons, beaucoup de VIE"
 
-- program: Management Trainee Program
-  company: L'Oréal
-  url: https://careers.loreal.com/en_US/students
+- program: New grad Product / Program Manager (postes UE)
+  company: Amazon
+  url: https://amazon.jobs/en/teams/internships-for-students
   opens_month: 9
-  window: Sep–Oct 2026
-  region: France / global
-  fit: Product/brand management, business-school classic
-  visa: Recruits from France — no sponsorship issue for France-based roles
+  window: Au fil de l'eau depuis septembre
+  region: Luxembourg / Europe
+  visa: UE — aucun visa pour les postes européens
+  fit: "Ton stage ACES est ton meilleur levier : recontacte ton ancien manager pour un referral"
+
+- program: New grad PM / Program Manager (postes UE)
+  company: Microsoft
+  url: https://careers.microsoft.com/v2/global/en/universityrecruiting
+  opens_month: 8
+  window: Au fil de l'eau depuis août
+  region: Europe
+  visa: UE — aucun visa pour les postes européens
+  fit: "Product & program management ; vise Paris, Dublin, Amsterdam"
+
+- program: Graduate Product Manager (postes UE)
+  company: TikTok
+  url: https://lifeattiktok.com/search?recruitment_id_list=202
+  opens_month: 8
+  window: Août–octobre (tendance)
+  region: Europe (Dublin, Londres hors visa) / Singapour
+  visa: UE — Dublin sans visa ; Londres et Singapour demandent un visa
+  fit: "Product management ; vise les postes à Dublin"
