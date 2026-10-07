@@ -107,6 +107,9 @@ INTERN_DESC_RE = re.compile(r"stage de fin d.?etudes|end.of.studies internship|"
                             r"internship of [4-6] months|convention de stage")
 GRAD_RE = re.compile(r"graduate|trainee|rotational|leadership (?:development )?program|"
                      r"programme? jeunes? diplomes?|young graduate|early careers? program")
+# words that describe the contract format, not the job (no role points)
+FORMAT_WORDS = {"graduate", "graduate program", "graduate programme", "management trainee",
+                "rotational", "leadership program"}
 # apprenticeships don't validate the master's degree
 APPRENTICE_RE = re.compile(r"alternan|apprenti|work.study|contrat pro|werkstudent|"
                            r"working student|dual study|duales studium")
@@ -272,12 +275,16 @@ def _rank(o, title, desc, loc, matched, priority, boost, preferred,
         pts += n
         why.append(f"{text} (+{n})" if n >= 0 else f"{text} ({n})")
 
-    # 1. role (35)
-    top = [w for w in matched if w in priority]
+    # 1. role (35) — format words ("graduate program"...) say nothing
+    # about the job itself: they are scored in part 2, not here
+    roles = [w for w in matched if w not in FORMAT_WORDS]
+    top = [w for w in roles if w in priority]
     if top:
-        add(35 if len(set(matched)) > 1 else 32, "métier cœur de cible : " + ", ".join(dict.fromkeys(top)))
-    elif matched:
-        add(22 if len(set(matched)) > 1 else 20, "métier compatible : " + ", ".join(dict.fromkeys(matched)))
+        add(35 if len(set(roles)) > 1 else 32, "métier cœur de cible : " + ", ".join(dict.fromkeys(top)))
+    elif roles:
+        add(22 if len(set(roles)) > 1 else 20, "métier compatible : " + ", ".join(dict.fromkeys(roles)))
+    else:
+        add(12, "métier non précisé dans le titre (seulement le format)")
 
     # 2. level / contract (20)
     kind = (o.contract + " " + title).lower()

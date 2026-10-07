@@ -72,9 +72,9 @@ keywords:
     - program manager
     - chef de projet
     - charge de mission
-    - graduate program
-    - graduate programme
-    - management trainee
+    # "graduate program", "management trainee"... are a FORMAT, not a job:
+    # they stay in "include" (so the offer is kept) and the format earns
+    # its own points, but they no longer count as a core target role.
 
   # Bonus points if these appear (in the title or description)
   boost:
@@ -199,6 +199,10 @@ disqualifiers:
   - pharmacist
   - degree in law
   - law degree
+  # real estate / wealth management degrees
+  - "re:master[^.]{0,60}(?:immobili|gestion de patrimoine)"
+  - "re:(?:degree|master'?s?|msc)[^.]{0,40}real estate"
+  - real estate degree
   # visa: offers abroad that say they won't sponsor a work permit
   # (delete these lines if you get the right to work there)
   - no visa sponsorship
