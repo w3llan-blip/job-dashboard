@@ -85,6 +85,8 @@ details.why p{margin:6px 0 0;font-size:13px;line-height:1.45}
 .b-new{background:var(--new-bg);color:var(--new)} .b-vie{background:var(--vie-bg);color:var(--vie)}
 .b-grad{background:var(--grad-bg);color:var(--grad)} .b-visa{background:var(--visa-bg);color:var(--visa)}
 .b-nodate{background:var(--nodate-bg);color:var(--nodate)}
+.b-ideal{background:#ffe1ec;color:#a3164a}
+@media (prefers-color-scheme: dark){.b-ideal{background:#4a1a2c;color:#ff9cc0}}
 .empty{text-align:center;color:var(--muted);padding:40px 10px;background:var(--card);border:1px dashed var(--line);border-radius:10px}
 table.compact{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 table.compact th,table.compact td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line);font-size:13px;vertical-align:middle}
@@ -167,6 +169,7 @@ function toast(msg, undo){
 
 // ---------- filters ----------
 var CHIPS = [
+  ['ideal', 'Idéal', function(o){ return o.ideal; }],
   ['new', 'Nouveautés', function(o){ return o.n; }],
   ['vie', 'VIE', function(o){ return o.vie; }],
   ['stage', 'Stage', function(o){ return /intern|stage|stagiaire/i.test(o.ct + ' ' + o.t); }],
@@ -194,6 +197,7 @@ function sorter(a, b){
 // ---------- rendering ----------
 function badges(o){
   var h = '';
+  if (o.ideal) h += '<span class="badge b-ideal" title="Proche de ton stage idéal — détail dans « Détails »">IDÉAL</span>';
   if (o.n) h += '<span class="badge b-new">NEW</span>';
   if (o.vie) h += '<span class="badge b-vie">VIE</span>';
   if (o.grad) h += '<span class="badge b-grad">GRAD</span>';
@@ -401,6 +405,7 @@ def _offer_dict(o) -> dict:
         "vie": o.source == "VIE" or o.contract == "VIE",
         "grad": "graduate" in kind or "trainee" in kind,
         "visa": bool(getattr(o, "visa_ok", False)),
+        "ideal": bool(getattr(o, "ideal", False)),
         "reg": getattr(o, "region", ""),
         "sal": getattr(o, "salary_label", ""),
         "why": list(o.reasons or []), "desc": _snippet(o.description),

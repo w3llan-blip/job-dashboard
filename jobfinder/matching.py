@@ -28,6 +28,9 @@ from .salary import monthly_from_text, label as salary_label
 
 # why offers were dropped in the last run (shown in the "Sources" tab)
 LAST_DROPS: dict = {}
+# the "ideal:" section of config.yaml, folded (set by score_offers)
+IDEAL: dict = {}
+AI_CASE_RE = re.compile(r"\b(?:AI|IA|GenAI|GenIA|LLMs?)\b")
 
 INTERNSHIP_WORDS = ("intern", "internship", "stage", "stagiaire", "alternance", "apprenticeship")
 
@@ -135,6 +138,9 @@ def _drop(reason: str) -> None:
 
 def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
     LAST_DROPS.clear()
+    IDEAL.clear()
+    for k, v in (config.get("ideal") or {}).items():
+        IDEAL[k] = [_fold(x) for x in v or []]
     kw = config.get("keywords") or {}
     fold_all = lambda xs: [_fold(x) for x in xs or []]
     include = fold_all(kw.get("include"))
@@ -357,5 +363,52 @@ def _rank(o, title, desc, loc, matched, priority, boost, preferred,
     if o.visa_ok:
         why.append("visa sponsorisé mentionné")
 
+    # 9. your ideal internship (bonus up to +15, penalty -12)
+    bonus, hits = _ideal(o, title, desc, loc)
+    o.ideal = False
+    if bonus < 0:
+        add(bonus, "pas ton style : " + ", ".join(hits))
+    elif bonus > 0:
+        add(bonus, "proche de ton stage idéal : " + ", ".join(hits))
+        o.ideal = bonus >= 10
+
     o.score = max(0, min(100, pts))
     o.reasons = why
+
+
+def _ideal(o, title, desc, loc):
+    """Bonus for your ideal internship (strategy, change management around
+    AI/tech, international), penalty for Excel-heavy or local roles."""
+    if not IDEAL:
+        return 0, []
+    off = [w for w in IDEAL.get("turnoffs", []) if _has_word(w, title)]
+    if off:
+        return -12, off
+    pts, hits = 0, []
+
+    def theme(name, label, in_title, in_desc):
+        nonlocal pts
+        words = IDEAL.get(name, [])
+        if any(_has_word(w, title) for w in words):
+            pts += in_title
+            hits.append(label + " (titre)")
+        elif any(_has_word(w, desc) for w in words):
+            pts += in_desc
+            hits.append(label)
+
+    theme("strategy", "stratégie", 6, 2)
+    theme("change", "transformation / changement", 6, 3)
+    # AI: config words + the short acronyms, matched case-sensitive
+    ai_title = AI_CASE_RE.search(o.title or "") or any(_has_word(w, title) for w in IDEAL.get("ai", []))
+    ai_desc = AI_CASE_RE.search(o.description or "") or any(_has_word(w, desc) for w in IDEAL.get("ai", []))
+    if ai_title:
+        pts += 6
+        hits.append("IA (titre)")
+    elif ai_desc:
+        pts += 4
+        hits.append("IA")
+    theme("international", "international", 3, 2)
+    if any(_has_word(c, loc) for c in IDEAL.get("cities", [])):
+        pts += 3
+        hits.append("ville cible")
+    return min(15, pts), hits

@@ -150,6 +150,93 @@ keywords:
     - expert
     - confirmé
 
+# Your IDEAL internship: offers that match get bonus points and an
+# "IDÉAL" badge (filter chip "Idéal"). Words are searched in the title
+# (strong signal) and the description (weaker). Accents don't matter.
+ideal:
+  strategy:
+    - strategie d'entreprise
+    - corporate strategy
+    - strategie groupe
+    - group strategy
+    - strategy
+    - strategie
+    - plan strategique
+    - strategic planning
+    - corporate development
+  change:
+    - change management
+    - conduite du changement
+    - accompagnement du changement
+    - transformation
+    - adoption
+  ai:   # "AI", "IA", "GenAI", "LLM" are also detected (case-sensitive)
+    - intelligence artificielle
+    - artificial intelligence
+    - generative ai
+    - gen ai
+    - ia generative
+    - agentic
+    - agents ia
+    - ai agents
+  international:
+    - international
+    - worldwide
+    - cross-border
+    - multi-pays
+    - multi-country
+  # dream cities (small bonus)
+  cities:
+    - paris
+    - london
+    - londres
+    - new york
+    - shanghai
+    - tokyo
+    - hong kong
+    - taipei
+    - singapore
+    - singapour
+    - toronto
+    - montreal
+    - sydney
+    - melbourne
+    - berlin
+    - amsterdam
+    - dublin
+    - munich
+    - zurich
+    - madrid
+    - barcelona
+    - milan
+    - stockholm
+    - copenhagen
+    - casablanca
+    - lagos
+    - nairobi
+    - johannesburg
+    - cape town
+    - abidjan
+    - dakar
+  # Not you: too much Excel/data analysis, or too local a scope.
+  # Found in the TITLE: penalty and never "IDÉAL".
+  turnoffs:
+    - data analyst
+    - analyste de donnees
+    - analyste data
+    - reporting
+    - controle de gestion
+    - controleur de gestion
+    - business intelligence
+    - power bi
+    - pricing
+    - magasin
+    - store
+    - agence
+    - comptab
+    - test logiciel
+    - software testing
+
 # Only keep offers starting in this window (inclusive, format YYYY-MM).
 # keep_undated: what to do with offers that don't state a start date
 # (most company job posts are "start ASAP" and say nothing — set this
@@ -260,6 +347,7 @@ exclude_companies:
   - mc2i
   - inetum
   - "square management"
+  - julhiet
 
 # Visa: as a French citizen you can work / intern anywhere in the
 # EU/EEA and Switzerland. Outside (UK, US, Asia...), an offer is only kept
