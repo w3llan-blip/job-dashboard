@@ -75,20 +75,30 @@ _MONTHS = {
 }
 _MONTH_RE = "|".join(sorted(_MONTHS, key=len, reverse=True))
 _CUES = (r"(?:start(?:ing|s)?(?:\s+date)?|begin(?:ning)?|commence|as of|from|"
-         r"debut|demarrage|a partir de|des|prise de poste|disponible|available)")
+         r"debut|demarrage|a partir de|a compter|des|prise de poste|disponible|available)")
 
 _PATTERNS = [
     # "starting April 2027" / "début : avril 2027"
     re.compile(_CUES + r"\W{0,15}(?:\w+\W{1,3}){0,3}?(" + _MONTH_RE + r")\w*\W{1,3}(20\d{2})"),
     # "start: 04/2027"
     re.compile(_CUES + r"\W{0,15}(0?[1-9]|1[0-2])\s*/\s*(20\d{2})"),
+    # "de janvier à juin 2027" / "from January to June 2027"
+    re.compile(r"\b(" + _MONTH_RE + r")\w*\s+(?:a|au|to|-|–)\s+(?:" + _MONTH_RE + r")\w*\W{1,3}(20\d{2})"),
 ]
+# a title like "Strategy Intern - January 2027"
+_TITLE_DATE = re.compile(r"\b(" + _MONTH_RE + r")\w*\W{1,3}(20\d{2})")
 
 
-def extract_start_date(text: str) -> str:
-    """Return 'YYYY-MM' if the text states a job start date, else ''."""
+def extract_start_date(text: str, title: str = "") -> str:
+    """Return 'YYYY-MM' if the text (or a 'Month YYYY' in the title)
+    states a job start date, else ''."""
     t = _fold(text)
-    for pat in _PATTERNS:
+    pats = list(_PATTERNS)
+    if title:
+        m = _TITLE_DATE.search(_fold(title))
+        if m and _MONTHS.get(m.group(1)):
+            return f"{m.group(2)}-{_MONTHS[m.group(1)]:02d}"
+    for pat in pats:
         m = pat.search(t)
         if m:
             month_raw, year = m.group(1), m.group(2)
@@ -252,7 +262,7 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
         date_fits = False
         if win_from and win_to:
             if not o.start_date:
-                o.start_date = extract_start_date(o.description)
+                o.start_date = extract_start_date(o.description, o.title)
             # internships start later (end of the master's); VIE / grad keep win_from
             start_min = intern_from if (is_intern and not is_vie and not is_grad) else win_from
             if o.start_date:
