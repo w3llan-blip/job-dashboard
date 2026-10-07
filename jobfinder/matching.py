@@ -161,7 +161,10 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
     keep_undated = bool(window.get("keep_undated"))
     preferred = fold_all((config.get("locations") or {}).get("preferred"))
     min_emp = int((config.get("company_size") or {}).get("min_employees") or 0)
-    visa_rule = bool((config.get("visa") or {}).get("non_eu_requires_sponsorship", True))
+    visa_cfg = config.get("visa") or {}
+    visa_rule = bool(visa_cfg.get("non_eu_requires_sponsorship", True))
+    intern_ok_places = fold_all(visa_cfg.get("internship_ok_without_sponsorship"))
+    never_places = fold_all(visa_cfg.get("never_except_vie"))
     sal = config.get("salary") or {}
     south_min_intern = int(sal.get("south_europe_min_internship_month") or 1000)
     south_min = int(sal.get("south_europe_min_month") or 2500)
@@ -227,7 +230,14 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
             if o.salary_month < need:
                 _drop("Europe du Sud avec salaire trop bas")
                 continue
-        if visa_rule and o.region == "visa" and not is_vie and not o.visa_ok:
+        o.permit_ok = False
+        if o.region == "visa" and not is_vie and any(_has_word(w, loc) for w in never_places):
+            _drop("États-Unis hors VIE")
+            continue
+        if (o.region == "visa" and is_intern and not is_vie and not is_grad
+                and any(_has_word(w, loc) for w in intern_ok_places)):
+            o.permit_ok = True   # e.g. Canada co-op internship permit
+        if visa_rule and o.region == "visa" and not is_vie and not o.visa_ok and not o.permit_ok:
             _drop("hors Europe sans VIE ni sponsoring de visa")
             continue
 
@@ -330,7 +340,12 @@ def _rank(o, title, desc, loc, matched, priority, boost, preferred,
     elif o.region == "south":
         add(7, "Europe du Sud (salaire correct)")
     elif o.region == "visa":
-        add(6, "hors Europe (VIE)" if is_vie else "hors Europe, visa sponsorisé")
+        if is_vie:
+            add(6, "hors Europe (VIE)")
+        elif getattr(o, "permit_ok", False):
+            add(6, "Canada : permis stage coop (EIC) à demander toi-même")
+        else:
+            add(6, "hors Europe, visa sponsorisé")
     else:
         add(5, "lieu non reconnu")
 

@@ -355,6 +355,43 @@ exclude_companies:
 # ("VISA ✓" badge on the dashboard). false = show everything.
 visa:
   non_eu_requires_sponsorship: true
+  # Internships kept WITHOUT the offer mentioning sponsorship: a French
+  # student can get a work permit for a school internship himself
+  # (Canada: Expérience internationale Canada, "Stage coop international").
+  internship_ok_without_sponsorship:
+    - canada
+    - toronto
+    - montreal
+    - vancouver
+    - quebec
+    - ottawa
+    - calgary
+  # Never shown, even if the offer says it sponsors — except VIE
+  # (Business France handles the visa).
+  never_except_vie:
+    - united states
+    - etats-unis
+    - etats unis
+    - usa
+    - u.s.
+    - nyc
+    - new york
+    - san francisco
+    - boston
+    - chicago
+    - seattle
+    - austin
+    - los angeles
+    - washington
+    - atlanta
+    - miami
+    - denver
+    - california
+    - texas
+    - florida
+    - massachusetts
+    - illinois
+    - remote us
 
 # Your school only validates the master's with a VIE, an internship or a
 # graduate program: everything else (CDI, CDD, apprenticeship) is removed.
@@ -547,3 +584,7 @@ linkedin:
       location: ""
     - keywords: "graduate programme"
       location: "European Union"
+    - keywords: "strategy intern"
+      location: "Canada"
+    - keywords: "stage stratégie"
+      location: "Montréal, Québec, Canada"
