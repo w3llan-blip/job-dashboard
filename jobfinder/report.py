@@ -477,9 +477,18 @@ def _health_table(health, kept_by_source) -> str:
 </table></div>"""
 
 
+def _paris_now():
+    """Current time in Paris (GitHub's servers run on UTC)."""
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.now(ZoneInfo("Europe/Paris"))
+    except Exception:  # no time-zone database (e.g. Windows without tzdata)
+        return datetime.now()
+
+
 def write_reports(offers, programs=None, health=None, kept_by_source=None, drops=None) -> Path:
     OUT_DIR.mkdir(exist_ok=True)
-    stamp = datetime.now().strftime("%d/%m/%Y à %H:%M")
+    stamp = _paris_now().strftime("%d/%m/%Y à %H:%M")
     n_new = sum(1 for o in offers if o.is_new)
     data = json.dumps([_offer_dict(o) for o in offers], ensure_ascii=False)
     data = data.replace("</", "<\\/")   # keep the JSON safe inside <script>
