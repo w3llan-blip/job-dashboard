@@ -366,32 +366,9 @@ visa:
     - quebec
     - ottawa
     - calgary
-  # Never shown, even if the offer says it sponsors — except VIE
-  # (Business France handles the visa).
-  never_except_vie:
-    - united states
-    - etats-unis
-    - etats unis
-    - usa
-    - u.s.
-    - nyc
-    - new york
-    - san francisco
-    - boston
-    - chicago
-    - seattle
-    - austin
-    - los angeles
-    - washington
-    - atlanta
-    - miami
-    - denver
-    - california
-    - texas
-    - florida
-    - massachusetts
-    - illinois
-    - remote us
+  # Places never shown outside VIE, even if the offer sponsors the visa
+  # (empty = US offers that sponsor the visa are kept).
+  never_except_vie: []
 
 # Your school only validates the master's with a VIE, an internship or a
 # graduate program: everything else (CDI, CDD, apprenticeship) is removed.
