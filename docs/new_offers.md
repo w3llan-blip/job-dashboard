@@ -1,27 +1,8 @@
-**23 new offer(s) match your profile today.**
+**4 new offer(s) match your profile today.**
 
-- [Chargé.e de mission (scientifique) auprès du Service Scientifique du Consulat général de France à San Francisco (H/F)](https://mon-vie-via.businessfrance.fr/offres/246893) — MINISTERE DE L'EUROPE ET DES AFFAIRES ETRANGERES — San Francisco -Ca-, Etats-Unis — VIE (12 months)
-- [Stage - Chef/fe de projet Transformation Durable (H/F)](https://www.welcometothejungle.com/fr/companies/lacoste/jobs/stage-chef-fe-de-projet-transformation-durable-h-f_paris-16e-arrondissement) — Lacoste — Paris-16e-Arrondissement, France — Stage
-- [Internship - Epr & Circularity Strategy Analyst M/f/x](https://www.welcometothejungle.com/fr/companies/hager-group/jobs/internship-epr-circularity-strategy-analyst-m-f-x_obernai) — Hager — Obernai, France — Stage
-- [SALES & SUPPLY CHAIN COORDINATOR & TECHNICAL SUPPORT FOR TUNNELLING PROJECTS (H/F)](https://mon-vie-via.businessfrance.fr/offres/246890) — CONDAT SA — Melbourne, Australie — VIE (24 months)
-- [STAGE - Assistant Business Developer Stars Unit H/F](https://www.welcometothejungle.com/fr/companies/essilor/jobs/stage-assistant-business-developer-stars-unit-h-f_paris_EF_bADY7O) — EssilorLuxottica France — Paris, France — Stage
-- [STAGE - Assistant Chef de Projet Expérience Client Europe & Moyen Orient (H/F)](https://www.welcometothejungle.com/fr/companies/hermes/jobs/stage-assistant-chef-de-projet-experience-client-europe-moyen-orient-h-f_paris) — Hermès — Paris, France — Stage
-- [STAGE - Assistant Chef de projet SI (H/F)](https://www.welcometothejungle.com/fr/companies/hermes/jobs/stage-assistant-chef-de-projet-si-h-f_pantin_HERMS_rPbVjMO) — Hermès — Pantin, France — Stage
-- [Stage - PMO programme IA H/F](https://www.welcometothejungle.com/fr/companies/synetis/jobs/stage-pilotage-programme-transformation-ia-h-f_paris) — Synetis — Paris, France — Stage
-- [Stage - Conseil en stratégie - Energie](https://fr.linkedin.com/jobs/view/stage-conseil-en-strat%C3%A9gie-energie-at-afry-4441491475) — AFRY — Paris, Île-de-France, France — Stage
-- [Stagiaire Executive Strategy Partner F/H](https://fr.linkedin.com/jobs/view/stagiaire-executive-strategy-partner-f-h-at-walter-learning-4477896952) — Walter Learning — Marseille, Provence-Alpes-Côte d'Azur, France — Stage
-- [Intern, Aftermarket Product Strategy and Business Development (Winter 2027)](https://ca.linkedin.com/jobs/view/intern-aftermarket-product-strategy-and-business-development-winter-2027-at-bombardier-4477855127) — Bombardier — Dorval, Quebec, Canada — Stage
-- [Enterprise Strategy (CEO’s Office), MBA Intern](https://ca.linkedin.com/jobs/view/enterprise-strategy-ceo%E2%80%99s-office-mba-intern-at-olg-4476870209) — OLG — Toronto, Ontario, Canada — Stage
-- [Winter Co-op 2027 - Strategy Intern](https://ca.linkedin.com/jobs/view/winter-co-op-2027-strategy-intern-at-manulife-4476879907) — Manulife — Toronto, Ontario, Canada — Stage
-- [Stage chargé de projet RH F/H/X](https://www.welcometothejungle.com/fr/companies/socomec-1/jobs/stage-charge-de-projet-rh-f-h-x_benfeld) — Socomec — Benfeld, France — Stage
-- [Stage - Business Developer / SDR](https://fr.linkedin.com/jobs/view/stage-business-developer-sdr-at-manty-4476813634) — Manty — Paris, Île-de-France, France — Stage
-- [Stage – Chargé de projet Supply Chain – F/H](https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/stage-charge-de-projet-supply-chain-f-h_guichainville_SE_1kze4O) — Schneider Electric — Guichainville, France — Stage
-- [Stage 2027 - Résilience de la Supply Chain aéronautique face au changement climatique (All Gender)](https://ag.wd3.myworkdayjobs.com/Airbus/job/Toulouse-Area/Stage-2027---Rsilience-de-la-Supply-Chain-aronautique-face-au-changement-climatique--All-Gender-_JR10449613) — Airbus — Toulouse Area, France — Stage
-- [Product Manager Immobilier Intern H/F](https://www.welcometothejungle.com/fr/companies/bnp-paribas/jobs/product-manager-immobilier-intern-h-f_puteaux) — BNP Paribas — Puteaux, France — Stage
-- [Stage - Chargé de Missions Supply Chain amont et aval - F/H](https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/stage-charge-de-missions-supply-chain-amont-et-aval-f-h_champforgeuil) — Schneider Electric — Champforgeuil, France — Stage
-- [R&D Biomedical/Mechanical Engineering Graduate Program - September 2027](https://ie.linkedin.com/jobs/view/r-d-biomedical-mechanical-engineering-graduate-program-september-2027-at-stryker-4471193479) — Stryker — Cork, County Cork, Ireland — Graduate program
-- [Graduate Programme (d/m/w) Compliance & Anti-Financial Crime 2027 Deutsche Bank](https://de.linkedin.com/jobs/view/graduate-programme-d-m-w-compliance-anti-financial-crime-2027-deutsche-bank-at-bhw-bausparkasse-ag-4475620092) — BHW Bausparkasse AG — Frankfurt am Main, Hesse, Germany — Graduate program
-- [Global Graduate Program](https://se.linkedin.com/jobs/view/global-graduate-program-at-gkn-aerospace-sweden-4476294182) — GKN Aerospace Sweden — Trollhättan, Västra Götaland County, Sweden — Graduate program
-- [Management Trainee (m/w/d) – Mandarin Speaking](https://de.linkedin.com/jobs/view/management-trainee-m-w-d-%E2%80%93-mandarin-speaking-at-j-t-express-germany-gmbh-4476733772) — J&T Express Germany GmbH — Nieder Olm, Rhineland-Palatinate, Germany — Graduate program
+- [STAGE - Chef de Projet Data Logistique (H/F)](https://www.welcometothejungle.com/fr/companies/hermes/jobs/stage-chef-de-projet-data-logistique-h-f_bobigny_HERMS_0jxPAyd) — Hermès — Bobigny, France — Stage
+- [Stage - Data Catalog, Data Quality & IA : Optimistion et intégration - Global Supply Chain (GSC) -F/H](https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/stage-data-catalog-data-quality-ia-optimistion-et-integration-global-supply-chain-gsc-f-h_grenoble) — Schneider Electric — Grenoble, France — Stage
+- [STAGE - Assistant(e) Chef de Projet Evènements Internationaux (H/F)](https://fr.linkedin.com/jobs/view/stage-assistant-e-chef-de-projet-ev%C3%A8nements-internationaux-h-f-at-chaumet-4460369081) — CHAUMET — Paris, Île-de-France, France — Stage
+- [Business Developer Intern Spain (H/F)](https://fr.linkedin.com/jobs/view/business-developer-intern-spain-h-f-at-pysae-4477687912) — Pysae — Paris, Île-de-France, France — Stage
 
 Full list: see your dashboard (GitHub Pages link in the README).
