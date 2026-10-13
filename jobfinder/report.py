@@ -5,7 +5,8 @@ Output goes to docs/ so GitHub Pages can serve it at a public URL.
 The page embeds today's offers as data and renders them in the browser.
 Your choices (Pas intéressé / Postulé / À garder, application status,
 notes) are stored in the browser (localStorage), keyed by offer id, so
-they survive the daily refresh. Offers you applied to are saved with
+they survive the daily refresh. Optionally they are synced between devices
+through a private GitHub gist (the "Synchroniser" panel at the bottom). Offers you applied to are saved with
 their title/company/link, so they stay in "Candidatures" even after the
 offer disappears from the job sites.
 """
@@ -105,6 +106,9 @@ footer .btn{font-size:12px;padding:4px 8px}
 #toast.show{transform:translateX(-50%) translateY(0)}
 #toast button{background:none;border:0;color:#8fb0ff;font:inherit;font-weight:700;cursor:pointer}
 .hidden{display:none!important}
+.syncp{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:10px 0;font-size:13px;color:var(--ink)}
+.syncp p{margin:0 0 8px} .syncp ol{margin:0 0 8px;padding-left:20px}
+.syncp input{font:inherit;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);width:min(320px,100%)}
 .kbd{font-family:ui-monospace,monospace;font-size:11px;border:1px solid var(--line);border-radius:4px;padding:0 4px}
 @media (max-width:640px){
   .wrap{padding:10px}
@@ -123,6 +127,8 @@ var KEY = 'jd_state_v1', UIKEY = 'jd_ui_v1';
 function load(k, d){ try { var v = JSON.parse(localStorage.getItem(k)); return v || d; } catch(e){ return d; } }
 function save(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
 var S = load(KEY, {});      // id -> {s:'hidden'|'applied'|'saved', t:'YYYY-MM-DD', o:{...}, st, note}
+var DELKEY = 'jd_del_v1';
+var D = load(DELKEY, {});    // id -> time (ms) the choice was removed, so removals sync too
 var UI = load(UIKEY, {});
 UI.tab = UI.tab || 'todo'; UI.chips = UI.chips || []; UI.sort = UI.sort || 'score'; UI.q = '';
 var byId = {}; OFFERS.forEach(function(o){ byId[o.id] = o; });
@@ -140,6 +146,9 @@ function ago(d){
 }
 function snap(o){ return o ? {t:o.t, c:o.c, u:o.u, l:o.l, ct:o.ct, src:o.src} : {}; }
 function stateOf(id){ return S[id] ? S[id].s : ''; }
+function touch(id){ if (S[id]) S[id].m = Date.now(); delete D[id]; }
+function drop(id){ delete S[id]; D[id] = Date.now(); }
+function commit(){ save(KEY, S); save(DELKEY, D); syncSoon(); }
 
 // ---------- actions with undo ----------
 var LABEL = {hidden:'Offre masquée', applied:'Ajoutée à tes candidatures', saved:'Gardée pour plus tard'};
@@ -147,16 +156,17 @@ function setState(id, s){
   var prev = S[id] ? JSON.parse(JSON.stringify(S[id])) : null;
   var o = byId[id] || (S[id] && S[id].o);
   if (s === null || (S[id] && S[id].s === s && s === 'saved')) {
-    delete S[id];
+    drop(id);
     toast('Remise dans « À voir »', undo);
   } else {
     var cur = S[id] || {};
     S[id] = {s:s, t:(cur.s === s ? cur.t : today()), o:snap(o), st:cur.st, note:cur.note || ''};
     if (s === 'applied' && !S[id].st) S[id].st = 'Postulé';
+    touch(id);
     toast(LABEL[s], undo);
   }
-  function undo(){ if (prev) S[id] = prev; else delete S[id]; save(KEY, S); render(); }
-  save(KEY, S); render();
+  function undo(){ if (prev){ S[id] = prev; touch(id); } else drop(id); commit(); render(); }
+  commit(); render();
 }
 
 var toastTimer;
@@ -339,7 +349,7 @@ document.addEventListener('click', function(e){
 document.addEventListener('change', function(e){
   var f = e.target.dataset && e.target.dataset.field; if (!f) return;
   var id = e.target.closest('[data-id]').dataset.id; if (!S[id]) return;
-  S[id][f] = e.target.value; save(KEY, S);
+  S[id][f] = e.target.value; touch(id); commit();
   if (f === 'st') renderApplied();
 });
 $('#q').addEventListener('input', function(e){ UI.q = e.target.value; renderTodo(); });
@@ -347,7 +357,7 @@ $('#sort').value = UI.sort;
 $('#sort').addEventListener('change', function(e){ UI.sort = e.target.value; render(); });
 $('#restore-all').addEventListener('click', function(){
   if (!confirm('Restaurer toutes les offres masquées ?')) return;
-  Object.keys(S).forEach(function(id){ if (S[id].s === 'hidden') delete S[id]; }); save(KEY, S); render();
+  Object.keys(S).forEach(function(id){ if (S[id].s === 'hidden') drop(id); }); commit(); render();
 });
 
 // keyboard: J/K move, X hide, A applied, S save, O open, / search
@@ -380,12 +390,102 @@ $('#import').addEventListener('change', function(e){
   var r = new FileReader();
   r.onload = function(){
     try { var data = JSON.parse(r.result), n = 0;
-      Object.keys(data).forEach(function(id){ if (data[id] && data[id].s){ S[id] = data[id]; n++; } });
-      save(KEY, S); render(); toast(n + ' éléments importés', function(){});
+      Object.keys(data).forEach(function(id){ if (data[id] && data[id].s){ S[id] = data[id]; touch(id); n++; } });
+      commit(); render(); toast(n + ' éléments importés', function(){});
     } catch(err){ alert('Fichier invalide'); }
   };
   r.readAsText(file); e.target.value = '';
 });
+
+// ---------- sync between devices (a private gist on your GitHub account) ----------
+var SYNCKEY = 'jd_sync_v1', FILE = 'job-dashboard-choices.json';
+var SY = load(SYNCKEY, null);
+(function(){  // link opened from another device: #sync=<token>&gist=<id>
+  var m = location.hash.match(/sync=([^&]+)&gist=([0-9a-f]+)/);
+  if (!m) return;
+  SY = {token: decodeURIComponent(m[1]), gist: m[2]}; save(SYNCKEY, SY);
+  history.replaceState(null, '', location.pathname + location.search);
+})();
+function gh(method, path, body){
+  return fetch('https://api.github.com' + path, {method: method, cache: 'no-store',
+    headers: {'Authorization': 'Bearer ' + SY.token, 'Accept': 'application/vnd.github+json'},
+    body: body ? JSON.stringify(body) : undefined
+  }).then(function(r){ if (!r.ok) throw r.status; return r.json(); });
+}
+function ensureGist(){
+  if (SY.gist) return Promise.resolve();
+  return gh('GET', '/gists?per_page=100').then(function(list){
+    var g = list.filter(function(x){ return x.files && x.files[FILE]; })[0];
+    if (g){ SY.gist = g.id; save(SYNCKEY, SY); return; }
+    var files = {}; files[FILE] = {content: JSON.stringify({v:1, S:{}, D:{}})};
+    return gh('POST', '/gists', {description: 'Dashboard stage — mes choix (synchro)', public: false, files: files})
+      .then(function(g){ SY.gist = g.id; save(SYNCKEY, SY); });
+  });
+}
+// newest change wins, offer by offer (a removal counts as a change)
+function mergeIn(R){
+  var rs = R.S || {}, rd = R.D || {}, ids = {}, res = {pulled: false, push: false};
+  [S, D, rs, rd].forEach(function(o){ Object.keys(o).forEach(function(k){ ids[k] = 1; }); });
+  Object.keys(ids).forEach(function(id){
+    var ls = S[id] ? (S[id].m || 0) : -1, ld = D[id] != null ? D[id] : -1;
+    var rS = rs[id] ? (rs[id].m || 0) : -1, rD = rd[id] != null ? rd[id] : -1;
+    var lt = Math.max(ls, ld), rt = Math.max(rS, rD);
+    if (rt > lt){
+      res.pulled = true;
+      if (rS >= rD){ S[id] = rs[id]; delete D[id]; } else { delete S[id]; D[id] = rD; }
+    } else if (lt > rt) res.push = true;
+  });
+  return res;
+}
+var syncBusy = false, syncAgain = false, syncTimer;
+function syncLabel(t){ $('#sync').textContent = t; }
+function sync(){
+  if (!SY || !SY.token) return Promise.resolve();
+  if (syncBusy){ syncAgain = true; return Promise.resolve(); }
+  syncBusy = true; syncLabel('⟳ Synchro…');
+  return ensureGist().then(function(){ return gh('GET', '/gists/' + SY.gist); })
+    .then(function(g){
+      var f = g.files[FILE], R = {};
+      try { R = JSON.parse((f && f.content) || '{}'); } catch(e){}
+      var r = mergeIn(R);
+      if (r.pulled){ save(KEY, S); save(DELKEY, D); render(); }
+      if (r.push){ var files = {}; files[FILE] = {content: JSON.stringify({v:1, S:S, D:D})};
+        return gh('PATCH', '/gists/' + SY.gist, {files: files}); }
+    })
+    .then(function(){ syncLabel('✓ Synchronisé'); return true; },
+      function(err){
+        if (err === 404 && SY.gist){ delete SY.gist; save(SYNCKEY, SY); }  // gist deleted: make a new one next time
+        syncLabel(err === 401 ? '⚠ Clé GitHub refusée' : '⚠ Synchro impossible'); return false; })
+    .then(function(ok){ syncBusy = false; if (syncAgain){ syncAgain = false; sync(); } return ok; });
+}
+function syncSoon(){ clearTimeout(syncTimer); syncTimer = setTimeout(sync, 1500); }
+function syncPanel(){
+  $('#sync-setup').classList.toggle('hidden', !!(SY && SY.token));
+  $('#sync-ready').classList.toggle('hidden', !(SY && SY.token));
+  if (!(SY && SY.token)) syncLabel('🔄 Synchroniser mes appareils');
+}
+$('#sync').addEventListener('click', function(){ syncPanel(); $('#sync-panel').classList.toggle('hidden'); });
+$('#sync-connect').addEventListener('click', function(){
+  var t = $('#sync-token').value.trim(); if (!t) return;
+  SY = {token: t}; save(SYNCKEY, SY);
+  sync().then(function(ok){
+    if (ok){ $('#sync-token').value = ''; syncPanel(); toast('Synchro activée', function(){}); }
+    else { SY = null; save(SYNCKEY, null); alert('Connexion impossible. Vérifie que la clé est bien copiée et que la case « gist » est cochée.'); syncPanel(); }
+  });
+});
+$('#sync-copy').addEventListener('click', function(){
+  var link = location.origin + location.pathname + '#sync=' + encodeURIComponent(SY.token) + '&gist=' + SY.gist;
+  (navigator.clipboard ? navigator.clipboard.writeText(link) : Promise.reject()).then(function(){
+    toast('Lien copié — ouvre-le sur ton autre appareil', function(){}); },
+    function(){ prompt('Copie ce lien et ouvre-le sur ton autre appareil :', link); });
+});
+$('#sync-now').addEventListener('click', function(){ sync(); });
+$('#sync-disconnect').addEventListener('click', function(){
+  if (!confirm('Arrêter la synchro sur cet appareil ? Tes choix restent enregistrés ici.')) return;
+  SY = null; save(SYNCKEY, null); syncPanel();
+});
+document.addEventListener('visibilitychange', function(){ if (document.visibilityState === 'visible') sync(); });
+syncPanel(); sync();
 
 render();
 })();
@@ -546,8 +646,25 @@ def write_reports(offers, programs=None, health=None, kept_by_source=None, drops
 <section data-view="programs" class="hidden">{_grad_table(programs)}</section>
 <section data-view="sources" class="hidden">{_health_table(health, kept_by_source or {})}{_drops_table(drops)}</section>
 
+<div id="sync-panel" class="syncp hidden">
+  <div id="sync-setup">
+    <p><b>Retrouver tes choix sur l'ordi, l'iPad et le téléphone.</b> Ils sont enregistrés dans un gist privé de ton compte GitHub. À faire une seule fois :</p>
+    <ol>
+      <li><a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=Dashboard%20stage%20-%20synchro" target="_blank" rel="noopener">Crée une clé GitHub</a> : laisse seulement la case « gist » cochée, choisis « No expiration », puis « Generate token ».</li>
+      <li>Copie la clé (elle commence par ghp_) et colle-la ici :</li>
+    </ol>
+    <input id="sync-token" placeholder="ghp_…" autocomplete="off" spellcheck="false"> <button class="btn primary" id="sync-connect">Connecter</button>
+  </div>
+  <div id="sync-ready">
+    <p>La synchro est activée sur cet appareil. Pour l'activer sur un autre, copie ce lien, envoie-le-toi (AirDrop, message) et ouvre-le là-bas une fois. Garde-le pour toi : il donne accès à tes choix.</p>
+    <button class="btn" id="sync-copy">Copier le lien</button>
+    <button class="btn" id="sync-now">Synchroniser maintenant</button>
+    <button class="btn" id="sync-disconnect">Arrêter sur cet appareil</button>
+  </div>
+</div>
 <footer>
-  <span>Tes choix sont enregistrés dans ce navigateur. Pour les passer sur un autre appareil :</span>
+  <button class="btn" id="sync">🔄 Synchroniser mes appareils</button>
+  <span>· Sauvegarde manuelle :</span>
   <button class="btn" id="export">Exporter</button>
   <label class="btn">Importer<input id="import" type="file" accept="application/json" hidden></label>
   <span class="hide-sm">· Clavier : <span class="kbd">J</span>/<span class="kbd">K</span> naviguer,

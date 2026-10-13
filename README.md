@@ -75,9 +75,14 @@ search box. Keyboard: J/K to move, A applied, X not interested,
 S keep, O open, / search.
 
 Your choices are saved **in the browser** you use (they survive the
-daily update). To carry them to another device, use **Exporter** at the
-bottom of the page, then **Importer** on the other one. The online
-dashboard and the local `Find Jobs.bat` page don't share choices.
+daily update). To see the same choices on your computer, iPad and phone,
+click **🔄 Synchroniser mes appareils** at the bottom of the page: create
+a GitHub key with only the `gist` box ticked, paste it once, then use
+**Copier le lien** and open that link once on each other device. Your
+choices are then kept in a private gist on your GitHub account and synced
+whenever you change something or come back to the page (the newest change
+wins, offer by offer). **Exporter / Importer** still work as a manual
+backup. The local `Find Jobs.bat` page doesn't sync.
 
 ## Turning on France Travail (optional, 10 minutes)
 
