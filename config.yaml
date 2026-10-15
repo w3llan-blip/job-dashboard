@@ -318,6 +318,7 @@ exclude_companies:
   - consulting
   - consultants
   - conseil
+  - capgemini         # engineering / IT side; Capgemini Invent is under consulting:
   - alten
   - altran
   - sopra steria
@@ -361,7 +362,6 @@ consulting:
     # transformation, data & AI consulting
     - accenture
     - capgemini invent
-    - capgemini
     - wavestone
     - converteo
     - artefact
@@ -425,6 +425,10 @@ consulting:
     - juridique
     - legal
     - avocat
+    - droit
+    - law
+    - mba
+    - thesis
     - lawyer
     - transaction services
     - transaction

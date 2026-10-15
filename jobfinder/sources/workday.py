@@ -21,7 +21,7 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 PAGE = 20          # Workday's maximum page size
 MAX_PER_SEARCH = 60
-MAX_DETAILS = 300  # job pages downloaded per run (description + country)
+MAX_DETAILS = 450  # job pages downloaded per run (description + country)
 
 
 def _parse(url: str):
@@ -50,6 +50,17 @@ def _posted(text: str) -> str:
         return (text or "").replace("Posted ", "").strip()
     from datetime import date, timedelta
     return (date.today() - timedelta(days=days)).isoformat()
+
+
+def _location(job: dict, path: str) -> str:
+    """Workday's location text; when it is empty or "2 Locations", fall
+    back to the city in the job address (/job/Milano/...) so the region
+    filters still work."""
+    text = (job.get("locationsText") or "").strip()
+    if text and not re.match(r"\d+ locations?$", text, re.I):
+        return text
+    m = re.match(r"/job/([^/]+)/", path or "")
+    return m.group(1).replace("-", " ") if m else text
 
 
 def _strip_html(text: str) -> str:
@@ -148,7 +159,7 @@ def fetch(config: dict) -> list[Offer]:
                         source="Workday",
                         company=name or tenant.title(),
                         title=(j.get("title") or "").strip(),
-                        location=(j.get("locationsText") or "").strip(),
+                        location=_location(j, path),
                         url=f"https://{host}/{site}{path}",
                         date=_posted(j.get("postedOn")),
                         employees=10000,       # only big groups are listed here
