@@ -1,35 +1,11 @@
-**43 new offer(s) match your profile today.**
+**7 new offer(s) match your profile today.**
 
-- [Consultant(e) stagiaire en innovation et transformation F/H](https://www.welcometothejungle.com/fr/companies/ey/jobs/consultant-stagiaire-en-innovation-et-transformation-f-h_paris_EY_A4bA7V7) — EY — Paris, France — Stage
-- [Strategic Project Manager Intern](https://www.welcometothejungle.com/fr/companies/bidmotion/jobs/strategic-project-manager-intern_paris) — Homa — Paris, France — Stage
-- [Supply Chain & Logistics Coordinator (H/F)](https://mon-vie-via.businessfrance.fr/offres/247058) — VALEO ELECTRIFICATION — San Luis Potosi, Mexique — VIE (12 months)
-- [Chef de projet Bpifrance Université F/H](https://www.welcometothejungle.com/fr/companies/bpi-france-digital/jobs/chef-de-projet-bpifrance-universite-f-h_paris-9e) — Bpifrance — Paris (9e), France — Stage
-- [Graduate & Junior Strategy Professionals](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Stockholm/Graduate---Junior-Strategy-Professionals---Industry---Process-Strategy_R00358096-1) — Accenture —  — Graduate program
-- [STRATEGIC PROJECT ASSISTANT](https://www.welcometothejungle.com/fr/companies/lacoste/jobs/strategic-project-assistant_paris-16e-arrondissement) — Lacoste — Paris-16e-Arrondissement, France — Stage
-- [Health Strategy & Consulting Internship](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Amsterdam/Health---Public-Services---Strategy---Consulting-Internship_R00358081) — Accenture —  — Stage
-- [Public Services Strategy & Consulting Internship](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Amsterdam/Health---Public-Services---Strategy---Consulting-Internship-2_R00358098) — Accenture —  — Stage
-- [Thesis Internship Utilities - Strategy & Consulting – Balanceren van warmte en elektriciteit: de rol van hybride warmtesystemen bij het verminderen van netcongestie](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Amsterdam/THESIS-INTERN-UTILITIES-STRATEGY---CONSULTING---Balanceren-van-warmte-en-elektriciteit--de-rol-van-hybride-warmtesystemen-bij-het-verminderen-van-netcongestie_R00338294) — Accenture —  — Stage
-- [Technology Strategy & Advisory - Internship](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Milano/Technology-Strategy---Technology-Advisory-Intern_R00288639) — Accenture —  — Stage
-- [Consultant stagiaire People & Strategy H/F](https://fr.linkedin.com/jobs/view/consultant-stagiaire-people-strategy-h-f-at-bearingpoint-4479873738) — BearingPoint — Greater Paris Metropolitan Region — Stage
-- [Strategy & Consulting - Fresh Graduates](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Kuala-Lumpur/S-C-Global-Network-Fresh-Graduates_R00236260) — Accenture —  — Graduate program
-- [Resources Strategy & Consulting – Working internship](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Amsterdam/Resources-Strategy---Consulting---Working-internship-_R00359932) — Accenture —  — Stage
-- [Strategy Summer Consultant - MBA Internship - NAELFY27](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/NY---New-York/Strategy-Summer-Consultant---MBA-Internship---NAELFY27_R00361148) — Accenture —  — Stage
-- [Thesis Internship Utilities - Strategy & Consulting - Marktgebaseerde vs. gereguleerde ontsluiting van flexibiliteit in het elektriciteitsnet](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Amsterdam/THESIS-INTERN-UTILITIES-STRATEGY---CONSULTING-Marktgebaseerde-vs-gereguleerde-ontsluiting-van-flexibiliteit-in-het-elektriciteitsnet_R00338300) — Accenture —  — Stage
-- [Digital transformation intern](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Milano/Digital-transformation-intern_R00354466) — Accenture —  — Stage
-- [Intellera Public Service Local - Digital Transformation Intern](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Milano-Via-Gaetano-de-Castillia-23/Intellera---Candidatura-Assessment-Day_R00333132) — Accenture —  — Stage
-- [Stage - Conseil en stratégie - Energie](https://fr.linkedin.com/jobs/view/stage-conseil-en-strat%C3%A9gie-energie-at-afry-4479850463) — AFRY — Paris, Île-de-France, France — Stage
-- [Talent Transformation Analyst - Intern](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Assago-Via-del-Mulino-11a/Talent-Transformation-Analyst---Intern_R00356463) — Accenture —  — Stage
-- [Stage – Business Developer / SDR (4 à 6 mois) – Lyon – H/F](https://www.welcometothejungle.com/fr/companies/club-employes/jobs/stage-business-developer-sdr-4-a-6-mois-lyon-h-f_lyon) — Club Employes — Lyon, France — Stage
-- [STAGE - Stratégie et Plan Long Terme (périmètre Afrique) - H/F](https://fr.linkedin.com/jobs/view/stage-strat%C3%A9gie-et-plan-long-terme-p%C3%A9rim%C3%A8tre-afrique-h-f-at-totalenergies-4478555459) — TotalEnergies — Tour-en-Sologne, Centre-Val de Loire, France — Stage
-- [STAGE - BUSINESS DEVELOPER / DÉVELOPPEMENT COMMERCIAL (H/F)](https://fr.linkedin.com/jobs/view/stage-business-developer-d%C3%A9veloppement-commercial-h-f-at-station-f-4479117264) — STATION F — Paris, Île-de-France, France — Stage
-- [Deloitte Digital - Stage Consultant CX / Service Design - F/H](https://www.welcometothejungle.com/fr/companies/deloitte/jobs/deloitte-digital-stage-consultant-cx-service-design-f-h_paris) — Deloitte — Paris, France — Stage
-- [Stage -  AI Business Analyst H/F](https://www.welcometothejungle.com/fr/companies/bnp-paribas/jobs/stage-ai-business-analyst-h-f_rueil-malmaison) — BNP Paribas — Rueil-Malmaison, France — Stage
-- [Consultant(e) stagiaire Design Strategist F/H - Paris](https://www.welcometothejungle.com/fr/companies/ey/jobs/consultant-stagiaire-design-strategist-f-h-paris_paris_EY_PDO4Wdw) — EY — Paris, France — Stage
-- [STAGE - Analyste Stratégique Sales - EUROWEST (F/H)](https://fr.linkedin.com/jobs/view/stage-analyste-strat%C3%A9gique-sales-eurowest-f-h-at-dassault-syst%C3%A8mes-4470974933) — Dassault Systèmes — Paris, Île-de-France, France — Stage
-- [Stage en Droit économique (contrat/concurrence/ distribution) - Nantes - F/H - 4 mois](https://www.welcometothejungle.com/fr/companies/ey/jobs/stage-en-droit-economique-contrat-concurrence-distribution-nantes-f-h-4-mois_nantes) — EY — Nantes, France — Stage
-- [Stage Business Developer B2B - Startup Cybersécurité (Gratification + 20 % de commission)](https://fr.linkedin.com/jobs/view/stage-business-developer-b2b-startup-cybers%C3%A9curit%C3%A9-gratification-%2B-20-%25-de-commission-at-sauvix-4479843275) — SAUViX — Pantin, Île-de-France, France — Stage
-- [Stage - Business Analyst H/F](https://www.welcometothejungle.com/fr/companies/bnp-paribas/jobs/stage-business-analyst-h-f_rueil-malmaison) — BNP Paribas — Rueil-Malmaison, France — Stage
-- [Stage Business Analyst H/f/x](https://www.welcometothejungle.com/fr/companies/hager-group/jobs/stage-business-analyst-h-f-x_obernai_HAGER_jOo9GJ) — Hager — Obernai, France — Stage
-- …and 13 more on the dashboard.
+- [Strategy Intern](https://ca.linkedin.com/jobs/view/strategy-intern-at-interac-corp-4478845683) — Interac Corp. — Toronto, Ontario, Canada — Stage
+- [Business Strategy Intern](https://fr.linkedin.com/jobs/view/business-strategy-intern-at-electra-4476834846) — Electra — Paris, Île-de-France, France — Stage
+- [Stage - Strategy Analyst F/H](https://fr.linkedin.com/jobs/view/stage-strategy-analyst-f-h-at-schneider-electric-4479136725) — Schneider Electric — Rueil-Malmaison, Île-de-France, France — Stage
+- [Fraud Strategy Intern](https://ca.linkedin.com/jobs/view/fraud-strategy-intern-at-interac-corp-4478842825) — Interac Corp. — Toronto, Ontario, Canada — Stage
+- [Graduate Trainee - Future Finance Program (m/w/d)](https://de.linkedin.com/jobs/view/graduate-trainee-future-finance-program-m-w-d-at-daiichi-sankyo-europe-gmbh-4478438425) — Daiichi Sankyo Europe GmbH — Munich, Bavaria, Germany — Graduate program
+- [Graduate Trainee - Future Finance Program](https://de.linkedin.com/jobs/view/graduate-trainee-future-finance-program-at-daiichi-sankyo-europe-gmbh-4478444146) — Daiichi Sankyo Europe GmbH — Munich, Bavaria, Germany — Graduate program
+- [Young Graduate Program (M/F/X)](https://lu.linkedin.com/jobs/view/young-graduate-program-m-f-x-at-banque-raiffeisen-4478489997) — Banque Raiffeisen — Leudelange, Luxembourg, Luxembourg — Graduate program
 
 Full list: see your dashboard (GitHub Pages link in the README).
