@@ -159,6 +159,11 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
     boost = fold_all(kw.get("boost"))
     exclude = fold_all(kw.get("exclude"))
     bad_companies = fold_all(config.get("exclude_companies"))
+    cons = config.get("consulting") or {}
+    cons_firms = fold_all(cons.get("companies"))
+    cons_words = fold_all(cons.get("title_words"))
+    cons_topics = fold_all(cons.get("topics"))
+    cons_off = fold_all(cons.get("exclude_title"))
     dq_plain, dq_regex = [], []
     for d in config.get("disqualifiers") or []:
         if d.startswith("re:"):
@@ -194,11 +199,21 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
         vie_in_title = re.search(r"\bV\.?I\.?E\b", o.title) is not None
         is_vie = o.source == "VIE" or o.contract == "VIE" or vie_in_title
         matched = [w for w in include if _has_word(w, title)]
+        # consulting firms (config consulting:) feed the "Consulting" category
+        o.consulting = any(_has_word(c, company) for c in cons_firms)
+        if o.consulting:
+            if any(_has_word(x, title) for x in cons_off):
+                _drop("conseil : audit, fiscal, juridique ou finance")
+                continue
+            matched = matched or [w for w in cons_words if _has_word(w, title)]
         if not matched:   # a VIE must also be in one of your roles
             _drop("titre hors de tes métiers")
             continue
-        if any(_has_word(c, company) for c in bad_companies):
-            _drop("entreprise exclue (cabinets de conseil…)")
+        if o.consulting and not _consulting_topic(o, title, desc, cons_topics):
+            _drop("conseil hors stratégie, transformation ou IA")
+            continue
+        if not o.consulting and any(_has_word(c, company) for c in bad_companies):
+            _drop("entreprise exclue (ESN, sociétés de services…)")
             continue
         if o.employees is not None and o.employees < min_emp:
             _drop(f"entreprise de moins de {min_emp} personnes")
@@ -292,6 +307,16 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
         print("Dropped: " + ", ".join(f"{k} ({v})" for k, v in
                                       sorted(LAST_DROPS.items(), key=lambda kv: -kv[1])))
     return kept
+
+
+def _consulting_topic(o, title, desc, topics) -> bool:
+    """A consulting offer must be about strategy, transformation or AI:
+    in the title, or (for a generic "Stagiaire consultant" title) at the
+    start of the description."""
+    if AI_CASE_RE.search(o.title or "") or any(_has_word(w, title) for w in topics):
+        return True
+    head = (o.description or "")[:1500]
+    return bool(AI_CASE_RE.search(head)) or any(_has_word(w, desc[:1500]) for w in topics)
 
 
 def _rank(o, title, desc, loc, matched, priority, boost, preferred,

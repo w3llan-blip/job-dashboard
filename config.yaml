@@ -311,23 +311,13 @@ disqualifiers:
 
 # Companies you never want to work for.
 # Matched against the employer name (so "consulting" removes any
-# company with "Consulting" in its name).
+# company with "Consulting" in its name). Firms listed under
+# consulting.companies below are never removed by this list.
+# What stays here: IT services / engineering staffing firms (ESN).
 exclude_companies:
   - consulting
   - consultants
   - conseil
-  - accenture
-  - capgemini
-  - deloitte
-  - kpmg
-  - ey
-  - pwc
-  - mckinsey
-  - bcg
-  - boston consulting
-  - bain
-  - wavestone
-  - sia partners
   - alten
   - altran
   - sopra steria
@@ -338,7 +328,6 @@ exclude_companies:
   - amaris
   - talan
   - devoteam
-  - onepoint
   - extia
   - davidson
   - audensiel
@@ -346,8 +335,121 @@ exclude_companies:
   - isalys
   - mc2i
   - inetum
-  - "square management"
-  - julhiet
+
+# CONSULTING category ("Consulting" filter chip + "CONSEIL" badge).
+# Offers from these firms are kept when the title is a consulting role
+# AND the offer is about strategy, transformation or AI. Audit, tax,
+# legal and finance offers from the same firms are removed.
+consulting:
+  companies:
+    # strategy firms
+    - mckinsey
+    - boston consulting
+    - bcg
+    - bain
+    - roland berger
+    - oliver wyman
+    - kearney
+    - eleven strategy
+    - advancy
+    - circle strategy
+    # Big Four (advisory / consulting side)
+    - deloitte
+    - ey
+    - kpmg
+    - pwc
+    # transformation, data & AI consulting
+    - accenture
+    - capgemini invent
+    - capgemini
+    - wavestone
+    - converteo
+    - artefact
+    - sia partners
+    - onepoint
+    - bearingpoint
+    - julhiet sterwen
+    - eurogroup consulting
+    - square management
+    - colombus consulting
+    - magellan partners
+    - argon & co
+    - headmind partners
+    - kea
+    - quantmetry
+    - mews partners
+    - publicis sapient
+  # a consulting offer's title must contain one of these (or a normal
+  # role word from keywords.include)
+  title_words:
+    - consultant
+    - consultante
+    - consulting
+    - conseil
+    - advisory
+    - analyst
+    - analyste
+    - associate
+    - intern
+    - stage
+    - stagiaire
+  # ...and the title or the start of the description must be about this
+  topics:
+    - strategy
+    - strategie
+    - strategique
+    - transformation
+    - change management
+    - conduite du changement
+    - management
+    - organisation
+    - operations
+    - performance
+    - digital
+    - innovation
+    # "AI", "IA", "GenAI", "LLM" are also detected (case-sensitive)
+    - intelligence artificielle
+    - artificial intelligence
+    - ia generative
+    - generative ai
+    - data
+  # consulting offers with these in the title are removed
+  exclude_title:
+    - audit
+    - auditeur
+    - auditor
+    - tax
+    - fiscal
+    - fiscalite
+    - fiscaliste
+    - juridique
+    - legal
+    - avocat
+    - lawyer
+    - transaction services
+    - transaction
+    - valuation
+    - evaluation
+    - m&a
+    - fusions
+    - actuari
+    - actuary
+    - comptable
+    - accounting
+    - expertise comptable
+    - restructuring
+    - cyber
+    - cybersecurite
+    - sap
+    - salesforce
+    - erp
+    - servicenow
+    - finance
+    - financial
+    - forensic
+    - assurance
+    - risk
+    - risques
 
 # Visa: as a French citizen you can work / intern anywhere in the
 # EU/EEA and Switzerland. Outside (UK, US, Asia...), an offer is only kept
@@ -474,6 +576,7 @@ companies:
     - gitlab
     - intercom
     - monzo
+    - artefactjobs        # Artefact (data & AI consulting)
   # Ashby: many scale-ups moved there. The slug is the end of the
   # board address https://jobs.ashbyhq.com/<slug>. Add the ones you like;
   # a wrong slug just shows "not found" in the run log.
@@ -500,6 +603,8 @@ workday:
     url: https://michelinhr.wd3.myworkdayjobs.com/Michelin
   - name: Pernod Ricard
     url: https://pernodricard.wd3.myworkdayjobs.com/pernod-ricard
+  - name: Accenture
+    url: https://accenture.wd103.myworkdayjobs.com/AccentureCareers
 
 # Words searched on each Workday site (each = up to 60 offers per company)
 workday_search:
@@ -532,6 +637,17 @@ welcome_to_the_jungle:
     - stage 6 mois strategie
     - internship strategy
     - visa sponsorship graduate
+    # consulting category
+    - stage consultant transformation
+    - stage consultant IA
+    - stage consultant intelligence artificielle
+    - stage consultant strategie
+    - stage conseil en strategie
+    - stage conseil transformation digitale
+    - stage consultant data IA
+    - stage conseil en management
+    - stagiaire consultant
+    - strategy consulting internship
 
 # France Travail (official API, needs a free key — see README).
 france_travail:
@@ -544,6 +660,7 @@ france_travail:
     - stage transformation
     - stage supply chain
     - graduate programme
+    - stage consultant transformation
 
 # LinkedIn public job search (no account used). Keep the list of
 # searches short — LinkedIn rate-limits heavy automated browsing.
@@ -565,3 +682,7 @@ linkedin:
       location: "Canada"
     - keywords: "stage stratégie"
       location: "Montréal, Québec, Canada"
+    - keywords: "stage consultant transformation IA"
+      location: "Paris, France"
+    - keywords: "strategy consulting intern"
+      location: "European Union"

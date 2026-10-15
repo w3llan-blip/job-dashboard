@@ -87,6 +87,8 @@ details.why p{margin:6px 0 0;font-size:13px;line-height:1.45}
 .b-grad{background:var(--grad-bg);color:var(--grad)} .b-visa{background:var(--visa-bg);color:var(--visa)}
 .b-nodate{background:var(--nodate-bg);color:var(--nodate)}
 .b-ideal{background:#ffe1ec;color:#a3164a}
+.b-cons{background:#e6f4ea;color:#1e6b34}
+@media (prefers-color-scheme: dark){.b-cons{background:#173524;color:#8fd9a8}}
 @media (prefers-color-scheme: dark){.b-ideal{background:#4a1a2c;color:#ff9cc0}}
 .empty{text-align:center;color:var(--muted);padding:40px 10px;background:var(--card);border:1px dashed var(--line);border-radius:10px}
 table.compact{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
@@ -184,6 +186,7 @@ var CHIPS = [
   ['vie', 'VIE', function(o){ return o.vie; }],
   ['stage', 'Stage', function(o){ return /intern|stage|stagiaire/i.test(o.ct + ' ' + o.t); }],
   ['grad', 'Graduate', function(o){ return o.grad; }],
+  ['cons', 'Consulting', function(o){ return o.cons; }],
   ['eu', 'Europe (sans visa)', function(o){ return o.reg === 'west' || o.reg === 'south'; }],
   ['sal', 'Salaire affiché', function(o){ return !!o.sal; }],
   ['top', 'Score ≥ 70', function(o){ return o.sc >= 70; }],
@@ -211,6 +214,7 @@ function badges(o){
   if (o.n) h += '<span class="badge b-new">NEW</span>';
   if (o.vie) h += '<span class="badge b-vie">VIE</span>';
   if (o.grad) h += '<span class="badge b-grad">GRAD</span>';
+  if (o.cons) h += '<span class="badge b-cons" title="Cabinet de conseil (stratégie, transformation, IA)">CONSEIL</span>';
   if (o.visa) h += '<span class="badge b-visa" title="Hors UE — l\'offre dit sponsoriser le visa">VISA ✓</span>';
   if (!o.st) h += '<span class="badge b-nodate" title="L\'offre n\'indique pas de date de début">DATE ?</span>';
   return h;
@@ -506,6 +510,7 @@ def _offer_dict(o) -> dict:
         "grad": "graduate" in kind or "trainee" in kind,
         "visa": bool(getattr(o, "visa_ok", False)),
         "ideal": bool(getattr(o, "ideal", False)),
+        "cons": bool(getattr(o, "consulting", False)),
         "reg": getattr(o, "region", ""),
         "sal": getattr(o, "salary_label", ""),
         "why": list(o.reasons or []), "desc": _snippet(o.description),

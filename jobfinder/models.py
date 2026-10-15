@@ -21,6 +21,7 @@ class Offer:
     score: int = 0
     is_new: bool = False
     region: str = ""        # "west", "south", "east", "visa" or "unknown"
+    consulting: bool = False  # offer from a consulting firm (config consulting:)
     visa_ok: bool = False   # outside the EU and the offer says it sponsors
     salary_month: int | None = None  # monthly gross pay if stated (EUR)
     salary_label: str = ""  # e.g. "1 200 €/mois", "38 k€/an"

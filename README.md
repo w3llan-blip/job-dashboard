@@ -36,6 +36,13 @@ Offers that don't state a start date are kept with a **DATE ?** badge
 (companies rarely write it); offers whose date fits your window get a
 small bonus.
 
+**Consulting:** offers from the strategy, transformation and AI
+consulting firms listed under `consulting:` in `config.yaml` (McKinsey,
+BCG, Big Four, Accenture, Wavestone, Converteo, Artefact...) carry a
+**CONSEIL** badge; the **Consulting** filter chip shows only them.
+Their audit, tax, legal and finance offers are removed. IT services
+firms (ESN) stay excluded (`exclude_companies`).
+
 **Contracts:** only VIE, internships and graduate programs (the only
 contracts your school accepts to validate the master's). Full-time jobs,
 fixed-term contracts and apprenticeships are removed

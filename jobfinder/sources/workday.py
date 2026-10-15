@@ -63,7 +63,8 @@ def _title_ok(title: str, config: dict) -> bool:
     t = " " + title.lower() + " "
     if any(re.search(r"\b" + re.escape(x.lower()) + r"\b", t) for x in kw.get("exclude") or []):
         return False
-    return any(w.lower() in t for w in kw.get("include") or []) or "vie" in t
+    words = (kw.get("include") or []) + ((config.get("consulting") or {}).get("title_words") or [])
+    return any(w.lower() in t for w in words) or "vie" in t
 
 
 def _find(obj, key):
