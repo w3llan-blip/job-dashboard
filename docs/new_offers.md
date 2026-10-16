@@ -1,15 +1,2 @@
-**11 new offer(s) match your profile today.**
-
-- [AI Portfolio Operations Analyst - VIE Contract](https://sanofi.wd3.myworkdayjobs.com/SanofiCareers/job/Barcelona/AI-Portfolio-Operations-Analyst---VIE-Contract_R2872151) — Sanofi — Barcelona, Spain — VIE
-- [Praktikum Associate Consultant Healthcare & Life Sciences – Strategy & Transformation (m/w/d)](https://de.linkedin.com/jobs/view/praktikum-associate-consultant-healthcare-life-sciences-%E2%80%93-strategy-transformation-m-w-d-at-simon-kucher-4459532348) — Simon-Kucher — Berlin, Berlin, Germany — Stage
-- [ATR – Internship 2027  - Transformation méthodologique des SMS](https://ag.wd3.myworkdayjobs.com/Airbus/job/Toulouse-Area/ATR---Internship-2027----Transformation-mthodologique-des-SMS_JR10450572) — Airbus — Toulouse Area, France — Stage
-- [Graduation Internship: Supplier Portal Strategy & Design](https://nl.linkedin.com/jobs/view/graduation-internship-supplier-portal-strategy-design-at-daf-trucks-nv-4476848432) — DAF Trucks NV — Eindhoven, North Brabant, Netherlands — Stage
-- [Praktikant:in – Strategy & Management Consulting (all genders)](https://de.linkedin.com/jobs/view/praktikant-in-%E2%80%93-strategy-management-consulting-all-genders-at-vindelici-advisors-4455631009) — Vindelici Advisors — Munich, Bavaria, Germany — Stage
-- [Stagiaire Chargé de mission - IA & Automatisation des processus de conformité H/F](https://fr.linkedin.com/jobs/view/stagiaire-charg%C3%A9-de-mission-ia-automatisation-des-processus-de-conformit%C3%A9-h-f-at-agence-du-num%C3%A9rique-en-sant%C3%A9-4477393300) — Agence du numérique en santé — Greater Paris Metropolitan Region — Stage
-- [STAGE – ASSISTANT(E) CHEF DE PROJET DIGITAL INTERNATIONAL - E-COMMERCE](https://fr.linkedin.com/jobs/view/stage-%E2%80%93-assistant-e-chef-de-projet-digital-international-e-commerce-at-parfums-christian-dior-4469179685) — Parfums Christian Dior — Neuilly-sur-Seine, Île-de-France, France — Stage
-- [vMC - Intern Strategy, Transaction & Value Creation (all genders)](https://de.linkedin.com/jobs/view/vmc-intern-strategy-transaction-value-creation-all-genders-at-valantic-4148748215) — valantic — Cologne, North Rhine-Westphalia, Germany — Stage
-- [Stage - Business developer](https://fr.linkedin.com/jobs/view/stage-business-developer-at-agence-pattern-4479350431) — Agence Pattern — Bordeaux, Nouvelle-Aquitaine, France — Stage
-- [Business Operations Consultant (stage) - H/F](https://fr.linkedin.com/jobs/view/business-operations-consultant-stage-h-f-at-fifty-five-4479278907) — fifty-five — Paris, Île-de-France, France — Stage
-- [Finance & Accounting Graduate Programme - September 2027](https://ie.linkedin.com/jobs/view/finance-accounting-graduate-programme-september-2027-at-stryker-4471404175) — Stryker — Cork, County Cork, Ireland — Graduate program
 
 Full list: see your dashboard (GitHub Pages link in the README).
