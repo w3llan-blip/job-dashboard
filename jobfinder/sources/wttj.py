@@ -6,6 +6,12 @@ each run (falling back to the last known one), then run the searches
 listed in config.yaml -> welcome_to_the_jungle.queries. Read-only, no
 login, no account involved.
 
+Start date and full text: the search index has neither (only the
+`profile` part of the offer), so for internships, VIE and graduate
+programs each offer is also read from the site's public job API, which
+gives the start date shown on the page ("Date de début") and the whole
+description.
+
 Company size: WTTJ is full of early-stage startups. Each company's
 headcount is looked up once (then cached in org_sizes.json) and offers
 from companies smaller than `min_employees` are dropped.
@@ -30,6 +36,10 @@ ORGS_INDEX = "wk_cms_organizations_production"
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 HITS_PER_PAGE = 100
+JOB_API = "https://api.welcometothejungle.com/api/v1/organizations/{org}/jobs/{slug}"
+# contracts whose details we fetch (the others are dropped by matching anyway)
+DETAIL_CONTRACTS = {"internship", "vie", "graduate_program", ""}
+MAX_DETAILS = 1500
 CACHE_PATH = Path(__file__).resolve().parent.parent.parent / "org_sizes.json"
 
 # WTTJ contract codes -> what we show
@@ -151,6 +161,29 @@ def _text(hit, *keys) -> str:
     return " ".join(parts)
 
 
+def _start_month(value) -> str:
+    """'2027-03-31T22:00:00Z' (midnight Paris, stored in UTC) -> '2027-04'."""
+    if not isinstance(value, str) or len(value) < 10:
+        return ""
+    from datetime import datetime, timedelta
+    try:
+        d = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return value[:7]
+    return (d + timedelta(hours=12)).strftime("%Y-%m")
+
+
+def _details(session, org_slug, slug) -> dict:
+    """Full offer from the public job API ({} if unavailable)."""
+    try:
+        r = session.get(JOB_API.format(org=org_slug, slug=slug), timeout=20)
+        if r.ok:
+            return r.json().get("job") or {}
+    except (requests.RequestException, ValueError):
+        pass
+    return {}
+
+
 def fetch(config: dict) -> list[Offer]:
     cfg = config.get("welcome_to_the_jungle") or {}
     queries = cfg.get("queries") or []
@@ -178,7 +211,7 @@ def fetch(config: dict) -> list[Offer]:
             time.sleep(0.3)
 
     offers: list[Offer] = []
-    small = 0
+    small = n_details = n_dated = 0
     for h in hits.values():
         org = h.get("organization") or {}
         org_slug = org.get("slug") or ""
@@ -196,6 +229,13 @@ def fetch(config: dict) -> list[Offer]:
         location = ", ".join(x for x in ((office.get("city") or "").strip(),
                                           (office.get("country") or "").strip()) if x)
         contract_code = h.get("contract_type") or ""
+        job = {}
+        if contract_code in DETAIL_CONTRACTS and n_details < MAX_DETAILS:
+            job = _details(session, org_slug, h.get("slug"))
+            n_details += 1
+            n_dated += bool(job.get("start_date"))
+            time.sleep(0.1)
+        src = job or h
         offers.append(Offer(
             uid=f"wttj:{h.get('reference') or h.get('slug')}",
             source="WTTJ",
@@ -203,11 +243,11 @@ def fetch(config: dict) -> list[Offer]:
             title=(h.get("name") or "").strip(),
             location=location,
             url=f"{SITE}/fr/companies/{org_slug}/jobs/{h.get('slug')}",
-            description=_text(h, "summary", "description", "profile",
-                              "key_missions", "recruitment_process")[:4000],
+            description=_text(src, "summary", "description", "profile",
+                              "key_missions", "recruitment_process")[:6000],
             contract=CONTRACTS.get(contract_code, contract_code.replace("_", " ").title()),
             date=(h.get("published_at") or "")[:10],
-            start_date=(h.get("start_date") or "")[:7] if isinstance(h.get("start_date"), str) else "",
+            start_date=_start_month(job.get("start_date") or h.get("start_date")),
             employees=employees,
             size_label=f"{employees}" if employees else "",
             salary_month=(sal := _salary(h)),
@@ -219,6 +259,7 @@ def fetch(config: dict) -> list[Offer]:
         CACHE_PATH.write_text(json.dumps(cache, indent=0, sort_keys=True), encoding="utf-8")
     except OSError:
         pass
+    print(f"[WTTJ: {n_details} offers read in full, {n_dated} with a start date]", end=" ")
     if small:
         print(f"[WTTJ: {small} offers dropped, company < {min_emp} people]", end=" ")
     return offers

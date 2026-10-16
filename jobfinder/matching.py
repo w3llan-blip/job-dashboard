@@ -85,6 +85,14 @@ _PATTERNS = [
     # "de janvier à juin 2027" / "from January to June 2027"
     re.compile(r"\b(" + _MONTH_RE + r")\w*\s+(?:a|au|to|-|–)\s+(?:" + _MONTH_RE + r")\w*\W{1,3}(20\d{2})"),
 ]
+# "Q1 2027" / "T2 2027" / "1er trimestre 2027" / "first quarter of 2027"
+_QUARTER = re.compile(_CUES + r"\W{0,15}(?:\w+\W{1,3}){0,3}?"
+                      r"(?:[qt]([1-4])|([1-4])(?:er|e|eme|st|nd|rd|th)?\s+(?:trimestre|quarter)"
+                      r"|(first|second|third|fourth) quarter)\W{1,6}(?:of\s+|de\s+|d\W)?(20\d{2})")
+_QUARTER_WORDS = {"first": 1, "second": 2, "third": 3, "fourth": 4}
+# "début 2027" / "early 2027" / "courant janvier"-less: the start of the year
+_EARLY = re.compile(r"(?:demarrage|prise de poste|start(?:ing)?(?: date)?)?\W{0,15}"
+                    r"\b(?:debut|early|beginning of)\s+(202[6-9])\b")
 # a title like "Strategy Intern - January 2027"
 _TITLE_DATE = re.compile(r"\b(" + _MONTH_RE + r")\w*\W{1,3}(20\d{2})")
 
@@ -105,6 +113,13 @@ def extract_start_date(text: str, title: str = "") -> str:
             month = _MONTHS.get(month_raw, None) if not month_raw.isdigit() else int(month_raw)
             if month:
                 return f"{year}-{month:02d}"
+    m = _QUARTER.search(t)
+    if m:
+        q = int(m.group(1) or m.group(2) or _QUARTER_WORDS[m.group(3)])
+        return f"{m.group(4)}-{3 * q - 2:02d}"
+    m = _EARLY.search(t)
+    if m:
+        return f"{m.group(1)}-01"
     return ""
 
 
