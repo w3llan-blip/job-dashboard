@@ -37,8 +37,8 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 HITS_PER_PAGE = 100
 JOB_API = "https://api.welcometothejungle.com/api/v1/organizations/{org}/jobs/{slug}"
-# contracts whose details we fetch (the others are dropped by matching anyway)
-DETAIL_CONTRACTS = {"internship", "vie", "graduate_program", ""}
+# contracts whose details we skip (dropped by matching anyway)
+SKIP_DETAILS = ("apprentice", "alternan", "freelance", "part_time", "temporary", "cdd")
 MAX_DETAILS = 1500
 CACHE_PATH = Path(__file__).resolve().parent.parent.parent / "org_sizes.json"
 
@@ -211,7 +211,7 @@ def fetch(config: dict) -> list[Offer]:
             time.sleep(0.3)
 
     offers: list[Offer] = []
-    small = n_details = n_dated = 0
+    small = n_details = n_dated = n_tries = 0
     for h in hits.values():
         org = h.get("organization") or {}
         org_slug = org.get("slug") or ""
@@ -229,12 +229,16 @@ def fetch(config: dict) -> list[Offer]:
         location = ", ".join(x for x in ((office.get("city") or "").strip(),
                                           (office.get("country") or "").strip()) if x)
         contract_code = h.get("contract_type") or ""
+        if not isinstance(contract_code, str):
+            contract_code = str(contract_code)
         job = {}
-        if contract_code in DETAIL_CONTRACTS and n_details < MAX_DETAILS:
+        code = str(contract_code).lower()
+        if not any(w in code for w in SKIP_DETAILS) and n_tries < MAX_DETAILS:
+            n_tries += 1
             job = _details(session, org_slug, h.get("slug"))
-            n_details += 1
+            n_details += bool(job)
             n_dated += bool(job.get("start_date"))
-            time.sleep(0.1)
+            time.sleep(0.05)
         src = job or h
         offers.append(Offer(
             uid=f"wttj:{h.get('reference') or h.get('slug')}",
@@ -259,7 +263,8 @@ def fetch(config: dict) -> list[Offer]:
         CACHE_PATH.write_text(json.dumps(cache, indent=0, sort_keys=True), encoding="utf-8")
     except OSError:
         pass
-    print(f"[WTTJ: {n_details} offers read in full, {n_dated} with a start date]", end=" ")
+    codes = sorted({str(h.get("contract_type")) for h in hits.values()})[:8]
+    print(f"[WTTJ: {n_details} offers read in full, {n_dated} with a start date; contract codes {codes}]", end=" ")
     if small:
         print(f"[WTTJ: {small} offers dropped, company < {min_emp} people]", end=" ")
     return offers
