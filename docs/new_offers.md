@@ -1,6 +1,17 @@
-**2 new offer(s) match your profile today.**
+**13 new offer(s) match your profile today.**
 
-- [Stage - Chargé(e) de Projets RH stratégiques & Transformation - H/F](https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/stage-generaliste-en-ressources-humaines-h-f_grenoble) — Schneider Electric — Grenoble, France — Stage
-- [Stagiaire Executive Strategy Partner F/H](https://fr.linkedin.com/jobs/view/stagiaire-executive-strategy-partner-f-h-at-walter-learning-4480811021) — Walter Learning — Marseille, Provence-Alpes-Côte d'Azur, France — Stage
+- [Stage - Stratégie et Gouvernance de la donnée bac+5 (H/F)](https://www.welcometothejungle.com/fr/companies/arquus/jobs/stage-strategie-et-gouvernance-de-la-donnee-bac-5-h-f_versailles) — John Cockerill — Versailles, France — Stage
+- [STAGE - Assistant Chef de Projet Opérations Retail (H/F)](https://www.welcometothejungle.com/fr/companies/hermes/jobs/stage-assistant-chef-de-projet-operations-retail-h-f_paris) — Hermès — Paris, France — Stage
+- [Global International Business Development Assistant Intern](https://fr.linkedin.com/jobs/view/global-international-business-development-assistant-intern-at-the-est%C3%A9e-lauder-companies-inc-4479389020) — The Estée Lauder Companies Inc. — Neuilly-sur-Seine, Île-de-France, France — Stage
+- [Stage – Assistant Chef de Projet – F/H/NB](https://fr.linkedin.com/jobs/view/stage-%E2%80%93-assistant-chef-de-projet-%E2%80%93-f-h-nb-at-publicis-luxe-4461660861) — PUBLICIS LUXE — Paris, Île-de-France, France — Stage
+- [Strategy Consulting Intern TMT (m/f/d)](https://fr.linkedin.com/jobs/view/strategy-consulting-intern-tmt-m-f-d-at-altman-solon-4296080452) — Altman Solon — Paris, Île-de-France, France — Stage
+- [Stagiaire chargé de Mission en Management d'entreprise et Stratégie H/F](https://fr.linkedin.com/jobs/view/stagiaire-charg%C3%A9-de-mission-en-management-d-entreprise-et-strat%C3%A9gie-h-f-at-schaeffler-4405149305) — Schaeffler — Haguenau, Grand Est, France — Stage
+- [Stage – Consultant en stratégie – Énergie](https://fr.linkedin.com/jobs/view/stage-%E2%80%93-consultant-en-strat%C3%A9gie-%E2%80%93-%C3%A9nergie-at-afry-4480510205) — AFRY — Paris, Île-de-France, France — Stage
+- [Intern - Sales Strategy & Analytics](https://ca.linkedin.com/jobs/view/intern-sales-strategy-analytics-at-kensington-4479214191) — Kensington — Toronto, Ontario, Canada — Stage
+- [Stage – Développement Commercial (h/f)](https://fr.linkedin.com/jobs/view/stage-%E2%80%93-d%C3%A9veloppement-commercial-h-f-at-groupe-waterair-4477263354) — GROUPE WATERAIR — Mulhouse, Grand Est, France — Stage
+- [Comment optimiser les processus opérationnels en tirant profit de la GenAI afin d’assurer une livraison de bout en bout en garantissant la qualité de ces services en interne ? (Stage de fin d'études)](https://fr.linkedin.com/jobs/view/comment-optimiser-les-processus-op%C3%A9rationnels-en-tirant-profit-de-la-genai%E2%80%AFafin-d%E2%80%99assurer-une-livraison-de-bout-en-bout-en-garantissant-la-qualit%C3%A9-de-ces-services-en-interne-%3F-stage-de-fin-d-%C3%A9tudes-at-wavestone-4477711041) — Wavestone — Paris, Île-de-France, France — Stage
+- [Co-op/Intern Global Strategic Partnerships](https://ca.linkedin.com/jobs/view/co-op-intern-global-strategic-partnerships-at-kinaxis-4471823488) — Kinaxis — Ottawa, Ontario, Canada — Stage
+- [Business Operations Consultant (stage) - H/F](https://fr.linkedin.com/jobs/view/business-operations-consultant-stage-h-f-at-fifty-five-4480390747) — fifty-five — Paris, Île-de-France, France — Stage
+- [Commercial Graduate Development Programme 2027](https://ie.linkedin.com/jobs/view/commercial-graduate-development-programme-2027-at-esb-4471895053) — ESB — Dublin, County Dublin, Ireland — Graduate program
 
 Full list: see your dashboard (GitHub Pages link in the README).
