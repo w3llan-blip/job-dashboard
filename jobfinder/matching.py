@@ -80,6 +80,10 @@ _CUES = (r"(?:start(?:ing|s)?(?:\s+date)?|begin(?:ning)?|commence|as of|from|"
 _PATTERNS = [
     # "starting April 2027" / "début : avril 2027"
     re.compile(_CUES + r"\W{0,15}(?:\w+\W{1,3}){0,3}?(" + _MONTH_RE + r")\w*\W{1,3}(20\d{2})"),
+    # "start date: 01/02/2027" (day/month/year)
+    re.compile(_CUES + r"\W{0,15}(?:[0-2]?\d|3[01])[/.](0?[1-9]|1[0-2])[/.](20\d{2})"),
+    # "start date: 2027-02-01"
+    re.compile(_CUES + r"\W{0,15}(20\d{2})-(0[1-9]|1[0-2])-\d{2}"),
     # "start: 04/2027"
     re.compile(_CUES + r"\W{0,15}(0?[1-9]|1[0-2])\s*/\s*(20\d{2})"),
     # "de janvier à juin 2027" / "from January to June 2027"
@@ -110,6 +114,8 @@ def extract_start_date(text: str, title: str = "") -> str:
         m = pat.search(t)
         if m:
             month_raw, year = m.group(1), m.group(2)
+            if len(month_raw) == 4:          # year-first ISO date
+                month_raw, year = year, month_raw
             month = _MONTHS.get(month_raw, None) if not month_raw.isdigit() else int(month_raw)
             if month:
                 return f"{year}-{month:02d}"
