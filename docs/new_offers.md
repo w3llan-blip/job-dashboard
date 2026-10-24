@@ -1,35 +1,11 @@
-**32 new offer(s) match your profile today.**
+**7 new offer(s) match your profile today.**
 
-- [STAGE - Supply Chain Transformation & IA – H/F](https://www.welcometothejungle.com/fr/companies/thales/jobs/stage-supply-chain-transformation-ia-h-f_meudon) — Thales — Meudon, France — Stage
-- [Stage - Chargé(e) de Projets RH stratégiques & Transformation - H/F](https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/stage-charge-de-projets-rh-strategiques-transformation-h-f_grenoble) — Schneider Electric — Grenoble, France — Stage
-- [Assistant.e planning stratégique H/F](https://www.welcometothejungle.com/fr/companies/hopscotch/jobs/assistant-e-planning-strategique-h-f_paris_HG_dD5pAxZ) — Hopscotch Groupe — Paris, France — Stage
-- [CHARGE DE MISSION NUCLEAIRE (H/F)](https://mon-vie-via.businessfrance.fr/offres/247397) — COMMISSARIAT A L' ENERGIE ATOMIQUE ET AUX ENERGIES ALTERNATIVES — New Delhi, Inde — VIE (12 months)
-- [Stage – Analyste transformation Digitale et Conduite du Changement– F/H](https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/stage-analyste-transformation-digitale-et-conduite-du-changement-f-h_rueil-malmaison_SE_OQZlGPj) — Schneider Electric — Rueil-Malmaison, France — Stage
-- [STAGE - Chef de projet IA et Expérience client F/H](https://www.welcometothejungle.com/fr/companies/la-poste-groupe-maquette/jobs/stage-chef-de-projet-ia-et-experience-client-f-h_paris) — La Poste Groupe — Paris, France — Stage
-- [Chargé de missions stratégie F/H](https://www.welcometothejungle.com/fr/companies/orano/jobs/charge-de-missions-strategie-f-h_chatillon) — Orano — Châtillon, France — Stage
-- [Intern, Enterprise Transformation and AI Strategy (Summer 2027)](https://ca.linkedin.com/jobs/view/intern-enterprise-transformation-and-ai-strategy-summer-2027-at-investment-management-corporation-of-ontario-imco-4481613775) — Investment Management Corporation of Ontario (IMCO) — Toronto, Ontario, Canada — Stage
-- [Stage Consultant(e) Transformation Digitale & IA H/F](https://fr.linkedin.com/jobs/view/stage-consultant-e-transformation-digitale-ia-h-f-at-free-work-4480042774) — Free-Work — Paris, Île-de-France, France — Stage
-- [Stage : Assistant Chef de projet Facturation](https://www.welcometothejungle.com/fr/companies/stellantis-n-v-groupe-fr/jobs/stage-assistant-chef-de-projet-facturation_poissy) — Stellantis — Poissy, France — Stage
-- [STAGE : Business Developer](https://www.welcometothejungle.com/fr/companies/stellantis-n-v-groupe-fr/jobs/stage-business-developer_poissy) — Stellantis — Poissy, France — Stage
-- [Stage - Chef de Projet & Relation Client](https://www.welcometothejungle.com/fr/companies/ornikar/jobs/stage-customer-success-ops_paris) — Ornikar — Paris, France — Stage
-- [Stage de fin d’études – Consultant en Stratégie SI et Architecture d’Entreprise F/H](https://fr.linkedin.com/jobs/view/stage-de-fin-d%E2%80%99%C3%A9tudes-%E2%80%93-consultant-en-strat%C3%A9gie-si-et-architecture-d%E2%80%99entreprise-f-h-at-onepoint-4453412827) — Onepoint — Paris, Île-de-France, France — Stage
-- [STAGE - Digital Supply Chain – H/F](https://www.welcometothejungle.com/fr/companies/thales/jobs/stage-digital-supply-chain-h-f_meudon_THALE_l8V69RN) — Thales — Meudon, France — Stage
-- [EY-Parthenon Praktikant Strategy (w/m/d)](https://de.linkedin.com/jobs/view/ey-parthenon-praktikant-strategy-w-m-d-at-ey-parthenon-4378295597) — EY-Parthenon — Düsseldorf, North Rhine-Westphalia, Germany — Stage
-- [Stage - Business Developer H/F](https://fr.linkedin.com/jobs/view/stage-business-developer-h-f-at-smile-4455935577) — Smile — Grenoble, Auvergne-Rhône-Alpes, France — Stage
-- [Stage : Transformation SAP](https://fr.linkedin.com/jobs/view/stage-transformation-sap-at-stellantis-4472926125) — Stellantis — Poissy, Île-de-France, France — Stage
-- [STAGE - Management Industriel, Projets et Supply Chain F/H](https://www.welcometothejungle.com/fr/companies/thales/jobs/stage-management-industriel-projets-et-supply-chain-f-h_cergy) — Thales — Cergy, France — Stage
-- [Praktikant Consulting und Business Transformation (w/m/d)](https://at.linkedin.com/jobs/view/praktikant-consulting-und-business-transformation-w-m-d-at-porsche-holding-4474111907) — Porsche Holding — Salzburg, Austria — Stage
-- [Stage 2027 -Chef de Projets Stratégiques – Espace Militaire & Digital (h/f)](https://ag.wd3.myworkdayjobs.com/Airbus/job/Toulouse-Area/Stage-2027--Chef-de-Projets-Stratgiques---Espace-Militaire---Digital--h-f-_JR10445549) — Airbus — Toulouse Area, France — Stage
-- [STAGE - Amélioration continue en Supply Chain - F/H](https://www.welcometothejungle.com/fr/companies/thales/jobs/stage-amelioration-continue-en-supply-chain-f-h_valence) — Thales — Valence, France — Stage
-- [Stage : Business Operations (BizOps) : Business Operations Manager / Analyst / Associate](https://www.welcometothejungle.com/fr/companies/illicopro/jobs/stage-business-operations-bizops-business-operations-manager-analyst-associate_paris) — Matera — Paris, France — Stage
-- [Internship – Management Consulting - Supply Chain](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Brussels/Internship---Management-Consulting---Supply-Chain_R00366281) — Accenture — Brussels — Stage
-- [Stage - Assistant Supply Chain et Approvisionnements (H/F)](https://www.welcometothejungle.com/fr/companies/hermes/jobs/stage-assistant-supply-chain-et-approvisionnements-h-f_pantin_HERMS_WQ6kRl) — Hermès — Pantin, France — Stage
-- [STAGE - Chargé de projet développement international H/F](https://www.welcometothejungle.com/fr/companies/fondation-de-france-fr/jobs/stage-charge-de-projet-developpement-international-h-f_puteaux_FDF_qKXKZ3N) — Fondation de France — Puteaux, France — Stage
-- [Business Analyst Low Code - Stage de Fin d'études](https://fr.linkedin.com/jobs/view/business-analyst-low-code-stage-de-fin-d-%C3%A9tudes-at-banz-ai-4480787541) — Banz-Ai — Paris, Île-de-France, France — Stage
-- [Stage : Consultant Scientifique en Innovation - Spé IT H/F](https://fr.linkedin.com/jobs/view/stage-consultant-scientifique-en-innovation-sp%C3%A9-it-h-f-at-abgi-france-4471920121) — ABGi France — Paris, Île-de-France, France — Stage
-- [Winter Intern 2027 - Product Innovation & Development](https://ca.linkedin.com/jobs/view/winter-intern-2027-product-innovation-development-at-mackenzie-investments-4482759244) — Mackenzie Investments — Greater Toronto Area, Canada — Stage
-- [Graduate Management Trainee - Cork](https://ie.linkedin.com/jobs/view/graduate-management-trainee-cork-at-enterprise-4465058784) — Enterprise — Cork, County Cork, Ireland — Graduate program
-- [Graduate Programme (d/m/w) Compliance & Anti-Financial Crime 2027 Deutsche Bank](https://de.linkedin.com/jobs/view/graduate-programme-d-m-w-compliance-anti-financial-crime-2027-deutsche-bank-at-bhw-bausparkasse-ag-4480092152) — BHW Bausparkasse AG — Frankfurt am Main, Hesse, Germany — Graduate program
-- …and 2 more on the dashboard.
+- [Chef de Projet / PMO](https://www.welcometothejungle.com/fr/companies/societe-generale/jobs/chef-de-projet-pmo_la-defense_SG_YxyGmde) — Société Générale — La Défense, France — Stage
+- [Stage : Chargé de mission RH - Recrutement Emploi Jeunes et déploiement d'une enquête interne](https://www.welcometothejungle.com/fr/companies/stellantis-n-v-groupe-fr/jobs/stage-charge-de-mission-rh-recrutement-emploi-jeunes-et-deploiement-d-une-enquete-interne_poissy) — Stellantis — Poissy, France — Stage
+- [Stage Business Developer / Prospection Commerciale - Nantes - H/F](https://www.welcometothejungle.com/fr/companies/pretto/jobs/stage-business-developer-prospection-commerciale-nantes-h-f_nantes) — Pretto — Nantes, France — Stage
+- [Enterprise Strategy (CEO’s Office), MBA Intern](https://ca.linkedin.com/jobs/view/enterprise-strategy-ceo%E2%80%99s-office-mba-intern-at-olg-4476867400) — OLG — Sault Ste. Marie, Ontario, Canada — Stage
+- [Chef de Projet Promotion personnalisée (F/H) en stage](https://fr.linkedin.com/jobs/view/chef-de-projet-promotion-personnalis%C3%A9e-f-h-en-stage-at-carrefour-4480049830) — Carrefour — Massy, Île-de-France, France — Stage
+- [STAGE - PLANNEUR STRATEGIQUE JUNIOR (H/F/X)](https://fr.linkedin.com/jobs/view/stage-planneur-strategique-junior-h-f-x-at-havas-events-paris-4480484969) — Havas Events Paris — Puteaux, Île-de-France, France — Stage
+- [Stage - Analyste stratégique R&D Europe H/F](https://fr.linkedin.com/jobs/view/stage-analyste-strat%C3%A9gique-r-d-europe-h-f-at-naval-group-4478607253) — NAVAL GROUP — Ollioules, Provence-Alpes-Côte d'Azur, France — Stage
 
 Full list: see your dashboard (GitHub Pages link in the README).
