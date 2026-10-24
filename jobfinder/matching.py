@@ -87,7 +87,7 @@ _PATTERNS = [
     # "start: 04/2027"
     re.compile(_CUES + r"\W{0,15}(0?[1-9]|1[0-2])\s*/\s*(20\d{2})"),
     # "de janvier à juin 2027" / "from January to June 2027"
-    re.compile(r"\b(" + _MONTH_RE + r")\w*\s+(?:a|au|to|-|–)\s+(?:" + _MONTH_RE + r")\w*\W{1,3}(20\d{2})"),
+    re.compile(r"\b(" + _MONTH_RE + r")\w*(?:\s+(?:a|au|to)\s+|\s*[-–]\s*)(?:" + _MONTH_RE + r")\w*\W{1,3}(20\d{2})"),
 ]
 # "Q1 2027" / "T2 2027" / "1er trimestre 2027" / "first quarter of 2027"
 _QUARTER = re.compile(_CUES + r"\W{0,15}(?:\w+\W{1,3}){0,3}?"
