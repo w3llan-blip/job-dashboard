@@ -78,6 +78,8 @@ _CUES = (r"(?:start(?:ing|s)?(?:\s+date)?|begin(?:ning)?|commence|as of|from|"
          r"debut|demarrage|a partir de|a compter|des|prise de poste|disponible|available)")
 
 _PATTERNS = [
+    # "de janvier à juin 2027" / "from January to June 2027"
+    re.compile(r"\b(" + _MONTH_RE + r")\w*(?:\s+(?:a|au|to)\s+|\s*[-–]\s*)(?:" + _MONTH_RE + r")\w*\W{1,3}(20\d{2})"),
     # "starting April 2027" / "début : avril 2027"
     re.compile(_CUES + r"\W{0,15}(?:\w+\W{1,3}){0,3}?(" + _MONTH_RE + r")\w*\W{1,3}(20\d{2})"),
     # "start date: 01/02/2027" (day/month/year)
@@ -86,8 +88,6 @@ _PATTERNS = [
     re.compile(_CUES + r"\W{0,15}(20\d{2})-(0[1-9]|1[0-2])-\d{2}"),
     # "start: 04/2027"
     re.compile(_CUES + r"\W{0,15}(0?[1-9]|1[0-2])\s*/\s*(20\d{2})"),
-    # "de janvier à juin 2027" / "from January to June 2027"
-    re.compile(r"\b(" + _MONTH_RE + r")\w*(?:\s+(?:a|au|to)\s+|\s*[-–]\s*)(?:" + _MONTH_RE + r")\w*\W{1,3}(20\d{2})"),
 ]
 # "Q1 2027" / "T2 2027" / "1er trimestre 2027" / "first quarter of 2027"
 _QUARTER = re.compile(_CUES + r"\W{0,15}(?:\w+\W{1,3}){0,3}?"
