@@ -1,11 +1,14 @@
-**7 new offer(s) match your profile today.**
+**10 new offer(s) match your profile today.**
 
-- [Chef de Projet / PMO](https://www.welcometothejungle.com/fr/companies/societe-generale/jobs/chef-de-projet-pmo_la-defense_SG_YxyGmde) — Société Générale — La Défense, France — Stage
-- [Stage : Chargé de mission RH - Recrutement Emploi Jeunes et déploiement d'une enquête interne](https://www.welcometothejungle.com/fr/companies/stellantis-n-v-groupe-fr/jobs/stage-charge-de-mission-rh-recrutement-emploi-jeunes-et-deploiement-d-une-enquete-interne_poissy) — Stellantis — Poissy, France — Stage
-- [Stage Business Developer / Prospection Commerciale - Nantes - H/F](https://www.welcometothejungle.com/fr/companies/pretto/jobs/stage-business-developer-prospection-commerciale-nantes-h-f_nantes) — Pretto — Nantes, France — Stage
-- [Enterprise Strategy (CEO’s Office), MBA Intern](https://ca.linkedin.com/jobs/view/enterprise-strategy-ceo%E2%80%99s-office-mba-intern-at-olg-4476867400) — OLG — Sault Ste. Marie, Ontario, Canada — Stage
-- [Chef de Projet Promotion personnalisée (F/H) en stage](https://fr.linkedin.com/jobs/view/chef-de-projet-promotion-personnalis%C3%A9e-f-h-en-stage-at-carrefour-4480049830) — Carrefour — Massy, Île-de-France, France — Stage
-- [STAGE - PLANNEUR STRATEGIQUE JUNIOR (H/F/X)](https://fr.linkedin.com/jobs/view/stage-planneur-strategique-junior-h-f-x-at-havas-events-paris-4480484969) — Havas Events Paris — Puteaux, Île-de-France, France — Stage
-- [Stage - Analyste stratégique R&D Europe H/F](https://fr.linkedin.com/jobs/view/stage-analyste-strat%C3%A9gique-r-d-europe-h-f-at-naval-group-4478607253) — NAVAL GROUP — Ollioules, Provence-Alpes-Côte d'Azur, France — Stage
+- [Consultant en Transformation Business & IA - Stage - F/H](https://fr.linkedin.com/jobs/view/consultant-en-transformation-business-ia-stage-f-h-at-niji-4480688551) — Niji — Issy-les-Moulineaux, Île-de-France, France — Stage
+- [Strategy Insights & Planning Consultant Intern - Frankfurt 2027](https://de.linkedin.com/jobs/view/strategy-insights-planning-consultant-intern-frankfurt-2027-at-zs-4478280842) — ZS — Frankfurt, Hesse, Germany — Stage
+- [STAGIAIRE ASSISTANT CHEF DE PROJET TRANSFORMATION METIERS FINANCE](https://fr.linkedin.com/jobs/view/stagiaire-assistant-chef-de-projet-transformation-metiers-finance-at-pomona-4483116953) — POMONA — Antony, Île-de-France, France — Stage
+- [Intern (m/f/d), Corporate Transformation Services 2027](https://de.linkedin.com/jobs/view/intern-m-f-d-corporate-transformation-services-2027-at-alvarez-marsal-4483161806) — Alvarez & Marsal — Munich, Bavaria, Germany — Stage
+- [Volvo Group Graduate Program 2027 - Strategic Portfolio Planning](https://se.linkedin.com/jobs/view/volvo-group-graduate-program-2027-strategic-portfolio-planning-at-volvo-construction-equipment-4482861349) — Volvo Construction Equipment — Eskilstuna, Södermanland County, Sweden — Graduate program
+- [Intern - Acquisition Strategy, Winter 2027](https://ca.linkedin.com/jobs/view/intern-acquisition-strategy-winter-2027-at-eq-bank-4482763735) — EQ Bank — Toronto, Ontario, Canada — Stage
+- [Praktikum Strategieberatung Financial Services | AdEx Strategy](https://at.linkedin.com/jobs/view/praktikum-strategieberatung-financial-services-adex-strategy-at-adex-partners-4480624341) — AdEx Partners — Vienna, Austria — Stage
+- [STAGIAIRE DÉVELOPPEMENT COMMERCIAL & ÉTUDE DE MARCHÉ - SECTEUR HANDICAP](https://fr.linkedin.com/jobs/view/stagiaire-d%C3%A9veloppement-commercial-%C3%A9tude-de-march%C3%A9-secteur-handicap-at-station-f-4482307693) — STATION F — Lyon, Auvergne-Rhône-Alpes, France — Stage
+- [Risk Capital Graduate - Financial Lines & Professional Services](https://ie.linkedin.com/jobs/view/risk-capital-graduate-financial-lines-professional-services-at-aon-4483168461) — Aon — Dublin, County Dublin, Ireland — Graduate program
+- [Risk Capital Graduate - Financial Lines & Professional Services Graduate (Griffiths & Armour )](https://ie.linkedin.com/jobs/view/risk-capital-graduate-financial-lines-professional-services-graduate-griffiths-armour-at-aon-4483170371) — Aon — Dublin, County Dublin, Ireland — Graduate program
 
 Full list: see your dashboard (GitHub Pages link in the README).
