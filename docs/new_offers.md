@@ -1,14 +1,14 @@
 **10 new offer(s) match your profile today.**
 
-- [Consultant en Transformation Business & IA - Stage - F/H](https://fr.linkedin.com/jobs/view/consultant-en-transformation-business-ia-stage-f-h-at-niji-4480688551) — Niji — Issy-les-Moulineaux, Île-de-France, France — Stage
-- [Strategy Insights & Planning Consultant Intern - Frankfurt 2027](https://de.linkedin.com/jobs/view/strategy-insights-planning-consultant-intern-frankfurt-2027-at-zs-4478280842) — ZS — Frankfurt, Hesse, Germany — Stage
-- [STAGIAIRE ASSISTANT CHEF DE PROJET TRANSFORMATION METIERS FINANCE](https://fr.linkedin.com/jobs/view/stagiaire-assistant-chef-de-projet-transformation-metiers-finance-at-pomona-4483116953) — POMONA — Antony, Île-de-France, France — Stage
-- [Intern (m/f/d), Corporate Transformation Services 2027](https://de.linkedin.com/jobs/view/intern-m-f-d-corporate-transformation-services-2027-at-alvarez-marsal-4483161806) — Alvarez & Marsal — Munich, Bavaria, Germany — Stage
-- [Volvo Group Graduate Program 2027 - Strategic Portfolio Planning](https://se.linkedin.com/jobs/view/volvo-group-graduate-program-2027-strategic-portfolio-planning-at-volvo-construction-equipment-4482861349) — Volvo Construction Equipment — Eskilstuna, Södermanland County, Sweden — Graduate program
-- [Intern - Acquisition Strategy, Winter 2027](https://ca.linkedin.com/jobs/view/intern-acquisition-strategy-winter-2027-at-eq-bank-4482763735) — EQ Bank — Toronto, Ontario, Canada — Stage
-- [Praktikum Strategieberatung Financial Services | AdEx Strategy](https://at.linkedin.com/jobs/view/praktikum-strategieberatung-financial-services-adex-strategy-at-adex-partners-4480624341) — AdEx Partners — Vienna, Austria — Stage
-- [STAGIAIRE DÉVELOPPEMENT COMMERCIAL & ÉTUDE DE MARCHÉ - SECTEUR HANDICAP](https://fr.linkedin.com/jobs/view/stagiaire-d%C3%A9veloppement-commercial-%C3%A9tude-de-march%C3%A9-secteur-handicap-at-station-f-4482307693) — STATION F — Lyon, Auvergne-Rhône-Alpes, France — Stage
-- [Risk Capital Graduate - Financial Lines & Professional Services](https://ie.linkedin.com/jobs/view/risk-capital-graduate-financial-lines-professional-services-at-aon-4483168461) — Aon — Dublin, County Dublin, Ireland — Graduate program
-- [Risk Capital Graduate - Financial Lines & Professional Services Graduate (Griffiths & Armour )](https://ie.linkedin.com/jobs/view/risk-capital-graduate-financial-lines-professional-services-graduate-griffiths-armour-at-aon-4483170371) — Aon — Dublin, County Dublin, Ireland — Graduate program
+- [Stagiaire à la direction Stratégie et Transformation (H/F/X)](https://fr.linkedin.com/jobs/view/stagiaire-%C3%A0-la-direction-strat%C3%A9gie-et-transformation-h-f-x-at-savencia-4482959113) — SAVENCIA — Viroflay, Île-de-France, France — Stage
+- [Internship Healthcare & Life Sciences – Strategy & Transformation (m/f/d)](https://se.linkedin.com/jobs/view/internship-healthcare-life-sciences-%E2%80%93-strategy-transformation-m-f-d-at-simon-kucher-4481451030) — Simon-Kucher — Stockholm, Stockholm County, Sweden — Stage
+- [STAGE - Assistant Chef de Projet E-commerce (H/F)](https://www.welcometothejungle.com/fr/companies/hermes/jobs/assistant-chef-de-projet-e-commerce-h-f_paris) — Hermès — Paris, France — Stage
+- [Chef(fe) de projet transformation France (Stage)](https://fr.linkedin.com/jobs/view/chef-fe-de-projet-transformation-france-stage-at-winncare-4482926741) — Winncare — Rueil-Malmaison, Île-de-France, France — Stage
+- [Intern (m/f/d), Corporate Transformation Services 2027](https://de.linkedin.com/jobs/view/intern-m-f-d-corporate-transformation-services-2027-at-alvarez-marsal-4483154992) — Alvarez & Marsal — Frankfurt, Hesse, Germany — Stage
+- [STAGE - Business Analyst – Solutions IA &amp; Workflows (F/H)](https://www.welcometothejungle.com/fr/companies/bpce-solutions-informatiques/jobs/stage-business-analyst-solutions-ia-amp-workflows-f-h_aix-en-provence) — BPCE Solutions informatiques — Aix-En-Provence, France — Stage
+- [STAGE - Assistant Planneur stratégique (H/F) - STAGE](https://fr.linkedin.com/jobs/view/stage-assistant-planneur-strat%C3%A9gique-h-f-stage-at-w-conran-design-4472334086) — W Conran Design — Boulogne-Billancourt, Île-de-France, France — Stage
+- [Global Management Trainee - France](https://www.welcometothejungle.com/fr/companies/jacobs-douwe-egberts/jobs/global-management-trainee-france_paris_JPF_r1zkNoO) — JDE Peet’s France — Paris, France — Graduate program
+- [Global Management Trainee - France](https://fr.linkedin.com/jobs/view/global-management-trainee-france-at-jde-peet-s-4481431238) — JDE Peet's — Paris, Île-de-France, France — Graduate program
+- [Global Management Trainee - Netherlands](https://nl.linkedin.com/jobs/view/global-management-trainee-netherlands-at-jde-peet-s-4481426384) — JDE Peet's — Utrecht, Utrecht, Netherlands — Graduate program
 
 Full list: see your dashboard (GitHub Pages link in the README).
