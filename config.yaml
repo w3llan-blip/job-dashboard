@@ -49,6 +49,9 @@ keywords:
     - technology
     - digital
     - innovation
+    - chief of staff
+    - change management
+    - conduite du changement
 
 
   # Your core target roles: they rank highest (35/35 for the role).
@@ -72,6 +75,9 @@ keywords:
     - program manager
     - chef de projet
     - charge de mission
+    - chief of staff
+    - change management
+    - conduite du changement
     # "graduate program", "management trainee"... are a FORMAT, not a job:
     # they stay in "include" (so the offer is kept) and the format earns
     # its own points, but they no longer count as a core target role.
@@ -476,10 +482,11 @@ visa:
   # (empty = US offers that sponsor the visa are kept).
   never_except_vie: []
 
-# Your school only validates the master's with a VIE, an internship or a
-# graduate program: everything else (CDI, CDD, apprenticeship) is removed.
+# Contracts kept. Since 05/11/2026 a CDI (junior job) is fine too: the
+# school does not require an end-of-studies internship. Apprenticeships are
+# always removed. true = only VIE, internships and graduate programs.
 contracts:
-  only_vie_internship_graduate: true
+  only_vie_internship_graduate: false
 
 # Southern Europe (Spain, Italy, Portugal, Greece...) is only kept if the
 # offer shows a salary at least this high (gross, per month). VIEs always
@@ -652,6 +659,13 @@ welcome_to_the_jungle:
     - stage conseil en management
     - stagiaire consultant
     - strategy consulting internship
+    # junior jobs (CDI)
+    - chief of staff
+    - consultant junior transformation
+    - consultant transformation IA
+    - AI transformation
+    - chargé de mission stratégie
+    - chef de projet transformation IA
 
 # France Travail (official API, needs a free key — see README).
 france_travail:
@@ -665,6 +679,8 @@ france_travail:
     - stage supply chain
     - graduate programme
     - stage consultant transformation
+    - charge de mission strategie
+    - consultant transformation
 
 # LinkedIn public job search (no account used). Keep the list of
 # searches short — LinkedIn rate-limits heavy automated browsing.
@@ -689,4 +705,10 @@ linkedin:
     - keywords: "stage consultant transformation IA"
       location: "Paris, France"
     - keywords: "strategy consulting intern"
+      location: "European Union"
+    - keywords: "chief of staff"
+      location: "Paris, France"
+    - keywords: "consultant transformation IA"
+      location: "Paris, France"
+    - keywords: "AI transformation"
       location: "European Union"

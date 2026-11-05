@@ -145,6 +145,7 @@ GRAD_RE = re.compile(r"graduate|trainee|rotational|leadership (?:development )?p
 FORMAT_WORDS = {"graduate", "graduate program", "graduate programme", "management trainee",
                 "rotational", "leadership program"}
 # apprenticeships don't validate the master's degree
+CDI_RE = re.compile(r"\bcdi\b|full.time|permanent|unbefristet|indefinido")
 APPRENTICE_RE = re.compile(r"alternan|apprenti|work.study|contrat pro|werkstudent|"
                            r"working student|dual study|duales studium")
 
@@ -214,7 +215,8 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
         loc = _fold(o.location)
         company = _fold(o.company)
 
-        if any(_has_word(x, title) for x in exclude):
+        # "chief of staff" is a target role, not a senior one ("chief" is excluded)
+        if any(_has_word(x, title.replace("chief of staff", "")) for x in exclude):
             _drop("mot exclu dans le titre (tech, senior, marketing…)")
             continue
         vie_in_title = re.search(r"\bV\.?I\.?E\b", o.title) is not None
@@ -254,10 +256,10 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
         kind = _fold(o.contract) + " " + title
         is_intern = bool(INTERN_RE.search(kind) or INTERN_DESC_RE.search(desc[:1500]))
         is_grad = bool(GRAD_RE.search(kind))
+        if APPRENTICE_RE.search(kind) and not is_vie:
+            _drop("alternance")
+            continue
         if only_school_ok:
-            if APPRENTICE_RE.search(kind) and not is_vie:
-                _drop("alternance (non acceptée par l'école)")
-                continue
             if not (is_vie or is_intern or is_grad):
                 _drop("emploi (ni VIE, ni stage, ni graduate program)")
                 continue
@@ -369,6 +371,8 @@ def _rank(o, title, desc, loc, matched, priority, boost, preferred,
         add(20, "graduate program")
     elif is_intern:
         add(18, "stage")
+    elif CDI_RE.search(_fold(kind)):
+        add(18, "CDI / poste junior")
     else:
         add(8, "contrat non précisé")
     if years >= 3:

@@ -186,6 +186,7 @@ var CHIPS = [
   ['vie', 'VIE', function(o){ return o.vie; }],
   ['stage', 'Stage', function(o){ return /intern|stage|stagiaire/i.test(o.ct + ' ' + o.t); }],
   ['grad', 'Graduate', function(o){ return o.grad; }],
+  ['cdi', 'CDI', function(o){ return !o.vie && !o.grad && !/intern|stage|stagiaire/i.test(o.ct + ' ' + o.t); }],
   ['cons', 'Consulting', function(o){ return o.cons; }],
   ['eu', 'Europe (sans visa)', function(o){ return o.reg === 'west' || o.reg === 'south'; }],
   ['sal', 'Salaire affiché', function(o){ return !!o.sal; }],

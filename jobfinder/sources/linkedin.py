@@ -45,7 +45,7 @@ def _title_prefilter(title: str, config: dict) -> bool:
     """Cheap check with the user's keywords before spending a request."""
     kw = config.get("keywords") or {}
     t = " " + title.lower() + " "
-    if any(x.lower() in t for x in kw.get("exclude") or []):
+    if any(x.lower() in t.replace("chief of staff", "") for x in kw.get("exclude") or []):
         return False
     return any(w.lower() in t for w in kw.get("include") or [])
 
