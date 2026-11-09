@@ -1,12 +1,27 @@
-**8 new offer(s) match your profile today.**
+**23 new offer(s) match your profile today.**
 
-- [V.I.E. Building Management & Workplace Transformation](https://www.welcometothejungle.com/fr/companies/societe-generale/jobs/v-i-e-building-management-workplace-transformation_milan) — Société Générale — Milan, Italy — VIE
-- [DGPN/STN - Chargé.e de mission innovation et transformation H/F](https://www.welcometothejungle.com/fr/companies/maquette-ministere-de-l-interieur/jobs/charge-e-de-mission-innovation-et-transformation-h-f_paris) — Ministère de l'Intérieur — Paris, France — Full Time
-- [Manager Transformation Finance- Banque H/F](https://www.welcometothejungle.com/fr/companies/rsm/jobs/manager-transformation-finance-banque-h-f_paris_RSM_9O5Lb41) — RSM — Paris, France — Full Time
-- [CISO Office & Transformation](https://www.welcometothejungle.com/fr/companies/maquette-l-oreal-beauty-tech/jobs/ciso-office-transformation_saint-ouen) — L'Oréal Groupe — Saint-Ouen, France — Full Time
-- [Strategy and Analytics Business Partner](https://stripe.com/jobs/search?gh_jid=8326579) — Stripe — Dublin, Ireland — Full-time
-- [Stage - Assistant Chef de Projet digital H/F/X - Yves Rocher](https://www.welcometothejungle.com/fr/companies/groupe-rocher/jobs/stage-assistant-chef-de-projet-digital-h-f-x-yves-rocher_issy-les-moulineaux_GR_DbxbJAG) — Groupe Rocher — Issy-Les-Moulineaux, France — Stage
-- [Stagiaire, Stratégie et gouvernance, soutien aux opérations (Hiver 2027)](https://ca.linkedin.com/jobs/view/stagiaire-strat%C3%A9gie-et-gouvernance-soutien-aux-op%C3%A9rations-hiver-2027-at-bombardier-4476958584) — Bombardier — Dorval, Quebec, Canada — Stage
-- [Stage - Gestion des Programmes - Hiver 2027 Internship - Operations Program Management - Winter 2027](https://ca.linkedin.com/jobs/view/stage-gestion-des-programmes%C2%A0-hiver-2027-internship-operations-program-management-winter-2027-at-pratt-whitney-4467293409) — Pratt & Whitney — Longueuil, Quebec, Canada — Stage
+- [Chargé(e) de mission culturelle (H/F)](https://mon-vie-via.businessfrance.fr/offres/248046) — MINISTERE DE L'EUROPE ET DES AFFAIRES ETRANGERES — Libreville, Gabon — VIE (12 months)
+- [Stage 2027 - Stratégie & Analyse de données pour la conception de logiciels aéronautiques (F/H)](https://ag.wd3.myworkdayjobs.com/Airbus/job/Toulouse-Area/Stage-2027---Stratgie---Analyse-de-donnes-pour-la-conception-de-logiciels-aronautiques--F-H-_JR10444220) — Airbus — Toulouse Area, France — Stage
+- [#ETTP 3D Digital Transformation Leader (H/F)](https://ag.wd3.myworkdayjobs.com/Airbus/job/Marseille-Area/XMLNAME--ETTP-3D-Digital-Transformation-Leader--H-F-_JR10421809) — Airbus — Marseille Area, France — Full-time
+- [Consultant Manager en Stratégie Innovation/IA - F/H (Paris)](https://fr.linkedin.com/jobs/view/consultant-manager-en-strat%C3%A9gie-innovation-ia-f-h-paris-at-ey-4441040854) — EY — Paris, Île-de-France, France — Full-time
+- [Manager consultant transformation (H/F)](https://www.welcometothejungle.com/fr/companies/thales/jobs/manager-consultant-transformation-h-f_aix-en-provence) — Thales — Aix-En-Provence, France — Full Time
+- [Business Transformation Advisory - Paris](https://www.welcometothejungle.com/fr/companies/strana/jobs/business-transformation-advisory-paris_paris) — PIGMENT — Paris, France — Full Time
+- [Stage (M2) Consultant(e) en transformation - Organisation et digital](https://fr.linkedin.com/jobs/view/stage-m2-consultant-e-en-transformation-organisation-et-digital-at-artimon-4487146451) — Artimon — Paris, Île-de-France, France — Stage
+- [Consultant(e) en transformation - Organisation et digital](https://fr.linkedin.com/jobs/view/consultant-e-en-transformation-organisation-et-digital-at-artimon-4487134936) — Artimon — Paris, Île-de-France, France — Full-time
+- [Stage - Chargé de mission (H/F) - projet prévention](https://www.welcometothejungle.com/fr/companies/ucanss/jobs/stage-charge-de-mission-h-f-projet-prevention_la-roche-sur-yon) — La Sécurité Sociale — La Roche-Sur-Yon, France — Stage
+- [EY-Parthenon Praktikum Strategy - Life Science (w/m/d)](https://de.linkedin.com/jobs/view/ey-parthenon-praktikum-strategy-life-science-w-m-d-at-ey-parthenon-4487902572) — EY-Parthenon — Munich, Bavaria, Germany — Stage
+- [Stage (M2) Consultant(e) en transformation - Transport et Mobilités](https://fr.linkedin.com/jobs/view/stage-m2-consultant-e-en-transformation-transport-et-mobilit%C3%A9s-at-artimon-4487152336) — Artimon — Paris, Île-de-France, France — Stage
+- [Project Leader, Transformation & Value Creation](https://fr.linkedin.com/jobs/view/project-leader-transformation-value-creation-at-boston-consulting-group-bcg-4486980271) — Boston Consulting Group (BCG) — Paris, Île-de-France, France — Full-time
+- [HR Business Partner Operations (f/h)](https://ag.wd3.myworkdayjobs.com/Airbus/job/Toulouse-Area/HRBP-Single-Aisle-A320-coordination-Saint-Martin_JR10451187-1) — Airbus — Toulouse Area, France — Full-time
+- [INTERMARCHE - EMPLOYE DE TRANSFORMATION BOUCHERIE (H/F)](https://www.welcometothejungle.com/fr/companies/groupement-les-mousquetaires/jobs/intermarche-employe-de-transformation-boucherie-h-f_arques) — Groupement Mousquetaires — Arques, France — Temporary
+- [Chef(fe) de projet déploiement stratégie assurance vie](https://fr.linkedin.com/jobs/view/chef-fe-de-projet-d%C3%A9ploiement-strat%C3%A9gie-assurance-vie-at-abeille-assurances-4462441227) — Abeille Assurances — Bois-Colombes, Île-de-France, France — Full-time
+- [Planneur.se stratégique junior - stage](https://fr.linkedin.com/jobs/view/planneur-se-strat%C3%A9gique-junior-stage-at-spintank-4488855201) — Spintank — Paris, Île-de-France, France — Stage
+- [STAGE - CHARGE DE PROJET SIRH - F/H](https://www.welcometothejungle.com/fr/companies/generali-fr/jobs/stage-charge-de-projet-sirh-f-h_saint-denis_GF_Z90lk5J) — Generali France — Saint-Denis, France — Stage
+- [STAGE – BUSINESS DEVELOPER (BDR) – SAAS RH RETAIL](https://fr.linkedin.com/jobs/view/stage-%E2%80%93-business-developer-bdr-%E2%80%93-saas-rh-retail-at-station-f-4487663502) — STATION F — Paris, Île-de-France, France — Stage
+- [Chief Of Staff](https://fr.linkedin.com/jobs/view/chief-of-staff-at-seedext-4487112193) — Seedext — Paris, Île-de-France, France — Full-time
+- [Stagiaire Développement commercial & Étude de marché - secteur handicap](https://fr.linkedin.com/jobs/view/stagiaire-d%C3%A9veloppement-commercial-%C3%A9tude-de-march%C3%A9-secteur-handicap-at-lumeen-4488821923) — Lumeen — Lyon, Auvergne-Rhône-Alpes, France — Stage
+- [Chief of Staff, People & Culture](https://fr.linkedin.com/jobs/view/chief-of-staff-people-culture-at-alice-bob-4485862368) — Alice & Bob — Aubervilliers, Île-de-France, France — Full-time
+- [STAGE - Assistant Chef de Projets Supply Chain (H/F)](https://www.welcometothejungle.com/fr/companies/hermes/jobs/stage-assistant-chef-de-projets-supply-chain-h-f_fontenay-sous-bois) — Hermès — Fontenay-Sous-Bois, France — Stage
+- [AI Tech Consultant - Helsinki | BCG Platinion](https://fi.linkedin.com/jobs/view/ai-tech-consultant-helsinki-bcg-platinion-at-bcg-platinion-4434636625) — BCG Platinion — Helsinki, Uusimaa, Finland — Full-time
 
 Full list: see your dashboard (GitHub Pages link in the README).
