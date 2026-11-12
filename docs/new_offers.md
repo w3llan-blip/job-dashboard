@@ -1,22 +1,31 @@
-**18 new offer(s) match your profile today.**
+**15 nouvelle(s) offre(s) correspondent à ton profil aujourd'hui** (meilleur score d'abord).
 
-- [Strategy Consultant (Internship)](https://fr.linkedin.com/jobs/view/strategy-consultant-internship-at-emerton-4488514581) — Emerton — Paris, Île-de-France, France — Stage
-- [Summer Intern 2027 - Strategy Analyst](https://ca.linkedin.com/jobs/view/summer-intern-2027-strategy-analyst-at-manulife-4489649901) — Manulife — Toronto, Ontario, Canada — Stage
-- [Stage - Business Developer Partenaires Services - Paris (H/F)](https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/stage-business-developer-partenaires-services-paris-h-f_rueil-malmaison_SE_g66NoR7) — Schneider Electric — Rueil-Malmaison, France — Stage
-- [Strategy and Operations Intern](https://nl.linkedin.com/jobs/view/strategy-and-operations-intern-at-europeantailorco-4487401267) — EuropeanTailorCo — Amsterdam Area — Stage
-- [Analyste Transformation des Processus & IA - Stage (F/H)](https://fr.linkedin.com/jobs/view/analyste-transformation-des-processus-ia-stage-f-h-at-abeille-assurances-4489617763) — Abeille Assurances — Bois-Colombes, Île-de-France, France — Stage
-- [Chief of Staff, People & Transformation](https://fr.linkedin.com/jobs/view/chief-of-staff-people-transformation-at-alice-bob-4488283824) — Alice & Bob — Paris, Île-de-France, France — Full-time
-- [Managing Consultant/Consultante - Transformation IA & Agentic AI](https://fr.linkedin.com/jobs/view/managing-consultant-consultante-transformation-ia-agentic-ai-at-capgemini-invent-4489912288) — Capgemini Invent — Issy-les-Moulineaux, Île-de-France, France — Full-time
-- [Summer Intern 2027 - Enterprise Strategy](https://ca.linkedin.com/jobs/view/summer-intern-2027-enterprise-strategy-at-manulife-4489661265) — Manulife — Toronto, Ontario, Canada — Stage
-- [Treasury & Payment Solutions Strategy Internship, Summer 2027 (4 months)](https://ca.linkedin.com/jobs/view/treasury-payment-solutions-strategy-internship-summer-2027-4-months-at-bmo-4489641825) — BMO — Toronto, Ontario, Canada — Stage
-- [Chargé(e) de mission Stratégie et M&A (H/F) - Stage](https://fr.linkedin.com/jobs/view/charg%C3%A9-e-de-mission-strat%C3%A9gie-et-m-a-h-f-stage-at-abeille-assurances-4489113846) — Abeille Assurances — Bois-Colombes, Île-de-France, France — Stage
-- [Consultant(e) stagiaire en Customer & Business Transformation F/H](https://fr.linkedin.com/jobs/view/consultant-e-stagiaire-en-customer-business-transformation-f-h-at-ey-4488356924) — EY — Paris, Île-de-France, France — Stage
-- [Chief of Staff - Stratégie & Partenariats Assurance (H/F)](https://fr.linkedin.com/jobs/view/chief-of-staff-strat%C3%A9gie-partenariats-assurance-h-f-at-groupe-vilavi-4490305636) — Groupe VILAVI — Montreuil, Île-de-France, France — Full-time
-- [Business developer BtoB - Stagiaire](https://fr.linkedin.com/jobs/view/business-developer-btob-stagiaire-at-morning-4489044197) — Morning — Paris, Île-de-France, France — Stage
-- [Consultant(e) Change Management H/F](https://fr.linkedin.com/jobs/view/consultant-e-change-management-h-f-at-althea-4457265786) — ALTHEA — Issy-les-Moulineaux, Île-de-France, France — Full-time
-- [Chief of staff](https://fr.linkedin.com/jobs/view/chief-of-staff-at-sorontar-4490324668) — Sorontar — Paris, Île-de-France, France — Full-time
-- [Chief of Staff F/H](https://fr.linkedin.com/jobs/view/chief-of-staff-f-h-at-asmodee-4488663955) — asmodee — Boulogne-Billancourt, Île-de-France, France — Full-time
-- [Pathways Operations Manager Intern – Summer 2027 (Canada-Wide Opportunities)](https://ca.linkedin.com/jobs/view/pathways-operations-manager-intern-%E2%80%93-summer-2027-canada-wide-opportunities-at-amazon-4489628718) — Amazon — Toronto, Ontario, Canada — Stage
-- [Business Development, AI](https://www.linkedin.com/jobs/view/business-development-ai-at-lightwheel-4488862246) — Lightwheel — San Francisco Bay Area — Full-time
+**VIE** (1)
 
-Full list: see your dashboard (GitHub Pages link in the README).
+- **100** · [VIE 2026 - Malaysia - Finance Controller & Digital Transformation (m/f)](https://ag.wd3.myworkdayjobs.com/Airbus/job/Subang/VIE-2026---Malaysia---Finance-Controller---Digital-Transformation--m-f-_JR10456422) — Airbus — Subang, Malaysia — date de début ? — Workday
+
+**Stage** (4)
+
+- **82** · [Cloud Transformation Internship](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Assago-Via-del-Mulino-11a/Cloud-Transformation-Internship_R00355331) — Accenture — Assago Via del Mulino 11a — date de début ? — Workday
+- **81** · [EY-Parthenon Praktikant Strategy - Life Science (w/m/d)](https://de.linkedin.com/jobs/view/ey-parthenon-praktikant-strategy-life-science-w-m-d-at-ey-parthenon-4487901822) — EY-Parthenon — Berlin, Berlin, Germany — date de début ? — LinkedIn
+- **73** · [Student Intern, Supply Chain Management | Strategic Sourcing | Value Creation](https://ca.linkedin.com/jobs/view/student-intern-supply-chain-management-strategic-sourcing-value-creation-at-celestica-4486910648) — Celestica — Toronto, Ontario, Canada — date de début ? — LinkedIn
+- **58** · [Product Manager Intern (Winter 2027)](https://ca.linkedin.com/jobs/view/product-manager-intern-winter-2027-at-sweettech-4488609084) — SweetTech — Montreal, Quebec, Canada — date de début ? — LinkedIn
+
+**Graduate** (4)
+
+- **81** · [Junior Managers Program (Trainee) - Starte deine Leadership Journey im Bereich HR, Business und Strategy](https://de.linkedin.com/jobs/view/junior-managers-program-trainee-starte-deine-leadership-journey-im-bereich-hr-business-und-strategy-at-bosch-4489015717) — Bosch — Gerlingen, Baden-Württemberg, Germany — date de début ? — LinkedIn
+- **53** · [Management Trainee](https://nl.linkedin.com/jobs/view/management-trainee-at-gategourmet-4440120541) — gategourmet — Schiphol, North Holland, Netherlands — date de début ? — LinkedIn
+- **53** · [Management Trainee (Kallo)](https://be.linkedin.com/jobs/view/management-trainee-kallo-at-katoen-natie-4490340027) — Katoen Natie — Beveren, Flemish Region, Belgium — date de début ? — LinkedIn
+- **52** · [European Graduate Programme 2027](https://nl.linkedin.com/jobs/view/european-graduate-programme-2027-at-markel-international-4488517323) — Markel International — Rotterdam and The Hague — date de début ? — LinkedIn
+
+**Autres contrats** (6)
+
+- **90** · [Training Program Manager (M/F)](https://ag.wd3.myworkdayjobs.com/Airbus/job/Marseille-Area/Training-Program-Manager--M-F-_JR10457917-1) — Airbus — Marseille Area, France — date de début ? — Workday
+- **84** · [Sales Planning & Strategy](https://fr.linkedin.com/jobs/view/sales-planning-strategy-at-alan-4489911161) — Alan — Paris, Île-de-France, France — date de début ? — LinkedIn
+- **80** · [Consultant Transformation de la fonction SI – CIO Advisory - F/H](https://fr.linkedin.com/jobs/view/consultant-transformation-de-la-fonction-si-%E2%80%93-cio-advisory-f-h-at-onepoint-4329146513) — Onepoint — Paris, Île-de-France, France — date de début ? — LinkedIn
+- **74** · [People Operations Associate (11-Month FTC)](https://stripe.com/jobs/search?gh_jid=8248102) — Stripe — Dublin, Ireland — date de début ? — Greenhouse
+- **74** · [Chief of Staff](https://fr.linkedin.com/jobs/view/chief-of-staff-at-pennylane-4464643782) — Pennylane — Paris, Île-de-France, France — date de début ? — LinkedIn
+- **71** · [Value & Performance Program Manager (M/W)](https://fr.linkedin.com/jobs/view/value-performance-program-manager-m-w-at-servier-france-4482177662) — Servier France — Suresnes, Île-de-France, France — date de début ? — LinkedIn
+
+
+Liste complète et filtres : ton dashboard (lien GitHub Pages dans le README).
