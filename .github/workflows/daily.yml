@@ -49,7 +49,7 @@ jobs:
           echo "New offers: $COUNT"
           if [ "$COUNT" -gt 0 ]; then
             gh issue create \
-              --title "🔔 $COUNT new job offer(s) — $(date +%F)" \
+              --title "🔔 $COUNT nouveauté(s) : offres et dates limites — $(date +%F)" \
               --body-file docs/new_offers.md \
               --repo "$GITHUB_REPOSITORY"
           fi

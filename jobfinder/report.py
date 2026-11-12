@@ -14,7 +14,7 @@ import csv
 import html
 import json
 import re
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 OUT_DIR = Path(__file__).resolve().parent.parent / "docs"
@@ -146,7 +146,19 @@ function ago(d){
   if (days <= 0) return "aujourd'hui"; if (days === 1) return 'hier';
   if (days < 30) return 'il y a ' + days + ' j'; return 'il y a ' + Math.floor(days/30) + ' mois';
 }
-function snap(o){ return o ? {t:o.t, c:o.c, u:o.u, l:o.l, ct:o.ct, src:o.src} : {}; }
+// snapshot kept with your choice, so the offer's summary survives once it is gone from the sites
+function snap(o){ return o ? {t:o.t, c:o.c, u:o.u, l:o.l, ct:o.ct, src:o.src, st:o.st, sal:o.sal, desc:o.desc} : {}; }
+function fiche(o){
+  var bits = [o.ct, o.st ? 'début ' + o.st : '', o.sal, o.src].filter(Boolean).map(esc).join(' · ');
+  return (o.desc || bits) ? '<details class="why"><summary>Fiche de l\'offre</summary>' +
+    (bits ? '<p>' + bits + '</p>' : '') + (o.desc ? '<p>' + esc(o.desc) + '…</p>' : '') + '</details>' : '';
+}
+// choices made before snapshots carried the summary: fill it in while the offer is still online
+(function(){ var changed = false;
+  Object.keys(S).forEach(function(id){ var e = S[id], live = byId[id];
+    if (live && e && e.o && (e.s === 'applied' || e.s === 'saved') && !e.o.desc && live.desc){
+      e.o = snap(live); changed = true; } });
+  if (changed) save(KEY, S); })();
 function stateOf(id){ return S[id] ? S[id].s : ''; }
 function touch(id){ if (S[id]) S[id].m = Date.now(); delete D[id]; }
 function drop(id){ delete S[id]; D[id] = Date.now(); }
@@ -289,7 +301,7 @@ function storedList(state){
 function renderSaved(){
   var list = storedList('saved');
   $('#saved-list').innerHTML = list.length ? list.map(function(o){
-    return o.gone ? '<article class="offer" data-id="' + esc(o.id) + '"><div class="main"><div class="line1"><a class="title" href="' + esc(o.u) + '" target="_blank" rel="noopener">' + esc(o.t) + '</a></div><div class="meta"><span><b>' + esc(o.c) + '</b></span><span class="ko">plus en ligne ?</span></div></div><div class="actions"><button class="btn primary" data-act="applied">✓ Postulé</button><button class="btn" data-act="hidden">✕</button></div></article>'
+    return o.gone ? '<article class="offer" data-id="' + esc(o.id) + '"><div class="main"><div class="line1"><a class="title" href="' + esc(o.u) + '" target="_blank" rel="noopener">' + esc(o.t) + '</a></div><div class="meta"><span><b>' + esc(o.c) + '</b></span><span class="ko">plus en ligne ?</span></div>' + fiche(o) + '</div><div class="actions"><button class="btn primary" data-act="applied">✓ Postulé</button><button class="btn" data-act="hidden">✕</button></div></article>'
       : offerCard(o);
   }).join('') : '<div class="empty">Clique sur ☆ pour garder une offre ici avant de postuler.</div>';
 }
@@ -306,7 +318,7 @@ function renderApplied(){
     var days = Math.floor((Date.now() - new Date((o._s.t || today()) + 'T00:00:00')) / 864e5);
     var relance = (st === 'Postulé' && days >= 10) ? ' <span class="badge b-vie" title="Pas de nouvelles depuis ' + days + ' jours">À relancer</span>' : '';
     return '<tr data-id="' + esc(o.id) + '"><td>' + esc(o._s.t) + '</td>' +
-      '<td><a href="' + esc(o.u) + '" target="_blank" rel="noopener">' + esc(o.t) + '</a>' + relance + '<br><span style="color:var(--muted)">' + esc(o.c) + (o.l ? ' · ' + esc(o.l) : '') + '</span></td>' +
+      '<td><a href="' + esc(o.u) + '" target="_blank" rel="noopener">' + esc(o.t) + '</a>' + relance + '<br><span style="color:var(--muted)">' + esc(o.c) + (o.l ? ' · ' + esc(o.l) : '') + '</span>' + fiche(o) + '</td>' +
       '<td><select data-field="st" class="st-' + st + '">' + STATUSES.map(function(s){ return '<option' + (s === st ? ' selected' : '') + '>' + s + '</option>'; }).join('') + '</select></td>' +
       '<td><input class="note" data-field="note" placeholder="Contact, date d\'entretien…" value="' + esc(o._s.note || '') + '"></td>' +
       '<td><button class="btn" data-act="reset" title="Remettre dans « À voir »">↩</button></td></tr>';
@@ -518,22 +530,66 @@ def _offer_dict(o) -> dict:
     }
 
 
+def _deadline(p, today=None):
+    """(date, days left, approximate?) for a program, or (None, None, False)."""
+    d = p.get("deadline")
+    if isinstance(d, str):
+        try:
+            d = date.fromisoformat(d.strip())
+        except ValueError:
+            d = None
+    if isinstance(d, datetime):
+        d = d.date()
+    if not isinstance(d, date):
+        return None, None, False
+    today = today or _paris_now().date()
+    return d, (d - today).days, bool(p.get("deadline_approx"))
+
+
+def _deadline_cell(p) -> str:
+    d, left, approx = _deadline(p)
+    if d is None:
+        return '<span style="color:var(--muted)">—</span>'
+    when = ("vers le " if approx else "") + d.strftime("%d/%m/%Y")
+    if left < 0:
+        return f'<span style="color:var(--muted)">Clôturé ({when})</span>'
+    cls = "b-vie" if left <= 14 else "b-new"
+    tag = "aujourd'hui" if left == 0 else f"J-{left}"
+    return f'<span class="badge {cls}">{tag}</span><br>{html.escape(when)}'
+
+
+def _grad_sort_key(p):
+    """Visa-free first; within them: open deadlines soonest first, then
+    programs without a known deadline, then closed ones."""
+    d, left, _ = _deadline(p)
+    if d is None:
+        bucket, k = 1, 0
+    elif left < 0:
+        bucket, k = 2, -left
+    else:
+        bucket, k = 0, left
+    return (bool(p.get("needs_sponsorship")), bucket, k)
+
+
 def _grad_table(programs) -> str:
     if not programs:
         return '<div class="empty">Aucun programme listé (grad_programs.yaml).</div>'
     this_month = datetime.now().month
     rows = []
-    # programs you can actually join (no visa sponsorship needed) first
-    programs = sorted(programs, key=lambda p: bool(p.get("needs_sponsorship")))
+    # programs you can actually join (no visa sponsorship needed) first,
+    # then by application deadline (soonest first)
+    programs = sorted(programs, key=_grad_sort_key)
     for p in programs:
         badge = ('<span class="badge b-new">OUVRE CE MOIS-CI</span> '
                  if p.get("opens_month") == this_month else "")
-        style = ' style="opacity:.5"' if p.get("needs_sponsorship") else ""
+        closed = (_deadline(p)[1] or 0) < 0
+        style = ' style="opacity:.5"' if p.get("needs_sponsorship") or closed else ""
         rows.append(
             f"<tr{style}>"
             f'<td>{badge}<a href="{html.escape(p.get("url") or "")}" target="_blank" rel="noopener">'
             f'{html.escape(p.get("program") or "")}</a><br>'
             f'<span style="color:var(--muted)">{html.escape(p.get("company") or "")}</span></td>'
+            f'<td>{_deadline_cell(p)}</td>'
             f'<td>{html.escape(p.get("window") or MONTH_NAMES[p.get("opens_month") or 0])}</td>'
             f'<td>{html.escape(p.get("region") or "")}</td>'
             f'<td>{html.escape(p.get("visa") or "")}</td>'
@@ -541,10 +597,11 @@ def _grad_table(programs) -> str:
             "</tr>"
         )
     return f"""
-<p class="sub">Les fenêtres de candidature sont des tendances des années précédentes — vérifie sur la page.
-Rappel par notification le 1er du mois d'ouverture. Les lignes grisées demandent un visa rarement sponsorisé (pas de rappel).</p>
+<p class="sub">Triés par date limite (J-n = jours restants ; en orange à 14 jours ou moins). « vers le » = la page
+officielle ne donne que le mois. Sans date limite, les fenêtres sont des tendances des années précédentes — vérifie sur la page.
+Rappel par notification le 1er du mois d'ouverture et à J-14, J-7, J-3, J-1. Les lignes grisées sont clôturées ou demandent un visa rarement sponsorisé.</p>
 <div class="tablewrap"><table class="compact">
-<thead><tr><th>Programme</th><th>Candidatures</th><th>Région</th><th>Visa</th><th>Pourquoi toi</th></tr></thead>
+<thead><tr><th>Programme</th><th>Date limite</th><th>Candidatures</th><th>Région</th><th>Visa</th><th>Pourquoi toi</th></tr></thead>
 <tbody>{''.join(rows)}</tbody>
 </table></div>"""
 
@@ -696,29 +753,75 @@ def write_reports(offers, programs=None, health=None, kept_by_source=None, drops
     return html_path
 
 
-def write_new_offers_summary(offers, programs=None, max_items: int = 30) -> int:
+REMIND_DAYS = (14, 7, 3, 1, 0)   # deadline reminders in the daily notification
+
+
+def _kind(o) -> str:
+    text = (o.contract + " " + o.title).lower()
+    if o.source == "VIE" or "vie" in o.contract.lower().split():
+        return "VIE"
+    if "graduate" in text or "trainee" in text:
+        return "Graduate"
+    if o.contract.lower().startswith(("stage", "intern")) or "stage" in text or "intern" in text:
+        return "Stage"
+    return "Autres contrats"
+
+
+def write_new_offers_summary(offers, programs=None, health=None, max_items: int = 30) -> int:
     """Write docs/new_offers.md + docs/new_count.txt (used by the daily
-    GitHub notification). Returns the number of notification items."""
-    new = [o for o in offers if o.is_new]
-    today = datetime.now()
+    GitHub notification). Returns the number of notification items.
+
+    The recap lists new offers best score first, grouped by type, with the
+    start date and the source; then graduate-program deadlines coming up;
+    then the sources that returned nothing today (so a silent source is
+    not mistaken for "no new offers")."""
+    new = sorted((o for o in offers if o.is_new), key=lambda o: -o.score)
+    today = _paris_now().date()
+    progs = [p for p in (programs or []) if not p.get("needs_sponsorship")]
     # on the 1st of a month, remind about grad programs opening that month
-    reminders = [p for p in (programs or [])
-                 if p.get("opens_month") == today.month and today.day == 1
-                 and not p.get("needs_sponsorship")]
+    openings = [p for p in progs if p.get("opens_month") == today.month and today.day == 1]
+    deadlines = sorted((p for p in progs if _deadline(p, today)[1] in REMIND_DAYS),
+                       key=lambda p: _deadline(p, today)[1])
 
     lines = []
     if new:
-        lines += [f"**{len(new)} new offer(s) match your profile today.**", ""]
-        for o in new[:max_items]:
-            lines.append(f"- [{o.title}]({o.url}) — {o.company} — {o.location} — {o.contract}")
+        lines += [f"**{len(new)} nouvelle(s) offre(s) correspondent à ton profil aujourd'hui** "
+                  "(meilleur score d'abord).", ""]
+        shown = new[:max_items]
+        for kind in ("VIE", "Stage", "Graduate", "Autres contrats"):
+            group = [o for o in shown if _kind(o) == kind]
+            if not group:
+                continue
+            lines += [f"**{kind}** ({len(group)})", ""]
+            for o in group:
+                start = f"début {o.start_date}" if o.start_date else "date de début ?"
+                lines.append(f"- **{o.score}** · [{o.title}]({o.url}) — {o.company} — "
+                             f"{o.location} — {start} — {o.source}")
+            lines.append("")
         if len(new) > max_items:
-            lines.append(f"- …and {len(new) - max_items} more on the dashboard.")
-    if reminders:
-        lines += ["", "**📅 Graduate program applications likely opening this month — go check:**", ""]
-        for p in reminders:
+            lines.append(f"- …et {len(new) - max_items} autre(s) sur le dashboard.")
+    if deadlines:
+        lines += ["", "**⏰ Dates limites de graduate programs qui approchent :**", ""]
+        for p in deadlines:
+            d, left, approx = _deadline(p, today)
+            when = ("vers le " if approx else "le ") + d.strftime("%d/%m/%Y")
+            tag = "aujourd'hui" if left == 0 else f"J-{left}"
+            lines.append(f"- {tag} ({when}) : [{p.get('company')} — {p.get('program')}]({p.get('url')})")
+    if openings:
+        lines += ["", "**📅 Graduate programs qui ouvrent probablement ce mois-ci — va vérifier :**", ""]
+        for p in openings:
             lines.append(f"- [{p.get('company')} — {p.get('program')}]({p.get('url')}) ({p.get('window')})")
-    lines += ["", "Full list: see your dashboard (GitHub Pages link in the README)."]
+    # sources that broke or came back empty; sources you never set up
+    # (no API key, no company listed) are left out, they are silent on purpose
+    silent = [(name, err) for name, _label, fetched, err in (health or [])
+              if not fetched and not re.search(r"not set|configur", err or "", re.I)]
+    if silent and (new or deadlines or openings):
+        lines += ["", "**⚠️ Sources sans résultat aujourd'hui** (des offres ont pu être manquées) :", ""]
+        for name, err in silent:
+            lines.append(f"- {name}" + (f" — {err}" if err else " — 0 offre"))
+    lines += ["", "Liste complète et filtres : ton dashboard (lien GitHub Pages dans le README)."]
     OUT_DIR.mkdir(exist_ok=True)
+    count = len(new) + len(openings) + len(deadlines)
     (OUT_DIR / "new_offers.md").write_text("\n".join(lines), encoding="utf-8")
-    (OUT_DIR / "new_count.txt").write_text(str(len(new) + len(reminders)), encoding="utf-8")
-    return len(new) + len(reminders)
+    (OUT_DIR / "new_count.txt").write_text(str(count), encoding="utf-8")
+    return count

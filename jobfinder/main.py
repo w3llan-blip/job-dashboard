@@ -9,6 +9,7 @@ import yaml
 from .matching import score_offers, LAST_DROPS
 from .report import write_reports, write_new_offers_summary
 from .storage import mark_new
+from .dedup import dedupe
 from .sources import vie, greenhouse, lever, ashby, workday, wttj, francetravail, linkedin
 
 CONFIG_PATH = Path(__file__).resolve().parent.parent / "config.yaml"
@@ -45,14 +46,7 @@ def main() -> int:
 
     # drop cross-source duplicates (e.g. LinkedIn repeating a company's
     # own job board) — direct sources are listed first, so they win
-    unique, seen_keys = [], set()
-    for o in all_offers:
-        key = (o.title.strip().lower(), o.company.strip().lower())
-        if key in seen_keys:
-            continue
-        seen_keys.add(key)
-        unique.append(o)
-    all_offers = unique
+    all_offers, n_dupes = dedupe(all_offers)
 
     print(f"\nTotal fetched (after dedup): {len(all_offers)}")
     mark_new(all_offers)
@@ -65,8 +59,11 @@ def main() -> int:
     if GRAD_PATH.exists():
         programs = yaml.safe_load(GRAD_PATH.read_text(encoding="utf-8")) or []
 
-    report = write_reports(matches, programs, health, kept_by_source, dict(LAST_DROPS))
-    n_new = write_new_offers_summary(matches, programs)
+    drops = dict(LAST_DROPS)
+    if n_dupes:
+        drops["Doublon (même offre sur plusieurs sites)"] = n_dupes
+    report = write_reports(matches, programs, health, kept_by_source, drops)
+    n_new = write_new_offers_summary(matches, programs, health)
     print(f"Matching your profile: {len(matches)} ({n_new} new)")
     print(f"\nReport saved: {report}")
 

@@ -3,6 +3,11 @@
 # la notification du jour te rappelle d'aller postuler.
 # window commence par "Vérifié" quand les dates 2027 ont été lues sur la page
 # officielle (octobre 2026) ; sinon c'est la tendance des années précédentes.
+# deadline (facultatif) = date limite de candidature AAAA-MM-JJ. Ne la remplir
+# que si elle est lue sur la page officielle ; deadline_approx: true quand la
+# page donne seulement un mois (« jusqu'à novembre ») : on prend la fin du mois.
+# Le dashboard trie alors les programmes par date limite (J-n) et la
+# notification du jour te prévient à J-14, J-7, J-3, J-1 et le jour même.
 # Écartés volontairement : programmes marketing, programmes réservés aux
 # ingénieurs, et programmes hors UE sans sponsoring de visa (UK, US).
 
@@ -13,6 +18,8 @@
   url: https://europecareers.ab-inbev.com/programmes/graduate-management-traineeship
   opens_month: 9
   window: "Vérifié : ouvert maintenant, jusqu'à novembre 2026 (places pourvues au fil de l'eau). Début août 2027, 10 mois"
+  deadline: 2026-11-30
+  deadline_approx: true
   region: France (aussi Belgique, Pays-Bas, Allemagne, Italie)
   visa: UE — aucun visa
   fit: "3 rotations Sales / Commercial / Supply Chain / Transformation digitale. Anglais + français. À faire en premier : c'est ouvert et ça se remplit vite"
@@ -22,6 +29,7 @@
   url: https://www.novonordisk.com/careers/early-career-programmes/graduate.html
   opens_month: 12
   window: "Vérifié : du 6 décembre 2026 au 5 janvier 2027. Début 1er septembre 2027, 2 ans"
+  deadline: 2027-01-05
   region: Danemark (siège) + rotations à l'international
   visa: UE — aucun visa
   fit: "Anglais seulement, danois non requis. Master 2026/2027, moins d'1 an d'expérience, expérience internationale demandée : ton profil coche tout"
@@ -31,6 +39,8 @@
   url: https://theheinekencompany-rmk.jobs.hr.cloud.sap/TheNetherlands/go/Traineeships-The-Netherlands/9195101/
   opens_month: 9
   window: "Vérifié : candidatures au 2nd semestre 2026, début mars 2027 — trop tôt si ton master finit en avril, à vérifier avec eux"
+  deadline: 2026-12-31
+  deadline_approx: true
   region: Pays-Bas + une rotation à l'étranger
   visa: UE — aucun visa
   fit: "3 ans : 3 rotations de 6 mois puis un poste. Langue (néerlandais ?) non précisée : à vérifier"
