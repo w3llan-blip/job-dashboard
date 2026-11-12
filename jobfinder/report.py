@@ -640,6 +640,23 @@ def _health_table(health, kept_by_source) -> str:
 </table></div>"""
 
 
+DESC_MIN_SCORE = 70   # full texts are kept only for offers worth applying to
+
+
+def _write_descriptions(offers):
+    """docs/descriptions.json: full text of the best offers, keyed by offer id.
+    The page only embeds the first 420 characters; this file lets the
+    application assistant read the whole offer (LinkedIn, Workday and WTTJ
+    pages cannot be opened from the cloud). Only sources that give a
+    description (WTTJ, VIE, Greenhouse, Lever, Ashby, France Travail) fill it."""
+    data = {o.uid: {"t": o.title, "c": o.company, "u": o.url,
+                    "desc": re.sub(r"\s+", " ", o.description).strip()}
+            for o in offers
+            if o.score >= DESC_MIN_SCORE and len(o.description or "") > 420}
+    (OUT_DIR / "descriptions.json").write_text(
+        json.dumps(data, ensure_ascii=False, indent=0), encoding="utf-8")
+
+
 def _paris_now():
     """Current time in Paris (GitHub's servers run on UTC)."""
     try:
@@ -742,6 +759,7 @@ def write_reports(offers, programs=None, health=None, kept_by_source=None, drops
 
     html_path = OUT_DIR / "index.html"
     html_path.write_text(page, encoding="utf-8")
+    _write_descriptions(offers)
 
     with open(OUT_DIR / "offers.csv", "w", newline="", encoding="utf-8-sig") as f:
         w = csv.writer(f)
