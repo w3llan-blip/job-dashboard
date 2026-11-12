@@ -31,7 +31,7 @@ checkbox. Click a title to open the real offer.
 The same offer found on several sites is shown once (title and company
 compared without accents, punctuation or "H/F" markers; the company's own
 site wins, and missing details such as the start date are taken from the
-copies). The number of duplicates removed is in the **Sources** tab.
+copies). The number of duplicates removed is in the **Sources** tab (it was already removed before, just not counted: mostly one role posted in several cities).
 
 At the bottom of the dashboard, **Sources today** shows how many offers
 each source returned and how many passed your filters. A source stuck

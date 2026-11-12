@@ -61,7 +61,7 @@ def main() -> int:
 
     drops = dict(LAST_DROPS)
     if n_dupes:
-        drops["Doublon (même offre sur plusieurs sites)"] = n_dupes
+        drops["Doublon (même intitulé et même entreprise, souvent plusieurs villes ou sites)"] = n_dupes
     report = write_reports(matches, programs, health, kept_by_source, drops)
     n_new = write_new_offers_summary(matches, programs, health)
     print(f"Matching your profile: {len(matches)} ({n_new} new)")
