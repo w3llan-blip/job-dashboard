@@ -74,6 +74,7 @@ removed.
 
 Each offer has three buttons:
 
+- **✍ Candidature** opens a pre-filled GitHub issue (labelled `candidature`): just press "Submit new issue". Claude reads these requests twice a day, prepares a CV and a cover letter tailored to the offer and answers in the project. The offer also moves to **★ Gardées**.
 - **☆** keeps it for later (**★ Gardées** tab)
 - **✓ Postulé** moves it to **✓ Candidatures**: a compact tracker with
   the application date, a status (Postulé, Relancé, Entretien, Test,

@@ -78,7 +78,7 @@ details.why[open] summary::before{content:'▾ ';}
 details.why p{margin:6px 0 0;font-size:13px;line-height:1.45}
 .reasons span{display:inline-block;background:var(--chip);border-radius:6px;padding:1px 6px;margin:0 4px 3px 0;font-size:12px}
 .actions{display:flex;gap:6px;flex-shrink:0}
-.btn{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;white-space:nowrap}
+.btn{text-decoration:none;font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;white-space:nowrap}
 .btn:hover{border-color:var(--muted)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .btn.star.on{color:#d49b00;border-color:#d49b00}
@@ -115,8 +115,8 @@ footer .btn{font-size:12px;padding:4px 8px}
 @media (max-width:640px){
   .wrap{padding:10px}
   .offer{flex-direction:column;gap:8px}
-  .actions{width:100%}
-  .actions .btn{flex:1;text-align:center}
+  .actions{width:100%;flex-wrap:wrap}
+  .actions .btn{flex:1 1 auto;text-align:center}
   .actions .btn.star{flex:0 0 auto}
   .hide-sm{display:none}
 }
@@ -159,6 +159,15 @@ function fiche(o){
     if (live && e && e.o && (e.s === 'applied' || e.s === 'saved') && !e.o.desc && live.desc){
       e.o = snap(live); changed = true; } });
   if (changed) save(KEY, S); })();
+// « ✍ Candidature » opens a pre-filled issue in this repository: Claude reads the open
+// issues labelled "candidature", prepares a tailored CV + cover letter, then closes them
+var REPO = 'https://github.com/w3llan-blip/job-dashboard';
+function prepUrl(o){
+  var body = 'Offre : ' + o.u + '\nId : ' + o.id + '\nEntreprise : ' + o.c + '\nLieu : ' + (o.l || '?') +
+    '\n\n(Facultatif) Colle ici le texte de l\'offre si Claude risque de ne pas pouvoir le lire (LinkedIn, Workday), ou une consigne.';
+  return REPO + '/issues/new?labels=candidature&title=' + encodeURIComponent('Candidature : ' + o.t + ' — ' + o.c) +
+    '&body=' + encodeURIComponent(body);
+}
 function stateOf(id){ return S[id] ? S[id].s : ''; }
 function touch(id){ if (S[id]) S[id].m = Date.now(); delete D[id]; }
 function drop(id){ delete S[id]; D[id] = Date.now(); }
@@ -249,9 +258,9 @@ function offerCard(o){
     '<div class="meta">' + meta.map(function(m){ return '<span>' + m + '</span>'; }).join('') + '</div>' +
     ((why || o.desc) ? '<details class="why"><summary>Détails</summary>' +
       (why ? '<p class="reasons">' + why + '</p>' : '') +
-      (o.desc ? '<p>' + esc(o.desc) + '…</p>' : '') +
-      '<p class="prep"><button class="btn" data-prep="1">📝 Préparer ma candidature</button></p></details>' : '') +
+      (o.desc ? '<p>' + esc(o.desc) + '…</p>' : '') + '</details>' : '') +
     '</div><div class="actions">' +
+    '<a class="btn" data-prep="1" href="' + esc(prepUrl(o)) + '" target="_blank" rel="noopener" title="Claude te prépare un CV et une lettre adaptés à cette offre">✍ Candidature</a>' +
     '<button class="btn star' + (s === 'saved' ? ' on' : '') + '" data-act="saved" title="À garder (raccourci S)">' + (s === 'saved' ? '★' : '☆') + '</button>' +
     '<button class="btn primary" data-act="applied" title="Raccourci A">✓ Postulé</button>' +
     '<button class="btn" data-act="hidden" title="Raccourci X">✕ Pas intéressé</button>' +
@@ -353,11 +362,11 @@ document.addEventListener('click', function(e){
   if (chip){ var k = chip.dataset.chip, i = UI.chips.indexOf(k);
     if (i >= 0) UI.chips.splice(i, 1); else UI.chips.push(k); render(); return; }
   var prep = e.target.closest('[data-prep]');
-  if (prep){ var po = byId[prep.closest('[data-id]').dataset.id];
-    var txt = 'Prépare ma candidature (CV + lettre de motivation adaptés) pour cette offre : ' + po.t + ' — ' + po.c + ' — ' + po.u;
-    (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(function(){
-      toast('Copié — colle-le dans Claude (projet Stage)', function(){}); },
-      function(){ prompt('Copie ce texte et colle-le dans Claude :', txt); });
+  if (prep){ var pid = prep.closest('[data-id]').dataset.id;
+    // the link opens a pre-filled GitHub issue (the request queue Claude reads);
+    // also keep the offer in « Gardées » so it is easy to find again
+    if (stateOf(pid) !== 'saved' && stateOf(pid) !== 'applied')
+      setTimeout(function(){ setState(pid, 'saved'); }, 400);   // after the link has opened
     return; }
   var act = e.target.closest('[data-act]');
   if (act){ var id = act.closest('[data-id]').dataset.id, a = act.dataset.act;
