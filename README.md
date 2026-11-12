@@ -28,6 +28,11 @@ checkbox. Click a title to open the real offer.
   needs a free key, see below)
 - **LinkedIn** — public search (often blocked from GitHub's servers)
 
+The same offer found on several sites is shown once (title and company
+compared without accents, punctuation or "H/F" markers; the company's own
+site wins, and missing details such as the start date are taken from the
+copies). The number of duplicates removed is in the **Sources** tab.
+
 At the bottom of the dashboard, **Sources today** shows how many offers
 each source returned and how many passed your filters. A source stuck
 at 0 is blocked or misconfigured.
@@ -76,6 +81,10 @@ Each offer has three buttons:
   "À relancer". The offer stays there even once it's gone from the site.
 - **✕ Pas intéressé** hides it (**Masquées** tab, where you can restore it)
 
+Offers you keep or apply to also keep a short **Fiche de l'offre**
+(contract, start date, salary, first lines of the description), so you
+can still read what the offer said after it disappears from the site.
+
 Every action can be undone for 5 seconds ("Annuler"). Quick filters
 (VIE, Stage, Graduate, Europe, Visa sponsorisé...) combine with the
 search box. Keyboard: J/K to move, A applied, X not interested,
@@ -90,6 +99,23 @@ choices are then kept in a private gist on your GitHub account and synced
 whenever you change something or come back to the page (the newest change
 wins, offer by offer). **Exporter / Importer** still work as a manual
 backup. The local `Find Jobs.bat` page doesn't sync.
+
+## Graduate programs and deadlines
+
+The **Graduate programs** tab lists the programs in `grad_programs.yaml`,
+sorted by application deadline (J-n = days left, orange at 14 days or
+less). Add `deadline: 2027-01-05` to a program only when you read the date
+on the official page (`deadline_approx: true` if the page only gives a
+month). The daily notification reminds you at J-14, J-7, J-3, J-1 and on
+the day, and on the 1st of the month a program usually opens.
+
+## The daily notification
+
+When something is new, GitHub opens an issue (and emails you) with the new
+offers best score first, grouped by VIE / Stage / Graduate, with the start
+date and the source, then the deadlines coming up, then the sources that
+returned nothing today (so a blocked source is not mistaken for "no new
+offers").
 
 ## Turning on France Travail (optional, 10 minutes)
 
