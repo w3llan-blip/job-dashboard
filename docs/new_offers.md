@@ -1,26 +1,22 @@
-**22 new offer(s) match your profile today.**
+**18 new offer(s) match your profile today.**
 
-- [Strategic Partnerships Manager - Bank & Fintech - Stage - Paris](https://www.welcometothejungle.com/fr/companies/souscritoo/jobs/strategic-partnerships-manager-bank-fintech-stage-paris_paris_PAPER_l4MWdzZ) — Papernest — Paris, France — Stage
-- [Stage – Analyste Cybersécurité & Transformation Digitale - H/F](https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/stage-analyste-cybersecurite-transformation-digitale-h-f_grenoble_SE_L5LlKeA) — Schneider Electric — Grenoble, France — Stage
-- [Responsable Performance et Transformation (PMO) (H/F)](https://www.welcometothejungle.com/fr/companies/epsa-france/jobs/responsable-performance-et-transformation-pmo-h-f_niort) — EPSA — Niort, France — Full Time
-- [Stage - Support à la Transformation (Data-driven & Customer-Centric) - F/H](https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/stage-support-a-la-transformation-data-driven-customer-centric-f-h_eybens) — Schneider Electric — Eybens, France — Stage
-- [Consultant-e en Transformation  F/H](https://www.welcometothejungle.com/fr/companies/safran/jobs/consultant-e-en-transformation-f-h_malakoff) — Safran — Malakoff, France — Full Time
-- [Chef de Projets Transformation Digitale H/F](https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/chef-de-projets-transformation-digitale-h-f_macon) — Schneider Electric — Mâcon, France — Full Time
-- [Stage - chargé de mission dissémination et attractivité - projet PEPs - H/F](https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/stage-charge-de-mission-dissemination-et-attractivite-projet-peps-h-f_grenoble) — Schneider Electric — Grenoble, France — Stage
-- [Stage Strategy & Business Development BU Manganese Allows - F/H](https://fr.linkedin.com/jobs/view/stage-strategy-business-development-bu-manganese-allows-f-h-at-eramet-4488411319) — Eramet — Paris, Île-de-France, France — Stage
-- [Quality Graduate](https://sanofi.wd3.myworkdayjobs.com/SanofiCareers/job/Waterford/Quality-Graduate_R2877821) — Sanofi — Waterford, Ireland — Graduate program
-- [Transformation Office Analyst F/H](https://www.welcometothejungle.com/fr/companies/groupe-keolis/jobs/transformation-office-analyst-f-h_courbevoie) — Keolis — Courbevoie, France — Vie
-- [Technicien contrôle-commande et appui chargé d'affaires H/F](https://www.welcometothejungle.com/fr/companies/orano/jobs/technicien-controle-commande-et-appui-charge-d-affaires-h-f_pierrelatte) — Orano — Pierrelatte, France — Stage
-- [Chief of Staff Intern (H/F)](https://fr.linkedin.com/jobs/view/chief-of-staff-intern-h-f-at-iro-paris-4487610273) — IRO PARIS — Paris, Île-de-France, France — Stage
-- [Consultant(e) Digital Manufacturing & Maintenance en stage (H/F) - Paris](https://accenture.wd103.myworkdayjobs.com/AccentureCareers/job/Paris/Consultant-e--Digital-Manufacturing---Maintenance-en-stage--H-F----Paris_R00369313) — Accenture — Paris — Stage
-- [STAGE - Business Analyst Automatisation des Processus IT  – H/F](https://www.welcometothejungle.com/fr/companies/thales/jobs/stage-optimisation-des-processus-it-h-f_velizy-villacoublay) — Thales — Vélizy-Villacoublay, France — Stage
-- [Stage Développement commercial Export (H/F)](https://fr.linkedin.com/jobs/view/stage-d%C3%A9veloppement-commercial-export-h-f-at-cbm-4487171747) — CBM — Le Haillan, Nouvelle-Aquitaine, France — Stage
-- [Master Planning Pièces Elémentaires (H/F)](https://ag.wd3.myworkdayjobs.com/Airbus/job/Marseille-Area/Master-Planning-Pices-Elmentaires--H-F-_JR10442876) — Airbus — Marseille Area, France — Full-time
-- [Stage Chargé.e de projet Supply Chain Data F/H](https://www.welcometothejungle.com/fr/companies/safran/jobs/stage-charge-e-de-projet-data-f-h_plaisir) — Safran — Plaisir, France — Stage
-- [Graduate Program Finance F/H](https://www.welcometothejungle.com/fr/companies/groupe-adp/jobs/graduate-program-finance-f-h_roissy-en-france_GA_wqXda08) — Groupe ADP — Roissy-En-France, France — Graduate program
-- [Manager, HR Operations (APJC)](https://boards.greenhouse.io/cloudflare/jobs/8354708?gh_jid=8354708) — Cloudflare — Hybrid — Full-time
-- [Manager, People Operations (APJC)](https://boards.greenhouse.io/cloudflare/jobs/8354700?gh_jid=8354700) — Cloudflare — Hybrid — Full-time
-- [Project Manager, Government Projects Team](https://boards.greenhouse.io/cloudflare/jobs/8359292?gh_jid=8359292) — Cloudflare — In-Office — Full-time
-- [Stage - Chargé(e) de projet international - Hauts-de-France H/F](https://fr.linkedin.com/jobs/view/stage-charg%C3%A9-e-de-projet-international-hauts-de-france-h-f-at-business-france-4487925569) — Business France — Lille, Hauts-de-France, France — Stage
+- [Strategy Consultant (Internship)](https://fr.linkedin.com/jobs/view/strategy-consultant-internship-at-emerton-4488514581) — Emerton — Paris, Île-de-France, France — Stage
+- [Summer Intern 2027 - Strategy Analyst](https://ca.linkedin.com/jobs/view/summer-intern-2027-strategy-analyst-at-manulife-4489649901) — Manulife — Toronto, Ontario, Canada — Stage
+- [Stage - Business Developer Partenaires Services - Paris (H/F)](https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/stage-business-developer-partenaires-services-paris-h-f_rueil-malmaison_SE_g66NoR7) — Schneider Electric — Rueil-Malmaison, France — Stage
+- [Strategy and Operations Intern](https://nl.linkedin.com/jobs/view/strategy-and-operations-intern-at-europeantailorco-4487401267) — EuropeanTailorCo — Amsterdam Area — Stage
+- [Analyste Transformation des Processus & IA - Stage (F/H)](https://fr.linkedin.com/jobs/view/analyste-transformation-des-processus-ia-stage-f-h-at-abeille-assurances-4489617763) — Abeille Assurances — Bois-Colombes, Île-de-France, France — Stage
+- [Chief of Staff, People & Transformation](https://fr.linkedin.com/jobs/view/chief-of-staff-people-transformation-at-alice-bob-4488283824) — Alice & Bob — Paris, Île-de-France, France — Full-time
+- [Managing Consultant/Consultante - Transformation IA & Agentic AI](https://fr.linkedin.com/jobs/view/managing-consultant-consultante-transformation-ia-agentic-ai-at-capgemini-invent-4489912288) — Capgemini Invent — Issy-les-Moulineaux, Île-de-France, France — Full-time
+- [Summer Intern 2027 - Enterprise Strategy](https://ca.linkedin.com/jobs/view/summer-intern-2027-enterprise-strategy-at-manulife-4489661265) — Manulife — Toronto, Ontario, Canada — Stage
+- [Treasury & Payment Solutions Strategy Internship, Summer 2027 (4 months)](https://ca.linkedin.com/jobs/view/treasury-payment-solutions-strategy-internship-summer-2027-4-months-at-bmo-4489641825) — BMO — Toronto, Ontario, Canada — Stage
+- [Chargé(e) de mission Stratégie et M&A (H/F) - Stage](https://fr.linkedin.com/jobs/view/charg%C3%A9-e-de-mission-strat%C3%A9gie-et-m-a-h-f-stage-at-abeille-assurances-4489113846) — Abeille Assurances — Bois-Colombes, Île-de-France, France — Stage
+- [Consultant(e) stagiaire en Customer & Business Transformation F/H](https://fr.linkedin.com/jobs/view/consultant-e-stagiaire-en-customer-business-transformation-f-h-at-ey-4488356924) — EY — Paris, Île-de-France, France — Stage
+- [Chief of Staff - Stratégie & Partenariats Assurance (H/F)](https://fr.linkedin.com/jobs/view/chief-of-staff-strat%C3%A9gie-partenariats-assurance-h-f-at-groupe-vilavi-4490305636) — Groupe VILAVI — Montreuil, Île-de-France, France — Full-time
+- [Business developer BtoB - Stagiaire](https://fr.linkedin.com/jobs/view/business-developer-btob-stagiaire-at-morning-4489044197) — Morning — Paris, Île-de-France, France — Stage
+- [Consultant(e) Change Management H/F](https://fr.linkedin.com/jobs/view/consultant-e-change-management-h-f-at-althea-4457265786) — ALTHEA — Issy-les-Moulineaux, Île-de-France, France — Full-time
+- [Chief of staff](https://fr.linkedin.com/jobs/view/chief-of-staff-at-sorontar-4490324668) — Sorontar — Paris, Île-de-France, France — Full-time
+- [Chief of Staff F/H](https://fr.linkedin.com/jobs/view/chief-of-staff-f-h-at-asmodee-4488663955) — asmodee — Boulogne-Billancourt, Île-de-France, France — Full-time
+- [Pathways Operations Manager Intern – Summer 2027 (Canada-Wide Opportunities)](https://ca.linkedin.com/jobs/view/pathways-operations-manager-intern-%E2%80%93-summer-2027-canada-wide-opportunities-at-amazon-4489628718) — Amazon — Toronto, Ontario, Canada — Stage
+- [Business Development, AI](https://www.linkedin.com/jobs/view/business-development-ai-at-lightwheel-4488862246) — Lightwheel — San Francisco Bay Area — Full-time
 
 Full list: see your dashboard (GitHub Pages link in the README).
