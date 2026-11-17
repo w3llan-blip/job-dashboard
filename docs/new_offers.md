@@ -1,33 +1,36 @@
-**15 nouvelle(s) offre(s) correspondent à ton profil aujourd'hui** (meilleur score d'abord).
+**20 nouvelle(s) offre(s) correspondent à ton profil aujourd'hui** (meilleur score d'abord).
 
-**Stage** (6)
+**VIE** (1)
 
-- **88** · [Stage Assistant chef de projet digital sur les parcours e-commerce B2B F/H](https://www.welcometothejungle.com/fr/companies/bouygues-telecom/jobs/stage-assistant-chef-de-projet-digital-sur-les-parcours-e-commerce-b2b-f-h_boulogne-billancourt_BT_54P7jyM) — Bouygues Telecom — Boulogne - Billancourt, France — date de début ? — WTTJ
-- **77** · [Stage analyste stratégie corporate F/H](https://fr.linkedin.com/jobs/view/stage-analyste-strat%C3%A9gie-corporate-f-h-at-bouygues-telecom-4490632668) — Bouygues Telecom — Meudon, Île-de-France, France — date de début ? — LinkedIn
-- **75** · [Stage Business Developer Tech B2B H/F](https://fr.linkedin.com/jobs/view/stage-business-developer-tech-b2b-h-f-at-trimoji-4491511318) — Trimoji — Lyon, Auvergne-Rhône-Alpes, France — date de début ? — LinkedIn
-- **75** · [Business Development Representative (BDR) - Stage](https://fr.linkedin.com/jobs/view/business-development-representative-bdr-stage-at-jint-ex-mozzaik365-4490277727) — Jint (ex-Mozzaik365) — Paris, Île-de-France, France — date de début ? — LinkedIn
-- **71** · [Chargé de développement commercial, stage (H/F)](https://fr.linkedin.com/jobs/view/charg%C3%A9-de-d%C3%A9veloppement-commercial-stage-h-f-at-astridsen-4490528498) — ASTRIDSEN — Strasbourg, Grand Est, France — date de début ? — LinkedIn
-- **71** · [Stage – Développement commercial - Studentjob.fr](https://fr.linkedin.com/jobs/view/stage-%E2%80%93-d%C3%A9veloppement-commercial-studentjob-fr-at-jobster-4490622085) — Jobster — Cournon-d’Auvergne, Auvergne-Rhône-Alpes, France — date de début ? — LinkedIn
+- **88** · [Chargé(e) de mission (scientifique) (H/F)](https://mon-vie-via.businessfrance.fr/offres/248382) — MINISTERE DE L'EUROPE ET DES AFFAIRES ETRANGERES — Washington   -Dc-, Etats-Unis — début 2027-04 — VIE
 
-**Autres contrats** (9)
+**Stage** (10)
 
-- **90** · [Chargé de transformation numérique du métier SDI](https://www.welcometothejungle.com/fr/companies/ministere-des-armees-fr/jobs/charge-de-transformation-numerique-du-metier-sdi_paris) — Civils de la Défense - Ministère des Armées et des Anciens combattants — Paris, France — date de début ? — WTTJ
-- **90** · [Business Analyst en "Processus & Transformation SI" H/F](https://www.welcometothejungle.com/fr/companies/ministere-des-armees-fr/jobs/business-analyst-en-processus-transformation-si-h-f_palaiseau) — Civils de la Défense - Ministère des Armées et des Anciens combattants — Palaiseau, France — date de début ? — WTTJ
-- **89** · [Consultant(e) junior en Transformation des Organisations – Secteur de l'habitat – SCET HTC – Paris – CDI](https://www.welcometothejungle.com/fr/companies/scet/jobs/consultant-junior-en-transformation-des-organisations-secteur-de-l-habitat-scet-htc-paris-cdi_paris) — Groupe SCET HTC — Paris, France — date de début ? — WTTJ
-- **87** · [DIRECTEUR DE LA MISSION DE TRANSFORMATION POUR LA DIE](https://www.welcometothejungle.com/fr/companies/ministere-des-armees-fr/jobs/conseiller-a-la-transformation-numerique-de-la-dga-die_arcueil) — Civils de la Défense - Ministère des Armées et des Anciens combattants — Arcueil, France — date de début ? — WTTJ
-- **87** · [Responsable du service de la transformation numérique (STNUM) - SGCD de l'Eure](https://www.welcometothejungle.com/fr/companies/maquette-ministere-de-l-interieur/jobs/responsable-du-service-de-la-transformation-numerique-stnum-sgcd-de-l-eure_evreux) — Ministère de l'Intérieur — Évreux, France — date de début ? — WTTJ
-- **87** · [Transformation Manager Energy Management](https://www.welcometothejungle.com/fr/companies/hager-group/jobs/transformation-manager-energy-management_saverne) — Hager — Saverne, France — date de début ? — WTTJ
-- **87** · [Responsable Efficience Opérationnelle et projets de Transformation HF H/F](https://www.welcometothejungle.com/fr/companies/diot-siaci/jobs/responsable-efficience-operationnelle-et-projets-de-transformation-hf-h-f_clichy) — Diot Siaci — Clichy, France — date de début ? — WTTJ
-- **80** · [Strategic Account Executive - Public Sector](https://job-boards.greenhouse.io/gitlab/jobs/8860134002) — Gitlab — Remote, Germany — date de début ? — Greenhouse
-- **78** · [Strategy Consulting Work Placement](https://ie.linkedin.com/jobs/view/strategy-consulting-work-placement-at-arup-4489749378) — Arup — Cork, County Cork, Ireland — date de début ? — LinkedIn
+- **91** · [STAGE - CHEF DE PROJET DIGITAL F/H](https://www.welcometothejungle.com/fr/companies/cdiscount/jobs/stage-chef-de-projet-digital-f-h_bordeaux-33_CDISC_zDPz232) — Cdiscount — Bordeaux (33), France — date de début ? — WTTJ
+- **91** · [STAGE - Assistant Chef de Projet Opérations Retail (H/F)](https://www.welcometothejungle.com/fr/companies/hermes/jobs/stage-assistant-chef-de-projet-operations-retail-h-f_paris_HERMS_LOmOM7M) — Hermès — Paris, France — date de début ? — WTTJ
+- **82** · [STAGE - Chargé de mission RSE F/H](https://www.welcometothejungle.com/fr/companies/la-banque-postale/jobs/stage-charge-de-mission-rse-f-h_paris_LBP_K6aOpXj) — La Banque Postale — Paris, France — date de début ? — WTTJ
+- **81** · [STAGE - Chief of Staff / Stagiaire Bras Droit CEO](https://fr.linkedin.com/jobs/view/stage-chief-of-staff-stagiaire-bras-droit-ceo-at-savana-4489785046) — SAVANA — Paris, Île-de-France, France — date de début ? — LinkedIn
+- **81** · [Praktikum als Fellow Consultant (w/m/d) CFO Strategy & Performance Management](https://de.linkedin.com/jobs/view/praktikum-als-fellow-consultant-w-m-d-cfo-strategy-performance-management-at-horv%C3%A1th-4488233663) — Horváth — Berlin, Berlin, Germany — date de début ? — LinkedIn
+- **79** · [Stage - Business Analyst / SalesOps](https://www.welcometothejungle.com/fr/companies/illicopro/jobs/stage-business-analyst-salesops_paris_MATER_pD7eAx8) — Matera — Paris, France — date de début ? — WTTJ
+- **75** · [Stage Business Development - Partenariats (F/H)](https://fr.linkedin.com/jobs/view/stage-business-development-partenariats-f-h-at-lyra-4490114148) — Lyra — Labège, Occitanie, France — date de début ? — LinkedIn
+- **71** · [Business Developer - Chasse & Prescription Artisans (Stage 6 mois)](https://fr.linkedin.com/jobs/view/business-developer-chasse-prescription-artisans-stage-6-mois-at-logiadapt-4490956089) — Logiadapt' — Marseille, Provence-Alpes-Côte d'Azur, France — date de début ? — LinkedIn
+- **69** · [Stage - International Supply Chain Specialist (H/F)](https://www.welcometothejungle.com/fr/companies/withings/jobs/stage-international-supply-chain-specialist-h-f_issy-les-moulineaux) — Withings — Issy-Les-Moulineaux, France — date de début ? — WTTJ
+- **62** · [Edmonton Consulting Summer Internship, Operations - Government Solutions (May - August 2027)](https://ca.linkedin.com/jobs/view/edmonton-consulting-summer-internship-operations-government-solutions-may-august-2027-at-kpmg-canada-4490179730) — KPMG Canada — Edmonton, Alberta, Canada — début 2027-08 — LinkedIn
 
+**Graduate** (3)
 
-**⏰ Dates limites de graduate programs qui approchent :**
+- **81** · [Junior Managers Program (Trainee) - Start your Leadership Journey in HR, Business & Strategy](https://de.linkedin.com/jobs/view/junior-managers-program-trainee-start-your-leadership-journey-in-hr-business-strategy-at-bosch-4489593705) — Bosch — Gerlingen, Baden-Württemberg, Germany — date de début ? — LinkedIn
+- **69** · [GQO Manufacturing Operations Graduate Program - September 2027](https://ie.linkedin.com/jobs/view/gqo-manufacturing-operations-graduate-program-september-2027-at-stryker-4471185820) — Stryker — Cork, County Cork, Ireland — début 2027-09 — LinkedIn
+- **56** · [Corporate Management Trainee Rooms (m/w/d)](https://de.linkedin.com/jobs/view/corporate-management-trainee-rooms-m-w-d-at-grand-hyatt-4474618464) — Grand Hyatt — Berlin, Germany — date de début ? — LinkedIn
 
-- J-14 (vers le 30/11/2026) : [AB InBev — Graduate Management Traineeship (GMT) — France](https://europecareers.ab-inbev.com/programmes/graduate-management-traineeship)
+**Autres contrats** (6)
 
-**⚠️ Sources sans résultat aujourd'hui** (des offres ont pu être manquées) :
+- **96** · [Consultant Manager Transformation Financière- F/H](https://www.welcometothejungle.com/fr/companies/bdo-france-corporate-finance/jobs/consultant-manager-transformation-financiere-f-h) — BDO France — Paris, France — date de début ? — WTTJ
+- **85** · [TikTok Shop - Strategy Manager, Business Planning & Operations, Paris](https://fr.linkedin.com/jobs/view/tiktok-shop-strategy-manager-business-planning-operations-paris-at-tiktok-4490107912) — TikTok — Paris, Île-de-France, France — date de début ? — LinkedIn
+- **84** · [Business Development Representative, Financial Services - UKI](https://job-boards.greenhouse.io/gitlab/jobs/8939857002) — Gitlab — Remote Ireland; Remote, United Kingdom — date de début ? — Greenhouse
+- **74** · [Chief of staff H/F](https://fr.linkedin.com/jobs/view/chief-of-staff-h-f-at-snv-connect-4491251694) — SNV CONNECT — Paris, Île-de-France, France — date de début ? — LinkedIn
+- **71** · [Talent Operations Specialist](https://job-boards.greenhouse.io/dataiku/jobs/6256950004) — Dataiku — Netherlands, Remote — date de début ? — Greenhouse
+- **71** · [PMO Agile Lean Portfolio Management H/F](https://fr.linkedin.com/jobs/view/pmo-agile-lean-portfolio-management-h-f-at-lcl-4439556503) — LCL — Villejuif, Île-de-France, France — date de début ? — LinkedIn
 
-- Workday (large groups) — 0 offre
 
 Liste complète et filtres : ton dashboard (lien GitHub Pages dans le README).
