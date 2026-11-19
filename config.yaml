@@ -343,6 +343,39 @@ exclude_companies:
   - mc2i
   - inetum
 
+# VALUES: no arms makers, defence or interior ministries (Saliou, 19/11/2026).
+# Matched as whole words in the company name, like exclude_companies.
+# Airbus is NOT listed here on purpose: mostly civil, his call is pending.
+exclude_values_companies:
+  - thales
+  - safran
+  - mbda
+  - naval group
+  - dassault aviation
+  - knds
+  - nexter
+  - arquus
+  - arianegroup
+  - exail
+  - leonardo
+  - bae systems
+  - rheinmetall
+  - lockheed martin
+  - raytheon
+  - rtx
+  - northrop grumman
+  - general dynamics
+  - saab
+  - hensoldt
+  - kongsberg
+  - elbit
+  - ministere des armees
+  - civils de la defense
+  - direction generale de l'armement
+  - ministere de l'interieur
+  - gendarmerie
+  - police nationale
+
 # CONSULTING category ("Consulting" filter chip + "CONSEIL" badge).
 # Offers from these firms are kept when the title is a consulting role
 # AND the offer is about strategy, transformation or AI. Audit, tax,

@@ -181,6 +181,7 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
     boost = fold_all(kw.get("boost"))
     exclude = fold_all(kw.get("exclude"))
     bad_companies = fold_all(config.get("exclude_companies"))
+    values_companies = fold_all(config.get("exclude_values_companies"))
     cons = config.get("consulting") or {}
     cons_firms = fold_all(cons.get("companies"))
     cons_words = fold_all(cons.get("title_words"))
@@ -234,6 +235,9 @@ def score_offers(offers: list[Offer], config: dict) -> list[Offer]:
             continue
         if o.consulting and not _consulting_topic(o, title, desc, cons_topics):
             _drop("conseil hors stratégie, transformation ou IA")
+            continue
+        if any(_has_word(c, company) for c in values_companies):
+            _drop("entreprise exclue (armement, défense, intérieur)")
             continue
         if not o.consulting and any(_has_word(c, company) for c in bad_companies):
             _drop("entreprise exclue (ESN, sociétés de services…)")
