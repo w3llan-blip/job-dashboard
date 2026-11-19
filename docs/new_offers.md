@@ -1,27 +1,17 @@
-**14 nouvelle(s) offre(s) correspondent à ton profil aujourd'hui** (meilleur score d'abord).
+**7 nouvelle(s) offre(s) correspondent à ton profil aujourd'hui** (meilleur score d'abord).
 
-**Stage** (7)
+**VIE** (1)
 
-- **89** · [STAGE- Assistant Chef de Projet Visual Merchandising (VM Amont) H/F](https://www.welcometothejungle.com/fr/companies/hermes/jobs/stage-assistant-chef-de-projet-visual-merchandising-vm-amont-h-f_paris) — Hermès — Paris, France — date de début ? — WTTJ
-- **89** · [Stage -  Assistant chef de projet : Change & Déploiement (H/F)](https://www.welcometothejungle.com/fr/companies/coface/jobs/stage-assistant-chef-de-projet-change-deploiement-h-f_bois-colombes) — Coface — Bois-Colombes, France — date de début ? — WTTJ
-- **81** · [Stage Assistant Chef de Projet Opérations - H/F](https://www.welcometothejungle.com/fr/companies/globe-groupe/jobs/stage-assistant-chef-de-projet-operations-h-f_neuilly-sur-seine_GGF_erlNZVK) — GLOBE GROUPE FRANCE — Neuilly-Sur-Seine, France — date de début ? — WTTJ
-- **80** · [Technology Strategy - Winter 2027 Co-op/Intern](https://ca.linkedin.com/jobs/view/technology-strategy-winter-2027-co-op-intern-at-definity-financial-4492211274) — Definity Financial — Toronto, Ontario, Canada — date de début ? — LinkedIn
-- **75** · [Stage de pré-embauche Business Developer Tech B2B H/F](https://fr.linkedin.com/jobs/view/stage-de-pr%C3%A9-embauche-business-developer-tech-b2b-h-f-at-trimoji-4492024362) — Trimoji — Lyon, Auvergne-Rhône-Alpes, France — date de début ? — LinkedIn
-- **72** · [Stage - Business Development 🧑🍳](https://fr.linkedin.com/jobs/view/stage-business-development-%F0%9F%A7%91%E2%80%8D%F0%9F%8D%B3-at-les-cuistots-migrateurs-4492147090) — Les Cuistots Migrateurs — Montreuil, Île-de-France, France — date de début ? — LinkedIn
-- **71** · [Stagiaire - Analyste Stratégique F/H](https://fr.linkedin.com/jobs/view/stagiaire-analyste-strat%C3%A9gique-f-h-at-engie-4492027385) — ENGIE — La Garenne-Colombes, Île-de-France, France — date de début ? — LinkedIn
+- **75** · [VIE (d/f/m) 2027 - Germany - Quality Procurement Transverse Project Manager](https://ag.wd3.myworkdayjobs.com/Airbus/job/Hamburg---Finkenwerder/XMLNAME--VIE-2027---Germany---Airbus-SAS---Quality-Procurement-Transverse-Project-Manager----H-F-_JR10444107) — Airbus — Hamburg - Finkenwerder — date de début ? — Workday
 
-**Graduate** (1)
+**Stage** (6)
 
-- **57** · [Graduate Programme (d/m/w) Corporate Bank 2027 Deutsche Bank](https://de.linkedin.com/jobs/view/graduate-programme-d-m-w-corporate-bank-2027-deutsche-bank-at-bhw-bausparkasse-ag-4491339744) — BHW Bausparkasse AG — Berlin, Berlin, Germany — date de début ? — LinkedIn
-
-**Autres contrats** (6)
-
-- **100** · [Responsable du service transformation numérique RH F/H](https://www.welcometothejungle.com/fr/companies/aphp/jobs/responsable-du-service-transformation-numerique-rh-f-h_paris_ADDSND_dRLXYV) — AP-HP - Direction des Services Numériques (DSN) — Paris, France — date de début ? — WTTJ
-- **87** · [Opérateur 2ème transformation F/H](https://www.welcometothejungle.com/fr/companies/groupement-les-mousquetaires/jobs/operateur-2eme-transformation-f-h_briec_GM_y3635K) — Groupement Mousquetaires — Briec, France — date de début ? — WTTJ
-- **87** · [AI Strategy Consultant](https://fr.linkedin.com/jobs/view/ai-strategy-consultant-at-galadrim-4490941667) — Galadrim — Paris, Île-de-France, France — date de début ? — LinkedIn
-- **83** · [Manager Transformation Consolidation & IA (H/F/NB)](https://fr.linkedin.com/jobs/view/manager-transformation-consolidation-ia-h-f-nb-at-keyrus-4424005780) — Keyrus — Levallois-Perret, Île-de-France, France — date de début ? — LinkedIn
-- **80** · [Consultant -  Business Transformation](https://fr.linkedin.com/jobs/view/consultant-business-transformation-at-sia-4492013174) — Sia — Paris, Île-de-France, France — date de début ? — LinkedIn
-- **70** · [Junior Associate - Tech & AI](https://fr.linkedin.com/jobs/view/junior-associate-tech-ai-at-mckinsey-company-4465808930) — McKinsey & Company — Paris, Île-de-France, France — date de début ? — LinkedIn
+- **82** · [#DISCOVER I 2027/2028 Quality Team (Cádiz)- Support to transformation project Internship](https://ag.wd3.myworkdayjobs.com/Airbus/job/Cadiz-Area/XMLNAME--DISCOVER-I-2027-2028-Quality-Team--Cdiz---Support-to-transformation-project-Internship_JR10455666) — Airbus — Cadiz Area — date de début ? — Workday
+- **79** · [Stage 2027 - Chargé·e de mission Numérique Responsable & RSE (All Gender)](https://ag.wd3.myworkdayjobs.com/Airbus/job/Toulouse-Area/tage-2027---Charge-de-mission-RSE--Transition-cologique---Impact-Socital--All-Gender-_JR10447383) — Airbus — Toulouse Area — date de début ? — Workday
+- **79** · [Stage - Chargé.e de mission AMO Conseil environnement - Pantin (4-6mois) - F/H](https://www.welcometothejungle.com/fr/companies/arep/jobs/stage-charge-e-de-mission-amo-conseil-environnement-pantin-4-6mois-f-h_pantin) — AREP — Pantin, France — date de début ? — WTTJ
+- **74** · [Stagiaire Développement Commercial (H/F)](https://fr.linkedin.com/jobs/view/stagiaire-d%C3%A9veloppement-commercial-h-f-at-hospitaliti-4489278954) — Hospitaliti — Paris, Île-de-France, France — date de début ? — LinkedIn
+- **72** · [Stage Business Developer Junior- Marché espagnol (H/F)](https://fr.linkedin.com/jobs/view/stage-business-developer-junior-march%C3%A9-espagnol-h-f-at-interactiv-%E2%80%8B-technologies-catalogues-marketing-publications-4492428356) — Interactiv' Technologies - Catalogues & Marketing publications — Lyon, Auvergne-Rhône-Alpes, France — date de début ? — LinkedIn
+- **65** · [Intern Influence Project Manager](https://fr.linkedin.com/jobs/view/intern-influence-project-manager-at-picnic-technologies-4491718317) — Picnic Technologies — Paris, Île-de-France, France — date de début ? — LinkedIn
 
 
 Liste complète et filtres : ton dashboard (lien GitHub Pages dans le README).
