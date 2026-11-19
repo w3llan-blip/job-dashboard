@@ -345,9 +345,10 @@ exclude_companies:
 
 # VALUES: no arms makers, defence or interior ministries (Saliou, 19/11/2026).
 # Matched as whole words in the company name, like exclude_companies.
-# Airbus is NOT listed here on purpose: mostly civil, his call is pending.
+# Airbus kept (his choice 19/11), except its Defence and Space division.
 exclude_values_companies:
   - thales
+  - airbus defence and space
   - safran
   - mbda
   - naval group
