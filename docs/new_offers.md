@@ -1,31 +1,30 @@
-**18 nouvelle(s) offre(s) correspondent à ton profil aujourd'hui** (meilleur score d'abord).
+**17 nouvelle(s) offre(s) correspondent à ton profil aujourd'hui** (meilleur score d'abord).
 
-**VIE** (2)
+**VIE** (1)
 
-- **86** · [Operational product Manager Clé de Peau Beauté (H/F)](https://mon-vie-via.businessfrance.fr/offres/248523) — BEAUTE PRESTIGE INTERNATIONAL — Amsterdam, Pays-Bas — début 2027-04 — VIE
-- **79** · [Financial Planning & Analyst (H/F)](https://mon-vie-via.businessfrance.fr/offres/248522) — LONGCHAMP — Hong Kong, Hong Kong — début 2027-04 — VIE
+- **89** · [Chargé(e) de mission (culturel) (H/F)](https://mon-vie-via.businessfrance.fr/offres/248572) — MINISTERE DE L'EUROPE ET DES AFFAIRES ETRANGERES — Djibouti, Djibouti — début 2027-04 — VIE
 
-**Stage** (6)
+**Stage** (10)
 
-- **86** · [Stage stratégie et transformation Engineering Bac+5 (H/F))](https://fr.linkedin.com/jobs/view/stage-strat%C3%A9gie-et-transformation-engineering-bac%2B5-h-f-at-volvo-group-4492921463) — Volvo Group — Lyon, Auvergne-Rhône-Alpes, France — date de début ? — LinkedIn
-- **76** · [Stage - Business Developer IoT (France) H/F](https://fr.linkedin.com/jobs/view/stage-business-developer-iot-france-h-f-at-transatel-an-ntt-company-4491932188) — TRANSATEL (an NTT company) — Courbevoie, Île-de-France, France — date de début ? — LinkedIn
-- **75** · [Stage de pré-embauche Business Developer Tech B2B H/F](https://fr.linkedin.com/jobs/view/stage-de-pr%C3%A9-embauche-business-developer-tech-b2b-h-f-at-trimoji-4492790923) — Trimoji — Lyon, Auvergne-Rhône-Alpes, France — date de début ? — LinkedIn
-- **74** · [Stage - Business Developer - Immobilier professionnel](https://fr.linkedin.com/jobs/view/stage-business-developer-immobilier-professionnel-at-balthazar-s%C3%A9lection-4492173636) — Balthazar Sélection — Paris, Île-de-France, France — date de début ? — LinkedIn
-- **70** · [Stage Pilote Planification F/H - Bac+3/5 - Supply Chain - Nanterre](https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/stage-pilote-planification-f-h-bac-3-5-supply-chain-nanterre_rueil-malmaison) — Schneider Electric — Rueil-Malmaison, France — date de début ? — WTTJ
-- **62** · [Commercial Deposits, Money Movement & Digital Channels Intern/Co-op (Winter 2027)](https://ca.linkedin.com/jobs/view/commercial-deposits-money-movement-digital-channels-intern-co-op-winter-2027-at-td-4492750188) — TD — Toronto, Ontario, Canada — date de début ? — LinkedIn
+- **90** · [Assistant Stratégie & Pilotage GTB Europe](https://www.welcometothejungle.com/fr/companies/societe-generale/jobs/assistant-strategie-pilotage-gtb-europe_puteaux_SG_LZox1J5) — Société Générale — Puteaux, France — date de début ? — WTTJ
+- **89** · [STAGE - Assistant Chef de Projet Visual Merchandising (VM Amont) - Parfum & Beauté H/F](https://www.welcometothejungle.com/fr/companies/hermes/jobs/stage-assistant-chef-de-projet-visual-merchandising-vm-amont-parfum-beaute-h-f_paris) — Hermès — Paris, France — date de début ? — WTTJ
+- **80** · [Stage de fin d’études – Consultant en Stratégie SI et Architecture d’Entreprise F/H](https://fr.linkedin.com/jobs/view/stage-de-fin-d%E2%80%99%C3%A9tudes-%E2%80%93-consultant-en-strat%C3%A9gie-si-et-architecture-d%E2%80%99entreprise-f-h-at-onepoint-4483064708) — Onepoint — Paris, Île-de-France, France — date de début ? — LinkedIn
+- **78** · [Stage Data Analyst / Transformation Digitale F/H](https://www.welcometothejungle.com/fr/companies/edf/jobs/stage-data-analyst-transformation-digitale-f-h_lyon) — EDF — Lyon, France — date de début ? — WTTJ
+- **72** · [Business Developer Grands Comptes Photovoltaïque | Stage | F/H](https://fr.linkedin.com/jobs/view/business-developer-grands-comptes-photovolta%C3%AFque-stage-f-h-at-idex-4492939707) — IDEX — Boulogne-Billancourt, Île-de-France, France — date de début ? — LinkedIn
+- **71** · [STAGE - CHARGE DE PROJET SOLUTION PREVENTION FRAUDE - F/H](https://www.welcometothejungle.com/fr/companies/generali-fr/jobs/stage-charge-de-projet-solution-prevention-fraude-f-h_saint-denis) — Generali France — Saint-Denis, France — date de début ? — WTTJ
+- **71** · [Stage Chef de Projet Télécoms & Réseaux (H/F)](https://fr.linkedin.com/jobs/view/stage-chef-de-projet-t%C3%A9l%C3%A9coms-r%C3%A9seaux-h-f-at-fayat-group-4491651175) — FAYAT Group — Puteaux, Île-de-France, France — date de début ? — LinkedIn
+- **71** · [Stage — Développement commercial en microbrasserie](https://fr.linkedin.com/jobs/view/stage-%E2%80%94-d%C3%A9veloppement-commercial-en-microbrasserie-at-rupture-brewing-company-4492947134) — Rupture Brewing Company — St.-Maur-des-Fossés, Île-de-France, France — date de début ? — LinkedIn
+- **71** · [Strategic Analyst Intern F/M](https://fr.linkedin.com/jobs/view/strategic-analyst-intern-f-m-at-bouygues-construction-4491954946) — Bouygues Construction — Guyancourt, Île-de-France, France — date de début ? — LinkedIn
+- **65** · [Internship - Cloud Architecture, TechOps Innovation & AI](https://fr.linkedin.com/jobs/view/internship-cloud-architecture-techops-innovation-ai-at-alstom-4490458776) — Alstom — Île-de-France, France — date de début ? — LinkedIn
 
-**Autres contrats** (10)
+**Autres contrats** (6)
 
-- **89** · [Consultant Expérimenté Stratégie et Transformation Digitale H/F](https://fr.linkedin.com/jobs/view/consultant-exp%C3%A9riment%C3%A9-strat%C3%A9gie-et-transformation-digitale-h-f-at-onepoint-4353473218) — Onepoint — Paris, Île-de-France, France — date de début ? — LinkedIn
-- **86** · [Digital Advisory Manager – Transformation IA, Business Value & Change Management (F/H)](https://fr.linkedin.com/jobs/view/digital-advisory-manager-%E2%80%93-transformation-ia-business-value-change-management-f-h-at-avanade-4485226386) — Avanade — Issy-les-Moulineaux, Île-de-France, France — date de début ? — LinkedIn
-- **86** · [AI Transformation Manager](https://fr.linkedin.com/jobs/view/ai-transformation-manager-at-pollen-4489749807) — Pollen — Paris, Île-de-France, France — date de début ? — LinkedIn
-- **86** · [Manager IA transformation H/F/D](https://fr.linkedin.com/jobs/view/manager-ia-transformation-h-f-d-at-reply-4489757815) — Reply — Paris, Île-de-France, France — date de début ? — LinkedIn
-- **83** · [Manager – Transformation Finance F/H](https://www.welcometothejungle.com/fr/companies/primexis/jobs/manager-transformation-finance-f-h_puteaux_PRIME_dAl7oek) — Primexis — Puteaux, France — date de début ? — WTTJ
-- **83** · [Managing Consultante/Consultant - Conduite du changement / Change management](https://fr.linkedin.com/jobs/view/managing-consultante-consultant-conduite-du-changement-change-management-at-capgemini-invent-4305875685) — Capgemini Invent — Greater Paris Metropolitan Region — date de début ? — LinkedIn
-- **80** · [Leader Transformation de la fonction SI – CIO Advisory - F/H](https://fr.linkedin.com/jobs/view/leader-transformation-de-la-fonction-si-%E2%80%93-cio-advisory-f-h-at-onepoint-4329196332) — Onepoint — Paris, Île-de-France, France — date de début ? — LinkedIn
-- **74** · [Chargé(e) de développement commercial (H/F)](https://fr.linkedin.com/jobs/view/charg%C3%A9-e-de-d%C3%A9veloppement-commercial-h-f-at-le-m%C3%A9dia-positif-%F0%9F%8D%80-4491369812) — Le Média Positif 🍀 — Paris, Île-de-France, France — date de début ? — LinkedIn
-- **63** · [HR Operations Specialist, APAC (Full-time)](https://boards.greenhouse.io/cloudflare/jobs/8404717?gh_jid=8404717) — Cloudflare — Hybrid — date de début ? — Greenhouse
-- **63** · [People Operations Specialist, APAC (Full-time)](https://boards.greenhouse.io/cloudflare/jobs/8404716?gh_jid=8404716) — Cloudflare — Hybrid — date de début ? — Greenhouse
+- **86** · [Transformation Manager (F/M/X)](https://www.welcometothejungle.com/fr/companies/accor-tech/jobs/transformation-manager-f-m-x_issy-les-moulineaux) — Accor Tech & Digital — Issy-Les-Moulineaux, France — date de début ? — WTTJ
+- **83** · [Data Transformation Analyste H/F](https://www.welcometothejungle.com/fr/companies/volkswagen-financial-services/jobs/data-transformation-analyste-h-f_roissy-en-france) — Volkswagen Financial Services — Roissy-En-France, France — date de début ? — WTTJ
+- **74** · [Product Manager, Payment Methods, EMEA](https://stripe.com/jobs/search?gh_jid=8406995) — Stripe — Dublin — date de début ? — Greenhouse
+- **74** · [[Paris] Investment & Strategy Associate Manager](https://www.welcometothejungle.com/fr/companies/software-club/jobs/software-engineer-intern-end-of-studies-internship-start-date-asap_paris) — Dedale Intelligence — Paris, France — date de début ? — WTTJ
+- **67** · [IT Application Product Owner for H160 M ground segment M/F](https://ag.wd3.myworkdayjobs.com/Airbus/job/Marseille-Area/IT-Application-Product-Owner-for-H160-M-ground-segment-M-F_JR10430444-1) — Airbus — Marseille Area — date de début ? — Workday
+- **64** · [Network Architect / Product Manager Network (m/f/d)](https://ag.wd3.myworkdayjobs.com/Airbus/job/Mnchen-Area/Network-Architect---Product-Manager-Network--m-f-d-_JR10451758-1) — Airbus — Mnchen Area — date de début ? — Workday
 
 
 Liste complète et filtres : ton dashboard (lien GitHub Pages dans le README).
