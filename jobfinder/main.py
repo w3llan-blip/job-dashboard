@@ -10,6 +10,7 @@ from .matching import score_offers, LAST_DROPS
 from .report import write_reports, write_new_offers_summary
 from .storage import mark_new
 from .dedup import dedupe
+from .extras import manual_offers, add_manual, star_offers
 from .sources import vie, greenhouse, lever, ashby, workday, wttj, francetravail, linkedin
 
 CONFIG_PATH = Path(__file__).resolve().parent.parent / "config.yaml"
@@ -49,8 +50,13 @@ def main() -> int:
     all_offers, n_dupes = dedupe(all_offers)
 
     print(f"\nTotal fetched (after dedup): {len(all_offers)}")
-    mark_new(all_offers)
+    manual = manual_offers()   # offers added by hand (manual_offers.yaml)
+    mark_new(all_offers + manual)
     matches = score_offers(all_offers, config)
+    n_manual = add_manual(matches, manual)
+    if manual:
+        print(f"Manual offers: {n_manual} added ({len(manual) - n_manual} already listed)")
+        health.append(("Ajouts manuels (manual_offers.yaml)", "Ajout manuel", len(manual), ""))
     kept_by_source = {}
     for o in matches:
         kept_by_source[o.source] = kept_by_source.get(o.source, 0) + 1
@@ -62,7 +68,7 @@ def main() -> int:
     drops = dict(LAST_DROPS)
     if n_dupes:
         drops["Doublon (même intitulé et même entreprise, souvent plusieurs villes ou sites)"] = n_dupes
-    report = write_reports(matches, programs, health, kept_by_source, drops)
+    report = write_reports(matches, programs, health, kept_by_source, drops, star_offers(matches))
     n_new = write_new_offers_summary(matches, programs, health)
     print(f"Matching your profile: {len(matches)} ({n_new} new)")
     print(f"\nReport saved: {report}")

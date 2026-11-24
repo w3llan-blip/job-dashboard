@@ -169,3 +169,19 @@ them in the `applications/` folder — then you review and send them yourself.
 The `.gitignore` file makes sure your CV, cover letters and the whole
 `applications/` folder stay on your computer only — they are never
 uploaded to GitHub.
+
+## Offres ajoutées à la main et onglet ⭐ Star (24/11/2026)
+
+- `manual_offers.yaml` : offres trouvées à la main (ex. LinkedIn Premium). Elles
+  arrivent dans « À voir » avec le badge MAIN, sans passer par les filtres, et
+  disparaissent 45 jours après l'ajout (ou à leur date limite). Pas de doublon
+  avec une offre déjà listée (même intitulé + entreprise, ou même lien).
+- `star_offers.yaml` : les offres « À postuler » de la veille tous les 3 jours,
+  dans l'onglet **⭐ Star**, avec un statut par offre (À postuler, Dossier prêt,
+  Postulé… Pas pour moi, Expirée). Le statut choisi dans l'onglet est synchronisé
+  comme le reste (gist) ; une offre passée en « Postulé » apparaît aussi dans
+  « ✓ Candidatures ».
+- Pour que Claude lise les statuts : secret Actions `SYNC_GIST_ID` = identifiant
+  du gist de synchro (bouton « Copier l'identifiant » dans l'onglet). Le workflow
+  quotidien écrit alors `suivi_candidatures.json` (entreprise, poste, statut,
+  date ; jamais les notes). Attention : le dépôt est public, ce fichier aussi.

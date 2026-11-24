@@ -1,0 +1,64 @@
+# Offres ajoutées à la main (trouvées hors des sources automatiques,
+# par exemple avec LinkedIn Premium dans Chrome). Elles apparaissent dans
+# « À voir » comme les autres, avec le badge MAIN, sans passer par les
+# filtres automatiques (elles ont déjà été triées à la main).
+#
+# Champs : entreprise, poste, lieu, lien (obligatoires) ; contrat, debut
+# (AAAA-MM), score (0-100, 75 par défaut), pourquoi, a_verifier,
+# date_limite (AAAA-MM-JJ), ajoutee (AAAA-MM-JJ), jusqu_au (AAAA-MM-JJ :
+# l'offre disparaît du dashboard après cette date ; par défaut ajoutee +
+# 45 jours, ou la date limite si elle est plus proche).
+# Une offre déjà présente dans le dashboard (même intitulé + même
+# entreprise, ou même lien) n'est pas dupliquée.
+
+- entreprise: ESA (Agence spatiale européenne)
+  poste: "Intern in the Strategy Department (Strategy, Sustainability, Foresight)"
+  lieu: Paris
+  contrat: Stage
+  lien: https://jobs.esa.int/job/Paris-Intern-in-the-Strategy-Department-Strategy%2C-Sustainability%2C-and-Strategic-Foresight-Tracks/1263603801
+  date_limite: 2026-11-30
+  score: 80
+  pourquoi: "Département Stratégie au siège de l'ESA, 3 parcours (coordination stratégique, durabilité, prospective)."
+  a_verifier: "Clôture le 30/11/2026 à 23 h 59. Il faut rester inscrit à l'école pendant tout le stage (à vérifier avec Audencia)."
+  ajoutee: 2026-11-24
+
+- entreprise: Sopra Steria
+  poste: "Stage Chief of Staff, Bureau du CEO (Services Financiers)"
+  lieu: Paris
+  contrat: Stage
+  lien: https://www.linkedin.com/jobs/search/?keywords=Sopra%20Steria%20Chief%20of%20Staff%20stage&geoId=105015875
+  score: 78
+  pourquoi: "Rôle de chief of staff auprès de la direction de la branche Services Financiers."
+  a_verifier: "Lien = recherche LinkedIn (l'annonce exacte n'a pas été retrouvée hors LinkedIn). Date de début non précisée."
+  ajoutee: 2026-11-24
+
+- entreprise: SCOR
+  poste: "Strategic Insight Intern"
+  lieu: Paris
+  contrat: Stage
+  lien: https://www.jobteaser.com/fr/job-offers/1a8da175-8714-471c-bdfd-a0d822a09a37-scor-strategic-insight-intern
+  score: 70
+  pourquoi: "Veille concurrentielle et études internes pour l'équipe Relations investisseurs d'un grand réassureur, 6 mois fin d'études."
+  a_verifier: "Rattaché aux Relations investisseurs (part de reporting financier, Excel). Une version de l'annonce dit « dès que possible » : demande avril 2027."
+  ajoutee: 2026-11-24
+
+- entreprise: Dassault Systèmes
+  poste: "Stage Analyste des partenariats stratégiques, juin 2027"
+  lieu: Vélizy-Villacoublay
+  contrat: Stage
+  debut: 2027-06
+  lien: https://www.3ds.com/fr/careers/jobs/stage-analyste-des-partenariats-strategiques-juin-2027-f-h-550793
+  score: 76
+  pourquoi: "Analyse d'opportunités et préparation des discussions stratégiques avec les grands partenaires, présentations pour la direction."
+  a_verifier: "Début en juin d'après le titre (ta convention commence en avril : demande si un début plus tôt est possible)."
+  ajoutee: 2026-11-24
+
+- entreprise: Groupe M6
+  poste: "Stage Assistant(e) de missions innovation et programmes IA/data"
+  lieu: Neuilly-sur-Seine
+  contrat: Stage
+  lien: https://www.linkedin.com/jobs/search/?keywords=Groupe%20M6%20stage%20innovation%20programmes%20IA&geoId=105015875
+  score: 70
+  pourquoi: "Cadrage et suivi des projets IA et data de la direction Technologies, Innovation et Streaming, veille sur les cas d'usage IA."
+  a_verifier: "Lien = recherche LinkedIn. Date de début non vérifiée."
+  ajoutee: 2026-11-24

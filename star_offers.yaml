@@ -1,0 +1,457 @@
+# Offres « star » : les offres « À postuler » de la veille tous les 3 jours
+# (et des sélections), affichées dans l'onglet ⭐ Star du dashboard.
+#
+# Tenu par Claude : la veille ajoute ses nouvelles offres « À postuler » en
+# haut de la liste, sans doublon (même id ou même lien = même offre).
+# Ne jamais retirer une offre : changer plutôt son statut.
+#
+# statut = statut par défaut, connu de Claude. Dès que Saliou change le
+# statut dans l'onglet, c'est son choix qui compte (il est enregistré dans
+# son navigateur et dans le gist de synchro ; le workflow quotidien en
+# recopie un résumé dans suivi_candidatures.json pour que Claude le lise).
+# Statuts : À postuler, Dossier prêt, Postulé, Relancé, Entretien, Test,
+#           Offre, Refusé, Pas pour moi, Expirée.
+# dossier = dossier CV/lettre dans les fichiers du projet (/mnt/project-files/).
+
+- id: forvia-corporate-strategy
+  ajoutee: '2026-11-22'
+  source: Veille 22/11
+  entreprise: FORVIA
+  poste: Corporate Strategy Intern
+  lieu: Nanterre
+  lien: https://fr.linkedin.com/jobs/view/corporate-strategy-intern-at-faurecia-4492215034
+  pourquoi: 'Group Strategy du siège : veille, notes pour le Comex, transformation, outils de recherche IA.'
+  a_verifier: Premier stage en stratégie/conseil/finance et Excel solide demandés.
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-22/01_FORVIA_Corporate_Strategy/
+- id: ca-strategie-groupe
+  ajoutee: '2026-11-19'
+  source: Veille 19/11
+  entreprise: Crédit Agricole S.A.
+  poste: Stage Stratégie, analyste projets stratégiques
+  lieu: Montrouge
+  lien: https://www.welcometothejungle.com/fr/companies/groupe-credit-agricole/jobs/stage-strategie-analyste-en-charge-de-projets-strategiques-h-f-h-f_montrouge
+  pourquoi: Direction de la Stratégie Groupe rattachée à la DG.
+  a_verifier: Aucune expérience bancaire ; 2e dossier chez CA.
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-19/01_Credit_Agricole_Strategie_Groupe/
+- id: accenture-ste
+  ajoutee: '2026-11-19'
+  source: Fil Accenture 19/11
+  entreprise: Accenture
+  poste: Stage Strategic Technology Effectiveness (R00364735)
+  lieu: Paris
+  lien: https://www.accenture.com/fr-fr/careers/jobdetails?id=R00364735_fr-fr
+  pourquoi: 'Conseil en stratégie IT et IA : cas d''usage IA, roadmaps C-level.'
+  a_verifier: 'Business cases et coûts IT : un plus, pas un prérequis.'
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-19/03_Accenture_Strategic_Technology_Effectiveness/
+- id: deloitte-tst-cdi-junior
+  ajoutee: '2026-11-18'
+  source: Fil Deloitte 18/11
+  entreprise: Deloitte
+  poste: CDI junior Technology Strategy & Transformation
+  lieu: Paris
+  lien: https://app.jobseek.fr/deloitte#postes
+  pourquoi: Conseil aux DSI et directions générales sur leurs choix tech, data et IA.
+  a_verifier: 'Arrivée annoncée janv./févr. 2027 : demande mai 2027.'
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-18/01_Deloitte_TST_CDI_Junior/
+- id: mckinsey-ba-tech-ai
+  ajoutee: '2026-11-16'
+  source: Veille 16/11
+  entreprise: McKinsey & Company
+  poste: Business Analyst Intern – Tech & AI
+  lieu: Paris
+  lien: https://www.mckinsey.com/careers/search-jobs/jobs/businessanalystintern-techai-112014?loc=Paris
+  pourquoi: MBB, practice Tech & AI.
+  a_verifier: Test Solve passé le 21/11, résultat attendu par mail.
+  statut: Test
+  dossier: candidatures/2026-11-16/01_McKinsey_Business_Analyst_Tech_AI/
+- id: totalenergies-strategie-electricite
+  ajoutee: '2026-11-16'
+  source: Veille 16/11
+  entreprise: TotalEnergies
+  poste: Stage Chargé d'études Stratégie – Électricité
+  lieu: Courbevoie
+  lien: https://fr.linkedin.com/jobs/view/stage-charg%C3%A9-d-%C3%A9tudes-strat%C3%A9gie-electricit%C3%A9-h-f-at-totalenergies-4489467018
+  pourquoi: Stratégie corporate dans un très grand groupe.
+  a_verifier: 'Texte non lu : peut-être surtout de l''Excel.'
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-16/02_TotalEnergies_Strategie_Electricite/
+- id: airbus-vie-malaysia
+  ajoutee: '2026-11-14'
+  source: Bouton ✍ Candidature 14/11
+  entreprise: Airbus Helicopters
+  poste: VIE Finance Controller & Digital Transformation
+  lieu: Subang (Malaisie)
+  lien: https://ag.wd3.myworkdayjobs.com/Airbus/job/Subang/VIE-2026---Malaysia---Finance-Controller---Digital-Transformation--m-f-_JR10456422
+  pourquoi: VIE avec un volet IA et digitalisation.
+  a_verifier: Surtout du contrôle de gestion ; « VIE 2026 » = départ peut-être trop tôt.
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-14/01_Airbus_VIE_Finance_Digital_Malaysia/
+- id: deloitte-strategie-digitale-ia
+  ajoutee: '2026-11-13'
+  source: Veille 13/11
+  entreprise: Deloitte Digital
+  poste: Stage Consultant Stratégie Digitale, Expérience Client & IA générative
+  lieu: La Défense
+  lien: https://www.welcometothejungle.com/fr/companies/deloitte/jobs/stage-consultant-en-strategie-digitale-experience-client-ia-generative-f-h_paris
+  pourquoi: Conseil en stratégie sur l'IA générative et la relation client dans un grand cabinet.
+  a_verifier: Angle expérience client ; date non indiquée.
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-13/01_Deloitte_Strategie_Digitale_IA/
+- id: lbp-chef-projet-ia
+  ajoutee: '2026-11-13'
+  source: Veille 13/11
+  entreprise: La Banque Postale
+  poste: Stage Chef de projet IA et Expérience client
+  lieu: Paris
+  lien: https://www.welcometothejungle.com/fr/companies/la-banque-postale/jobs/stage-chef-de-projet-ia-et-experience-client-f-h_paris
+  pourquoi: Piloter une solution d'IA d'analyse des appels clients dans une grande banque.
+  a_verifier: Niveau Bac+4 demandé.
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-13/02_La_Banque_Postale_Chef_de_projet_IA/
+- id: ailancy-transformation-data-ia
+  ajoutee: '2026-11-13'
+  source: Sélection 13/11
+  entreprise: Ailancy
+  poste: Consultant stagiaire Transformation, Data et IA
+  lieu: Paris
+  lien: https://www.welcometothejungle.com/fr/companies/ailancy/jobs/consultant-stagiaire-transformation-data-et-ia-hf_paris
+  pourquoi: Conseil en transformation data et IA.
+  a_verifier: Date non indiquée.
+  statut: À postuler
+- id: accenture-strategy-stagiaire
+  ajoutee: '2026-11-13'
+  source: Sélection 13/11
+  entreprise: Accenture
+  poste: Consultant stagiaire Strategy
+  lieu: Paris
+  lien: https://www.engagement-jeunes.com/fr/detail-offre/39705595/stage-accenture-consultant-stagiaire-strategy-f-h.html
+  pourquoi: Conseil en stratégie dans un grand cabinet.
+  a_verifier: 'Tu as déjà postulé chez Accenture (STE, 19/11) : évite deux candidatures trop proches.'
+  statut: À postuler
+- id: emerton-strategy
+  ajoutee: '2026-11-13'
+  source: Sélection 13/11
+  entreprise: Emerton
+  poste: Strategy Consultant (Internship)
+  lieu: Paris
+  lien: https://fr.linkedin.com/jobs/view/strategy-consultant-internship-at-emerton-4488514581
+  pourquoi: Cabinet de conseil en stratégie.
+  a_verifier: Date non indiquée.
+  statut: À postuler
+- id: sg-pmo-transformation
+  ajoutee: '2026-11-13'
+  source: Sélection 13/11
+  entreprise: Société Générale
+  poste: Stage Chef de projet / PMO (Transformation Project Office)
+  lieu: La Défense
+  lien: https://www.welcometothejungle.com/fr/companies/societe-generale/jobs/chef-de-projet-pmo_la-defense_SG_YxyGmde
+  pourquoi: Pilotage de programme de transformation dans une grande banque.
+  a_verifier: Date non indiquée.
+  statut: À postuler
+- id: homa-strategic-pm
+  ajoutee: '2026-11-13'
+  source: Sélection 13/11
+  entreprise: Homa
+  poste: Strategic Project Manager Intern
+  lieu: Paris
+  lien: https://www.welcometothejungle.com/fr/companies/bidmotion/jobs/strategic-project-manager-intern_paris
+  pourquoi: Projets stratégiques dans une scale-up (jeux mobiles).
+  a_verifier: Start-up ; date non indiquée.
+  statut: À postuler
+- id: esa-strategy-intern
+  ajoutee: '2026-11-13'
+  source: Sélection 13/11 et LinkedIn 24/11
+  entreprise: ESA (Agence spatiale européenne)
+  poste: Intern in the Strategy Department (Strategy, Sustainability, Foresight)
+  lieu: Paris
+  lien: https://jobs.esa.int/job/Paris-Intern-in-the-Strategy-Department-Strategy%2C-Sustainability%2C-and-Strategic-Foresight-Tracks/1263603801
+  pourquoi: Département Stratégie au siège de l'ESA.
+  a_verifier: Inscription à l'école pendant tout le stage obligatoire (à vérifier avec Audencia).
+  date_limite: '2026-11-30'
+  statut: À postuler
+- id: airbus-integration-transfo-ia
+  ajoutee: '2026-11-13'
+  source: Sélection 13/11
+  entreprise: Airbus
+  poste: Stage 2027 Intégration de la Transformation IA
+  lieu: Toulouse
+  lien: https://ag.wd3.myworkdayjobs.com/Airbus/job/Toulouse-Area/STAGE-2027---Intgration-de-la-Transformation-IA--F-H-_JR10445019
+  pourquoi: Transformation IA dans un très grand groupe, stage 2027.
+  a_verifier: Toulouse ; vérifie que ce n'est pas la branche Defence and Space.
+  statut: À postuler
+- id: airbus-strategie-entreprise
+  ajoutee: '2026-11-13'
+  source: Sélection 13/11
+  entreprise: Airbus
+  poste: Stage 2027 Stratégie d'Entreprise (Corporate Strategy)
+  lieu: Blagnac
+  lien: https://ag.wd3.myworkdayjobs.com/de-DE/Airbus/job/Toulouse-Area/STAGE-2027---Stratgie-d-Entreprise--F-H-_JR10441862
+  pourquoi: Stratégie corporate dans un très grand groupe.
+  a_verifier: Début idéalement mars ou avril 2027.
+  debut: 2027-04
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-14/04_Airbus_Strategie_Entreprise/
+- id: rexel-strategie-groupe
+  ajoutee: '2026-11-13'
+  source: Sélection 13/11
+  entreprise: Rexel
+  poste: Stage Assistant(e) Analyste en Stratégie (Direction de la Stratégie Groupe)
+  lieu: Paris
+  lien: https://www.welcometothejungle.com/fr/companies/rexel-france/jobs/stage-assistant-analyste-en-strategie_paris
+  pourquoi: Direction de la Stratégie Groupe.
+  a_verifier: Date non indiquée.
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-14/03_Rexel_Strategie_Groupe/
+- id: stellantis-vcp
+  ajoutee: '2026-11-13'
+  source: Sélection 13/11
+  entreprise: Stellantis
+  poste: Stage Value Creation Program, Transformation & Performance
+  lieu: Poissy
+  lien: https://fr.linkedin.com/jobs/view/stage-value-creation-program-vcp-%E2%80%93-transformation-performance-at-stellantis-4472607953
+  pourquoi: Programme de transformation et performance au niveau groupe.
+  a_verifier: Date non indiquée.
+  statut: À postuler
+- id: orano-strategie-corporate
+  ajoutee: '2026-11-13'
+  source: Sélection 13/11 et veille 19/11
+  entreprise: Orano
+  poste: Chargé de missions stratégie (Direction de la Stratégie Corporate)
+  lieu: Châtillon
+  lien: https://www.welcometothejungle.com/fr/companies/orano/jobs/charge-de-missions-strategie-f-h_chatillon_ORANO_XZ2g8W1
+  pourquoi: Études stratégiques pour la DG et les BU.
+  a_verifier: Modélisation chiffrée et finance demandées.
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-19/02_Orano_Strategie_Corporate/
+- id: danone-global-strategy
+  ajoutee: '2026-11-13'
+  source: Sélection 13/11
+  entreprise: Danone
+  poste: Stage Global Strategy (plan stratégique à 3 ans)
+  lieu: Paris
+  lien: https://careers.danone.com/fr/fr/jobs/stage-global-strategy-janvier-2027-ou-mars-2027-h-f-27536-fr-fr.html
+  pourquoi: Plan stratégique à 3 ans d'un grand groupe.
+  a_verifier: 'Début janvier ou mars 2027 : demande avril.'
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-14/06_Danone_Global_Strategy/
+- id: wavestone-ai-strategy-junior
+  ajoutee: '2026-11-10'
+  source: Veille 10/11
+  entreprise: Wavestone
+  poste: AI Strategy & Business Transformation, Consultant·e junior / Analyst (CDI)
+  lieu: Puteaux
+  lien: https://fr.linkedin.com/jobs/view/ai-strategy-business-transformation-%E2%80%93-consultant-e-junior-analyst-h-f-at-wavestone-4485511165
+  pourquoi: Ta cible exacte, en CDI.
+  a_verifier: 'Déjà en process chez Wavestone : passe par ton contact RH plutôt que de postuler en doublon.'
+  statut: À postuler
+- id: airbus-nowassist
+  ajoutee: '2026-11-07'
+  source: Veille 07/11
+  entreprise: Airbus
+  poste: Stage 2027 Consultant Junior Transformation Digitale & Change Management (NowAssist)
+  lieu: Toulouse
+  lien: https://ag.wd3.myworkdayjobs.com/Airbus/job/Toulouse-Area/STAGE-2027-Consultant-Junior-Transformation-Digitale---Change-Management--NowAssist----h-f-_JR10444401
+  pourquoi: Déploiement et adoption d'un assistant IA générative (Now Assist) dans un très grand groupe.
+  a_verifier: Toulouse ; vérifie la date de début.
+  statut: À postuler
+- id: onepoint-strategie-ia
+  ajoutee: '2026-11-04'
+  source: Veille 04/11 et sélection 13/11
+  entreprise: Onepoint
+  poste: Stage de fin d'études Consultant Stratégie IA
+  lieu: Paris
+  lien: https://fr.linkedin.com/jobs/view/stage-de-fin-d-%C3%A9tudes-consultant-strat%C3%A9gie-ia-f-h-at-onepoint-4484376714
+  pourquoi: Conseil en stratégie IA, stage de fin d'études.
+  a_verifier: Vérifie la date de début et la part data.
+  statut: À postuler
+- id: avanade-digital-advisory
+  ajoutee: '2026-10-31'
+  source: Veille 31/10 et sélection 13/11
+  entreprise: Avanade
+  poste: Stagiaire Digital Advisory – Change, IA & Transformation
+  lieu: Issy-les-Moulineaux
+  lien: https://fr.linkedin.com/jobs/view/stagiaire-digital-advisory-%E2%80%93-change-ia-transformation-at-avanade-4484059737
+  pourquoi: Conduite du changement + IA + transformation (Copilot chez les clients).
+  a_verifier: 'Texte non lu : date de début et part technique.'
+  statut: À postuler
+- id: dassault-transformation-ia
+  ajoutee: '2026-10-28'
+  source: Veille 28/10 et sélection 13/11
+  entreprise: Dassault Systèmes
+  poste: Stage Chef de projet Transformation & IA
+  lieu: Vélizy
+  lien: https://www.3ds.com/fr/careers/jobs/stage-chef-de-projet-transformation-ia-f-h-550204
+  pourquoi: 'Repenser le travail avec l''IA, prototyper des cas d''usage, piloter l''adoption : exactement ton profil.'
+  a_verifier: Montre un prototype IA concret.
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-14/02_Dassault_Systemes_Transformation_IA/
+- id: savencia-strategie-transformation
+  ajoutee: '2026-10-28'
+  source: Veille 28/10
+  entreprise: Savencia
+  poste: Stagiaire à la direction Stratégie et Transformation
+  lieu: Viroflay
+  lien: https://fr.linkedin.com/jobs/view/stagiaire-%C3%A0-la-direction-strat%C3%A9gie-et-transformation-h-f-x-at-savencia-4482959113
+  pourquoi: Équipe de 5 type conseil interne, en lien direct avec le Comex.
+  a_verifier: Poste assez analytique ; Viroflay loin de Paris.
+  debut: 2027-04
+  statut: Dossier prêt
+  dossier: savencia/
+- id: schneider-transfo-digitale
+  ajoutee: '2026-10-24'
+  source: Veille 24/10
+  entreprise: Schneider Electric
+  poste: Analyste transformation digitale et conduite du changement
+  lieu: Rueil-Malmaison
+  lien: https://www.welcometothejungle.com/fr/companies/schneider-electric/jobs/stage-analyste-transformation-digitale-et-conduite-du-changement-f-h_rueil-malmaison_SE_OQZlGPj
+  pourquoi: 'Adoption de nouveaux outils et suivi des indicateurs d''adoption : ton expérience Amazon.'
+  a_verifier: Vérifie la part d'analyse de données.
+  statut: À postuler
+- id: imco-ai-strategy
+  ajoutee: '2026-10-24'
+  source: Veille 24/10
+  entreprise: IMCO
+  poste: Intern, Enterprise Transformation and AI Strategy (Summer 2027)
+  lieu: Toronto
+  lien: https://ca.linkedin.com/jobs/view/intern-enterprise-transformation-and-ai-strategy-summer-2027-at-investment-management-corporation-of-ontario-imco-4481613775
+  pourquoi: Intitulé exactement ta cible, à Toronto (permis coop possible).
+  a_verifier: Stages « Summer » souvent de 4 mois, parfois réservés aux étudiants canadiens.
+  statut: À postuler
+- id: europ-assistance-ai-delivery
+  ajoutee: '2026-10-21'
+  source: Veille 21/10
+  entreprise: Redion (ex-Europ Assistance)
+  poste: AI Delivery Intern
+  lieu: Saint-Denis
+  lien: https://www.welcometothejungle.com/fr/companies/europ-assistance-holding/jobs/ai-delivery-intern_saint-denis
+  pourquoi: Prioriser les cas d'usage IA et piloter leur adoption dans un grand groupe international.
+  a_verifier: Date de début non indiquée.
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-14/05_Redion_AI_Delivery/
+- id: europ-assistance-conseil-strategie-ia
+  ajoutee: '2026-10-21'
+  source: Veille 21/10
+  entreprise: Redion (ex-Europ Assistance)
+  poste: Stage Conseil en Stratégie, Transformation et IA
+  lieu: Saint-Denis
+  lien: https://fr.linkedin.com/jobs/view/stage-conseil-en-strat%C3%A9gie-transformation-et-ia-h-f-at-europ-assistance-4474321806
+  pourquoi: Intitulé exactement dans ta cible.
+  a_verifier: Début « dès à présent » d'après la sélection du 13/11.
+  statut: À postuler
+- id: saegus-ia-process-reinvention
+  ajoutee: '2026-10-19'
+  source: Veille 19/10 et 07/11
+  entreprise: Saegus
+  poste: Consultant(e) IA & process reinvention, stage de fin d'études
+  lieu: Paris
+  lien: https://fr.linkedin.com/jobs/view/consultant-e-ia-process-reinvention-stage-de-fin-d-%C3%A9tude-at-saegus-4486395547
+  pourquoi: Cadrage de cas d'usage IA chez les clients, refonte des process, mesure de la valeur de l'IA.
+  a_verifier: Cabinet plus petit ; date de début non indiquée.
+  statut: À postuler
+- id: saegus-adoption-ia
+  ajoutee: '2026-10-19'
+  source: Veille 19/10
+  entreprise: Saegus
+  poste: Consultant(e) Adoption des usages IA, stage de fin d'études
+  lieu: Paris
+  lien: https://www.the-intelligence-academy.com/job-board/offre/consultant-e-adoption-des-usages-ia-stage-de-fin-d-etudes-saegus-105965
+  pourquoi: Intitulé aligné avec ton expérience d'adoption chez Amazon.
+  a_verifier: Une seule candidature chez Saegus qui cite les deux postes.
+  statut: À postuler
+- id: air-liquide-adoption-ia
+  ajoutee: '2026-10-19'
+  source: JobTeaser Audencia 19/10
+  entreprise: Air Liquide
+  poste: Stagiaire Adoption Intelligence Artificielle
+  lieu: Paris
+  lien: https://audencia.jobteaser.com/fr/job-offers/538a1eaf-8110-4e98-b69b-1e9cdeec5be0
+  pourquoi: 'Pilotage de l''adoption de l''IA dans le groupe (AI Champions, maturité IA) : presque ton expérience Amazon.'
+  a_verifier: Début « dès que possible ».
+  statut: À postuler
+- id: sg-adoption-ia
+  ajoutee: '2026-10-19'
+  source: JobTeaser Audencia 19/10
+  entreprise: Société Générale
+  poste: Chargé de Développement et Adoption IA
+  lieu: La Défense
+  lien: https://audencia.jobteaser.com/fr/job-offers/a595ad4d-0889-4bf2-843a-6206ff98551f
+  pourquoi: 'Data & AI Management Office : cas d''usage, déploiement d''outils, adoption.'
+  a_verifier: Début « dès que possible ».
+  statut: À postuler
+- id: lvmh-ai-transformation
+  ajoutee: '2026-10-19'
+  source: JobTeaser Audencia 19/10
+  entreprise: LVMH
+  poste: AI Transformation & People Engagement
+  lieu: Paris
+  lien: https://audencia.jobteaser.com/fr/job-offers/e75fb0de-5be7-456f-9681-1865f9080438
+  pourquoi: Plan « AI for ALL » du groupe, volet engagement des collaborateurs.
+  a_verifier: 'Début mars 2027 : demande si avril est possible.'
+  statut: À postuler
+- id: sia-cio-data-ai
+  ajoutee: '2026-10-19'
+  source: JobTeaser 19/10 et sélection 13/11
+  entreprise: Sia Partners
+  poste: Consultant(e) CIO, Data & AI Advisory, stage de fin d'études
+  lieu: Paris
+  lien: https://www.sia-partners.com/fr/career/final-year-internship-cio-data-ai-advisory
+  pourquoi: 'Conseil en transformation IA : stratégie d''adoption, feuilles de route, cas d''usage, ROI.'
+  a_verifier: Pas de télétravail.
+  statut: À postuler
+- id: schneider-vie-ai-governance
+  ajoutee: '2026-10-19'
+  source: JobTeaser Audencia 19/10
+  entreprise: Schneider Electric
+  poste: VIE Governance & AI Strategic Transformation Coordinator
+  lieu: Bruxelles
+  lien: https://audencia.jobteaser.com/fr/job-offers/137b700b-8ae2-49d1-8aa7-ea8fb92ae1b0
+  pourquoi: VIE transformation stratégique dans un grand groupe tech, présentations à la direction.
+  a_verifier: Le texte parle peu d'IA ; début « dès que possible ».
+  statut: À postuler
+- id: wavestone-ai-strategy-stage
+  ajoutee: '2026-10-16'
+  source: Veille 16/10
+  entreprise: Wavestone
+  poste: AI Strategy & Business Transformation, stage de fin d'études
+  lieu: Puteaux
+  lien: https://www.welcometothejungle.com/fr/companies/wavestone/jobs/ai-strategy-business-transformation-stage-de-fin-d-etudes-h-f_puteaux
+  pourquoi: 'Stratégie IA + transformation en conseil tech : mot pour mot ton stage idéal.'
+  a_verifier: Process en cours (BU TIME), dernier tour passé le 20/11.
+  statut: Entretien
+  dossier: wavestone/
+- id: cacib-business-analyst-ia
+  ajoutee: '2026-10-16'
+  source: Veille 16/10
+  entreprise: Crédit Agricole CIB
+  poste: Business Analyst en Intelligence Artificielle
+  lieu: Montrouge
+  lien: https://www.welcometothejungle.com/fr/companies/credit-agricole-cib/jobs/business-analyst-en-intelligence-artificielle-h-f_montrouge_CAC_kgdVd4W
+  pourquoi: 'Cas d''usage IA, conduite du changement et adoption de l''IA : ton expérience Amazon.'
+  a_verifier: Date et durée non indiquées.
+  statut: À postuler
+- id: ca-transformation-ia
+  ajoutee: '2026-10-16'
+  source: Veille 16/10
+  entreprise: Crédit Agricole S.A.
+  poste: Stage Accompagnement de la Transformation IA
+  lieu: Montrouge
+  lien: https://www.welcometothejungle.com/fr/companies/groupe-credit-agricole/jobs/stage-accompagnement-de-la-transformation-ia-h-f_montrouge
+  pourquoi: 'Accompagner l''adoption de l''IA générative par les équipes (DBI) : cœur de cible.'
+  a_verifier: Ils citent une majeure Data Science.
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-12/01_Credit_Agricole_Transformation_IA/
+- id: ey-innovation-transformation
+  ajoutee: '2026-10-16'
+  source: Veille 16/10
+  entreprise: EY
+  poste: Consultant(e) stagiaire innovation et transformation
+  lieu: Paris
+  lien: https://www.welcometothejungle.com/fr/companies/ey/jobs/consultant-stagiaire-en-innovation-et-transformation-f-h_paris_EY_A4bA7V7
+  pourquoi: Conseil en innovation et nouvelles technologies, profil gestion de projet + tech/start-up.
+  a_verifier: Une partie contenus / marketing digital.
+  statut: Dossier prêt
+  dossier: ey-fabernovel/

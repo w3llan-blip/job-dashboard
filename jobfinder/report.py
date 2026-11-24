@@ -13,6 +13,7 @@ offer disappears from the job sites.
 import csv
 import html
 import json
+import os
 import re
 from datetime import date, datetime
 from pathlib import Path
@@ -88,6 +89,17 @@ details.why p{margin:6px 0 0;font-size:13px;line-height:1.45}
 .b-nodate{background:var(--nodate-bg);color:var(--nodate)}
 .b-ideal{background:#ffe1ec;color:#a3164a}
 .b-cons{background:#e6f4ea;color:#1e6b34}
+.b-man{background:#e8eefc;color:#2446a6}
+@media (prefers-color-scheme: dark){.b-man{background:#1c2a4a;color:#a9c1ff}}
+.star-help{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 10px;font-size:13px;line-height:1.45}
+.star-help p{margin:0 0 6px} .star-help p:last-child{margin:0}
+.offer.star-card .actions{flex-direction:column;align-items:stretch;min-width:150px}
+.offer.star-card select{font:inherit;font-size:14px;padding:7px 8px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);width:100%}
+.stp{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:700;background:var(--chip);color:var(--muted)}
+.stp.p-todo{background:var(--vie-bg);color:var(--vie)} .stp.p-ready{background:var(--grad-bg);color:var(--grad)}
+.stp.p-on{background:var(--visa-bg);color:var(--visa)} .stp.p-win{background:var(--new-bg);color:var(--new)}
+.offer.star-card.done{opacity:.6}
+.dossier{font-family:ui-monospace,monospace;font-size:12px;word-break:break-all}
 @media (prefers-color-scheme: dark){.b-cons{background:#173524;color:#8fd9a8}}
 @media (prefers-color-scheme: dark){.b-ideal{background:#4a1a2c;color:#ff9cc0}}
 .empty{text-align:center;color:var(--muted);padding:40px 10px;background:var(--card);border:1px dashed var(--line);border-radius:10px}
@@ -125,6 +137,8 @@ footer .btn{font-size:12px;padding:4px 8px}
 JS = r"""
 (function(){
 var OFFERS = JSON.parse(document.getElementById('data-offers').textContent);
+var STARS = JSON.parse(document.getElementById('data-star').textContent);
+var SUIVI_ACTIF = document.body.dataset.suivi === '1';
 var KEY = 'jd_state_v1', UIKEY = 'jd_ui_v1';
 function load(k, d){ try { var v = JSON.parse(localStorage.getItem(k)); return v || d; } catch(e){ return d; } }
 function save(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
@@ -135,6 +149,25 @@ var UI = load(UIKEY, {});
 UI.tab = UI.tab || 'todo'; UI.chips = UI.chips || []; UI.sort = UI.sort || 'score'; UI.q = '';
 var byId = {}; OFFERS.forEach(function(o){ byId[o.id] = o; });
 var STATUSES = ['Postulé', 'Relancé', 'Entretien', 'Test', 'Offre', 'Refusé'];
+// « ⭐ Star » tab: the watch's « À postuler » picks (star_offers.yaml). A status chosen
+// here is kept under 'star:<id>' (synced like the rest); before that, the status set on
+// the same offer in the main list counts, then Claude's default (st0).
+var STAR_ST = ['À postuler', 'Dossier prêt'].concat(STATUSES, ['Pas pour moi', 'Expirée']);
+var STAR_TODO = ['À postuler', 'Dossier prêt'], STAR_END = ['Refusé', 'Pas pour moi', 'Expirée'];
+var STAR_DID = {}; STARS.forEach(function(x){ if (x.did) STAR_DID[x.did] = x.id; });
+function starStatus(x){
+  var e = S['star:' + x.id];
+  if (e && e.st) return e.st;
+  var d = x.did && S[x.did];
+  if (d && d.s === 'applied') return d.st || 'Postulé';
+  if (d && d.s === 'hidden') return 'Pas pour moi';
+  return x.st0 || 'À postuler';
+}
+function starGroup(st){ return STAR_TODO.indexOf(st) >= 0 ? 'todo' : STAR_END.indexOf(st) >= 0 ? 'end' : 'on'; }
+// entries that belong to the star tab only (not shown in Gardées / Masquées), and main-list
+// entries already followed by a star entry (not shown twice in Candidatures)
+function starOnly(id){ return id.indexOf('star:') === 0 && S[id].s !== 'applied'; }
+function shadowed(id){ return STAR_DID[id] && S['star:' + STAR_DID[id]]; }
 
 function $(s){ return document.querySelector(s); }
 function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
@@ -234,6 +267,7 @@ function badges(o){
   var h = '';
   if (o.ideal) h += '<span class="badge b-ideal" title="Proche de ton stage idéal — détail dans « Détails »">IDÉAL</span>';
   if (o.n) h += '<span class="badge b-new">NEW</span>';
+  if (o.man) h += '<span class="badge b-man" title="Trouvée à la main (LinkedIn Premium…), hors des sources automatiques">MAIN</span>';
   if (o.vie) h += '<span class="badge b-vie">VIE</span>';
   if (o.grad) h += '<span class="badge b-grad">GRAD</span>';
   if (o.cons) h += '<span class="badge b-cons" title="Cabinet de conseil (stratégie, transformation, IA)">CONSEIL</span>';
@@ -270,7 +304,8 @@ function offerCard(o){
 function counts(){
   var c = {todo:0, saved:0, applied:0, hidden:0};
   OFFERS.forEach(function(o){ if (!S[o.id]) c.todo++; });
-  Object.keys(S).forEach(function(id){ if (c[S[id].s] !== undefined) c[S[id].s]++; });
+  Object.keys(S).forEach(function(id){ if (!starOnly(id) && !shadowed(id) && c[S[id].s] !== undefined) c[S[id].s]++; });
+  c.star = STARS.filter(function(x){ return starGroup(starStatus(x)) === 'todo'; }).length;
   return c;
 }
 
@@ -301,7 +336,7 @@ function renderTodo(){
 }
 
 function storedList(state){
-  return Object.keys(S).filter(function(id){ return S[id].s === state; })
+  return Object.keys(S).filter(function(id){ return S[id].s === state && !starOnly(id) && !shadowed(id); })
     .map(function(id){ var live = byId[id]; var r = live ? Object.assign({}, live) : Object.assign({id:id, gone:true}, S[id].o);
       r.id = id; r._s = S[id]; return r; })
     .sort(function(a, b){ return (b._s.t || '').localeCompare(a._s.t || ''); });
@@ -345,19 +380,68 @@ function renderHidden(){
   $('#restore-all').classList.toggle('hidden', !list.length);
 }
 
+function daysTo(d){ return Math.round((new Date(d + 'T23:59:59') - Date.now()) / 864e5); }
+function renderStar(){
+  var f = UI.starf || 'todo';
+  var all = STARS.map(function(x){ return {x:x, st:starStatus(x)}; });
+  var n = {todo:0, on:0, end:0}; all.forEach(function(r){ n[starGroup(r.st)]++; });
+  var FILTERS = [['todo', 'À faire', n.todo], ['on', 'En cours', n.on], ['end', 'Terminées', n.end], ['all', 'Toutes', all.length]];
+  $('#star-chips').innerHTML = FILTERS.map(function(c){
+    return '<button class="chip' + (f === c[0] ? ' on' : '') + '" data-starf="' + c[0] + '">' + c[1] + '<span class="c">' + c[2] + '</span></button>'; }).join('');
+  var list = all.filter(function(r){ return f === 'all' || starGroup(r.st) === f; });
+  // open deadlines first (soonest), then the newest picks
+  list.sort(function(a, b){
+    var da = a.x.dl && daysTo(a.x.dl) >= 0 ? daysTo(a.x.dl) : 1e4, db = b.x.dl && daysTo(b.x.dl) >= 0 ? daysTo(b.x.dl) : 1e4;
+    return da - db || (b.x.a || '').localeCompare(a.x.a || ''); });
+  $('#star-help-sync').classList.toggle('hidden', SUIVI_ACTIF);
+  $('#star-list').innerHTML = list.length ? list.map(function(r){
+    var x = r.x, st = r.st, g = starGroup(st);
+    var pill = st === 'À postuler' ? 'p-todo' : st === 'Dossier prêt' ? 'p-ready' : st === 'Offre' ? 'p-win' : g === 'on' ? 'p-on' : '';
+    var meta = ['<b>' + esc(x.c) + '</b>'];
+    if (x.l) meta.push('📍 ' + esc(x.l));
+    if (x.deb) meta.push('Début ' + esc(x.deb));
+    if (x.dl){ var left = daysTo(x.dl);
+      meta.push(left < 0 ? '<span class="ko">Clôturée le ' + esc(x.dl.split('-').reverse().join('/')) + '</span>'
+        : '<span class="badge ' + (left <= 7 ? 'b-ideal' : 'b-vie') + '">⏰ ' + (left === 0 ? "aujourd'hui" : 'J-' + left) + '</span>'); }
+    meta.push(esc(x.src || x.a));
+    var det = (x.why ? '<p>' + esc(x.why) + '</p>' : '') + (x.chk ? '<p><b>À vérifier :</b> ' + esc(x.chk) + '</p>' : '') +
+      (x.dos ? '<p><b>Dossier CV/lettre :</b> <span class="dossier">' + esc(x.dos) + '</span></p>' : '');
+    return '<article class="offer star-card' + (g === 'end' ? ' done' : '') + '" data-star="' + esc(x.id) + '">' +
+      '<div class="main"><div class="line1"><span class="stp ' + pill + '">' + esc(st) + '</span>' +
+      '<a class="title" href="' + esc(x.u) + '" target="_blank" rel="noopener">' + esc(x.t) + '</a></div>' +
+      '<div class="meta">' + meta.map(function(m){ return '<span>' + m + '</span>'; }).join('') + '</div>' +
+      (det ? '<details class="why"><summary>Pourquoi, et quoi vérifier</summary>' + det + '</details>' : '') +
+      '</div><div class="actions"><select data-starst="1" aria-label="Statut de ta candidature">' +
+      STAR_ST.map(function(s){ return '<option' + (s === st ? ' selected' : '') + '>' + s + '</option>'; }).join('') +
+      '</select></div></article>';
+  }).join('') : '<div class="empty">' + (f === 'todo' ? 'Rien à faire ici : toutes les offres star ont un statut 🎉' : 'Aucune offre dans cette catégorie.') + '</div>';
+}
+function setStar(id, st){
+  var x = STARS.filter(function(y){ return y.id === id; })[0]; if (!x) return;
+  var key = 'star:' + id, prev = S[key] ? JSON.parse(JSON.stringify(S[key])) : null;
+  var s = STATUSES.indexOf(st) >= 0 ? 'applied' : STAR_END.indexOf(st) >= 0 ? 'hidden' : 'saved';
+  var keepDate = prev && prev.s === s;
+  S[key] = {s:s, t:keepDate ? prev.t : today(), o:{t:x.t, c:x.c, u:x.u, l:x.l, src:'Offre star'}, st:st, note:(prev && prev.note) || ''};
+  touch(key); commit(); render();
+  toast('Statut : ' + st, function(){ if (prev){ S[key] = prev; touch(key); } else drop(key); commit(); render(); });
+}
+
 function render(){
   renderTabs();
   if (UI.tab === 'todo') renderTodo();
   if (UI.tab === 'saved') renderSaved();
   if (UI.tab === 'applied') renderApplied();
   if (UI.tab === 'hidden') renderHidden();
-  save(UIKEY, {tab:UI.tab, chips:UI.chips, sort:UI.sort});
+  if (UI.tab === 'star') renderStar();
+  save(UIKEY, {tab:UI.tab, chips:UI.chips, sort:UI.sort, starf:UI.starf});
 }
 
 // ---------- events ----------
 document.addEventListener('click', function(e){
   var tab = e.target.closest('nav.tabs button');
   if (tab){ UI.tab = tab.dataset.tab; render(); window.scrollTo(0, 0); return; }
+  var sf = e.target.closest('[data-starf]');
+  if (sf){ UI.starf = sf.dataset.starf; render(); return; }
   var chip = e.target.closest('[data-chip]');
   if (chip){ var k = chip.dataset.chip, i = UI.chips.indexOf(k);
     if (i >= 0) UI.chips.splice(i, 1); else UI.chips.push(k); render(); return; }
@@ -373,6 +457,7 @@ document.addEventListener('click', function(e){
     setState(id, a === 'reset' ? null : a); return; }
 });
 document.addEventListener('change', function(e){
+  if (e.target.dataset && e.target.dataset.starst){ setStar(e.target.closest('[data-star]').dataset.star, e.target.value); return; }
   var f = e.target.dataset && e.target.dataset.field; if (!f) return;
   var id = e.target.closest('[data-id]').dataset.id; if (!S[id]) return;
   S[id][f] = e.target.value; touch(id); commit();
@@ -388,7 +473,7 @@ $('#restore-all').addEventListener('click', function(){
 
 // keyboard: J/K move, X hide, A applied, S save, O open, / search
 var cur = -1;
-function cards(){ return Array.prototype.slice.call(document.querySelectorAll('section:not(.hidden) .offer')); }
+function cards(){ return Array.prototype.slice.call(document.querySelectorAll('section:not(.hidden) .offer[data-id]')); }
 function focusCard(i){ var c = cards(); if (!c.length) return; cur = Math.max(0, Math.min(i, c.length - 1));
   c.forEach(function(x, j){ x.style.outline = j === cur ? '2px solid var(--accent)' : ''; });
   c[cur].scrollIntoView({block:'nearest'}); }
@@ -506,6 +591,12 @@ $('#sync-copy').addEventListener('click', function(){
     function(){ prompt('Copie ce lien et ouvre-le sur ton autre appareil :', link); });
 });
 $('#sync-now').addEventListener('click', function(){ sync(); });
+$('#copy-gist').addEventListener('click', function(){
+  if (!(SY && SY.gist)){ alert('Active d\'abord la synchro (bouton en bas de page).'); return; }
+  (navigator.clipboard ? navigator.clipboard.writeText(SY.gist) : Promise.reject()).then(function(){
+    toast('Identifiant copié : colle-le comme valeur du secret SYNC_GIST_ID', function(){}); },
+    function(){ prompt('Identifiant à coller comme valeur du secret SYNC_GIST_ID :', SY.gist); });
+});
 $('#sync-disconnect').addEventListener('click', function(){
   if (!confirm('Arrêter la synchro sur cet appareil ? Tes choix restent enregistrés ici.')) return;
   SY = null; save(SYNCKEY, null); syncPanel();
@@ -533,6 +624,7 @@ def _offer_dict(o) -> dict:
         "visa": bool(getattr(o, "visa_ok", False)),
         "ideal": bool(getattr(o, "ideal", False)),
         "cons": bool(getattr(o, "consulting", False)),
+        "man": bool(getattr(o, "manual", False)),
         "reg": getattr(o, "region", ""),
         "sal": getattr(o, "salary_label", ""),
         "why": list(o.reasons or []), "desc": _snippet(o.description),
@@ -675,19 +767,24 @@ def _paris_now():
         return datetime.now()
 
 
-def write_reports(offers, programs=None, health=None, kept_by_source=None, drops=None) -> Path:
+def write_reports(offers, programs=None, health=None, kept_by_source=None, drops=None, stars=None) -> Path:
     OUT_DIR.mkdir(exist_ok=True)
     stamp = _paris_now().strftime("%d/%m/%Y à %H:%M")
     n_new = sum(1 for o in offers if o.is_new)
     data = json.dumps([_offer_dict(o) for o in offers], ensure_ascii=False)
     data = data.replace("</", "<\\/")   # keep the JSON safe inside <script>
+    stars = stars or []
+    star_data = json.dumps(stars, ensure_ascii=False).replace("</", "<\\/")
+    # the daily workflow copies the statuses to suivi_candidatures.json once the
+    # SYNC_GIST_ID secret is set; until then the tab explains how to set it
+    suivi = "1" if os.environ.get("SYNC_GIST_ID") else "0"
 
     page = f"""<!DOCTYPE html>
 <html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Offres — {stamp}</title><style>{CSS}</style></head>
-<body><div class="wrap">
+<body data-suivi="{suivi}"><div class="wrap">
 <header>
   <h1>Mes offres</h1>
   <p class="sub">{len(offers)} offres correspondent à ton profil, dont {n_new} nouvelles — mis à jour le {stamp}.
@@ -697,6 +794,7 @@ def write_reports(offers, programs=None, health=None, kept_by_source=None, drops
   <button data-tab="todo">À voir<span class="n"></span></button>
   <button data-tab="saved">★ Gardées<span class="n"></span></button>
   <button data-tab="applied">✓ Candidatures<span class="n"></span></button>
+  <button data-tab="star">⭐ Star<span class="n"></span></button>
   <button data-tab="hidden">Masquées<span class="n"></span></button>
   <button data-tab="programs">Graduate programs</button>
   <button data-tab="sources">Sources</button>
@@ -725,6 +823,18 @@ def write_reports(offers, programs=None, health=None, kept_by_source=None, drops
 <section data-view="applied" class="hidden">
   <div class="pipeline" id="pipeline"></div>
   <div id="applied-table"></div>
+</section>
+
+<section data-view="star" class="hidden">
+  <div class="star-help">
+    <p><b>Les offres où je te conseille de postuler</b>, ajoutées à chaque veille (tous les 3 jours). Change le statut quand tu avances :
+    je le lis avant chaque veille pour ne pas te les reproposer et te rappeler celles qui attendent.</p>
+    <p id="star-help-sync" class="hidden"><b>Pour que je voie tes statuts</b> : active « 🔄 Synchroniser mes appareils » en bas de page,
+    puis ajoute une seule fois le secret <code>SYNC_GIST_ID</code> au dépôt (<a href="https://github.com/w3llan-blip/job-dashboard/settings/secrets/actions/new" target="_blank" rel="noopener">page des secrets</a>)
+    avec cette valeur : <button class="btn" id="copy-gist" type="button">Copier l'identifiant</button></p>
+  </div>
+  <div class="chips" id="star-chips"></div>
+  <div class="list" id="star-list"></div>
 </section>
 
 <section data-view="hidden" class="hidden">
@@ -763,12 +873,14 @@ def write_reports(offers, programs=None, health=None, kept_by_source=None, drops
 </div>
 <div id="toast" role="status"><span></span><button>Annuler</button></div>
 <script type="application/json" id="data-offers">{data}</script>
+<script type="application/json" id="data-star">{star_data}</script>
 <script>{JS}</script>
 </body></html>"""
 
     html_path = OUT_DIR / "index.html"
     html_path.write_text(page, encoding="utf-8")
     _write_descriptions(offers)
+    (OUT_DIR / "star.json").write_text(json.dumps(stars, ensure_ascii=False, indent=0), encoding="utf-8")
 
     with open(OUT_DIR / "offers.csv", "w", newline="", encoding="utf-8-sig") as f:
         w = csv.writer(f)
