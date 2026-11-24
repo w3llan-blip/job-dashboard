@@ -1,29 +1,24 @@
-**12 nouvelle(s) offre(s) correspondent à ton profil aujourd'hui** (meilleur score d'abord).
+**14 nouvelle(s) offre(s) correspondent à ton profil aujourd'hui** (meilleur score d'abord).
 
-**VIE** (1)
+**Stage** (11)
 
-- **89** · [Chargé(e) de mission culturel (livre et débat d’idées) (H/F)](https://mon-vie-via.businessfrance.fr/offres/248664) — MINISTERE DE L'EUROPE ET DES AFFAIRES ETRANGERES — Pekin, Chine — début 2027-05 — VIE
+- **90** · [Strategy & Market Intelligence Internship](https://nl.linkedin.com/jobs/view/strategy-market-intelligence-internship-at-nemko-digital-4494127743) — Nemko Digital — Amsterdam, North Holland, Netherlands — date de début ? — LinkedIn
+- **87** · [Stage - Global Strategy & Transformation Assistant (F/H/X)](https://fr.linkedin.com/jobs/view/stage-global-strategy-transformation-assistant-f-h-x-at-sephora-4494145713) — SEPHORA — Neuilly-sur-Seine, Île-de-France, France — date de début ? — LinkedIn
+- **82** · [Internship Business Development & Strategy - Consumer Brands](https://de.linkedin.com/jobs/view/internship-business-development-strategy-consumer-brands-at-henkel-4494106226) — Henkel — Düsseldorf, North Rhine-Westphalia, Germany — date de début ? — LinkedIn
+- **80** · [Intern in the Strategy Department (Strategy, Sustainability, Foresight)](https://jobs.esa.int/job/Paris-Intern-in-the-Strategy-Department-Strategy%2C-Sustainability%2C-and-Strategic-Foresight-Tracks/1263603801) — ESA (Agence spatiale européenne) — Paris — date de début ? — Ajout manuel
+- **78** · [Stage Chief of Staff, Bureau du CEO (Services Financiers)](https://www.linkedin.com/jobs/search/?keywords=Sopra%20Steria%20Chief%20of%20Staff%20stage&geoId=105015875) — Sopra Steria — Paris — date de début ? — Ajout manuel
+- **77** · [Winter Co-op 2027 - Strategy Intern](https://ca.linkedin.com/jobs/view/winter-co-op-2027-strategy-intern-at-manulife-4493709040) — Manulife — Toronto, Ontario, Canada — date de début ? — LinkedIn
+- **76** · [Stage Analyste des partenariats stratégiques, juin 2027](https://www.3ds.com/fr/careers/jobs/stage-analyste-des-partenariats-strategiques-juin-2027-f-h-550793) — Dassault Systèmes — Vélizy-Villacoublay — début 2027-06 — Ajout manuel
+- **75** · [Intern Market Intelligence & Transformation (Group Asset Management) (m/w/d)](https://at.linkedin.com/jobs/view/intern-market-intelligence-transformation-group-asset-management-m-w-d-at-uniqa-insurance-group-4493665244) — UNIQA Insurance Group — Vienna, Vienna, Austria — date de début ? — LinkedIn
+- **70** · [Strategic Insight Intern](https://www.jobteaser.com/fr/job-offers/1a8da175-8714-471c-bdfd-a0d822a09a37-scor-strategic-insight-intern) — SCOR — Paris — date de début ? — Ajout manuel
+- **70** · [Stage Assistant(e) de missions innovation et programmes IA/data](https://www.linkedin.com/jobs/search/?keywords=Groupe%20M6%20stage%20innovation%20programmes%20IA&geoId=105015875) — Groupe M6 — Neuilly-sur-Seine — date de début ? — Ajout manuel
+- **59** · [Summer Intern 2027 - Canadian Operations Management (8 Months)](https://ca.linkedin.com/jobs/view/summer-intern-2027-canadian-operations-management-8-months-at-manulife-4493598572) — Manulife — Toronto, Ontario, Canada — date de début ? — LinkedIn
 
-**Stage** (4)
+**Autres contrats** (3)
 
-- **72** · [Stage Chef de Projet Junior F/H](https://fr.linkedin.com/jobs/view/stage-chef-de-projet-junior-f-h-at-magnitude-4493652986) — MAGNITUDE — Puteaux, Île-de-France, France — date de début ? — LinkedIn
-- **72** · [Internship - UK/Ireland Business Development M/F](https://fr.linkedin.com/jobs/view/internship-uk-ireland-business-development-m-f-at-transatel-an-ntt-company-4490888248) — TRANSATEL (an NTT company) — Courbevoie, Île-de-France, France — date de début ? — LinkedIn
-- **71** · [Stage – Développement commercial et gestion de projets de formation internationale (H/F)](https://fr.linkedin.com/jobs/view/stage-%E2%80%93-d%C3%A9veloppement-commercial-et-gestion-de-projets-de-formation-internationale-h-f-at-ginger-sofreco-4491907812) — Ginger SOFRECO — Clichy, Île-de-France, France — date de début ? — LinkedIn
-- **64** · [(Stage) Assistant Project Manager Hackathons & Innovation - F/H](https://fr.linkedin.com/jobs/view/stage-assistant-project-manager-hackathons-innovation-f-h-at-artefact-4476373550) — Artefact — Paris, Île-de-France, France — date de début ? — LinkedIn
+- **75** · [Chief of Staff, ETI](https://boards.greenhouse.io/cloudflare/jobs/8412125?gh_jid=8412125) — Cloudflare — Hybrid — date de début ? — Greenhouse
+- **74** · [Assistant chef de projet](https://fr.linkedin.com/jobs/view/assistant-chef-de-projet-at-ghu-paris-psychiatrie-neurosciences-4494150639) — GHU Paris psychiatrie & neurosciences — Paris, Île-de-France, France — date de début ? — LinkedIn
+- **65** · [Operations Support Specialist - Material Handling](https://michelinhr.wd3.myworkdayjobs.com/Michelin/job/Wommelgem/Operations-Support-Specialist---Material-Handling_R-2026044124) — Michelin — Wommelgem — date de début ? — Workday
 
-**Autres contrats** (7)
-
-- **91** · [Business Development Representative (Dutch-speaking)](https://databricks.com/company/careers/open-positions/job?gh_jid=8958450002) — Databricks — Amsterdam, Netherlands — date de début ? — Greenhouse
-- **88** · [Consultant Transformation Finance - Banque H/F](https://www.welcometothejungle.com/fr/companies/rsm/jobs/consultant-transformation-finance-banque-h-f_paris_RSM_Gme4Mrd) — RSM — Paris, France — date de début ? — WTTJ
-- **87** · [Responsable Projets Transformation F/H](https://www.welcometothejungle.com/fr/companies/in-extenso/jobs/responsable-projets-transformation-f-h_bordeaux) — In Extenso — Bordeaux, France — date de début ? — WTTJ
-- **78** · [Business Development Representative, Japan](https://job-boards.greenhouse.io/gitlab/jobs/8950909002) — Gitlab — Remote — date de début ? — Greenhouse
-- **70** · [Operations Associate, Guest Services](https://careers.airbnb.com/positions/8413908?gh_jid=8413908) — Airbnb — Ireland — date de début ? — Greenhouse
-- **63** · [Product Manager, Self-serve Growth](https://boards.greenhouse.io/cloudflare/jobs/8406966?gh_jid=8406966) — Cloudflare — Hybrid — date de début ? — Greenhouse
-- **62** · [Studio & Project Manager](https://jobs.lever.co/spotify/6ee8557a-5161-48e6-bba6-c3f8ffe30fda) — Spotify — Stockholm — date de début ? — Lever
-
-
-**⚠️ Sources sans résultat aujourd'hui** (des offres ont pu être manquées) :
-
-- Workday (large groups) — 0 offre
 
 Liste complète et filtres : ton dashboard (lien GitHub Pages dans le README).
