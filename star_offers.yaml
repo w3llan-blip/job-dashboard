@@ -13,6 +13,18 @@
 #           Offre, Refusé, Pas pour moi, Expirée.
 # dossier = dossier CV/lettre dans les fichiers du projet (/mnt/project-files/).
 
+- id: dassault-systemes-partenariats-strategiques
+  ajoutee: '2026-11-25'
+  source: Veille 25/11
+  entreprise: Dassault Systèmes
+  poste: Stage Analyste des partenariats stratégiques
+  lieu: Vélizy-Villacoublay
+  lien: https://www.3ds.com/fr/careers/jobs/stage-analyste-des-partenariats-strategiques-juin-2027-f-h-550793
+  pourquoi: "Équipe Strategic Partnerships : partenariats IA et cloud, business cases, présentations pour la direction."
+  a_verifier: "Début en juin 2027 d'après l'intitulé ; 2e dossier chez Dassault Systèmes."
+  debut: 2027-06
+  statut: Dossier prêt
+  dossier: candidatures/2026-11-25/01_Dassault_Systemes_Partenariats_Strategiques/
 - id: forvia-corporate-strategy
   ajoutee: '2026-11-22'
   source: Veille 22/11
