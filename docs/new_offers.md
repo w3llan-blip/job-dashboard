@@ -1,16 +1,10 @@
-**6 nouvelle(s) offre(s) correspondent à ton profil aujourd'hui** (meilleur score d'abord).
+**3 nouvelle(s) offre(s) correspondent à ton profil aujourd'hui** (meilleur score d'abord).
 
-**Graduate** (1)
+**Stage** (3)
 
-- **71** · [Industrial Graduate Program - PowerUP](https://www.welcometothejungle.com/fr/companies/nexans/jobs/industrial-graduate-program-powerup_cortaillod) — Nexans — Dour, Belgium — début 2027-04 — WTTJ
-
-**Autres contrats** (5)
-
-- **90** · [Responsable Transformation et Innovation Finance H/F](https://www.welcometothejungle.com/fr/companies/fondation-de-france-fr/jobs/responsable-transformation-et-innovation-finance-h-f_puteaux) — Fondation de France — Puteaux, France — date de début ? — WTTJ
-- **83** · [AI Transformation Manager](https://se.linkedin.com/jobs/view/ai-transformation-manager-at-sandvik-4491956159) — Sandvik — Malmo, Skåne County, Sweden — date de début ? — LinkedIn
-- **82** · [Product Manager (Casino Integrations)](https://www.welcometothejungle.com/fr/companies/entain/jobs/product-manager-casino-integrations_gzira) — Entain — Gżira, Malta — date de début ? — WTTJ
-- **71** · [Chief of Staff - CDI - Theodo France - Paris](https://www.welcometothejungle.com/fr/companies/theodo/jobs/chief-of-staff-cdi-theodo-france-paris_paris) — Theodo — Paris, France — date de début ? — WTTJ
-- **63** · [People Operations Onboarding Specialist](https://boards.greenhouse.io/cloudflare/jobs/8399112?gh_jid=8399112) — Cloudflare — Hybrid — date de début ? — Greenhouse
+- **77** · [Stage de fin d'études - Business Developer / SDR (conseil) - Lille](https://fr.linkedin.com/jobs/view/stage-de-fin-d-%C3%A9tudes-business-developer-sdr-conseil-lille-at-bloomco-4494000442) — Bloomco — Lille, Hauts-de-France, France — date de début ? — LinkedIn
+- **74** · [Business developer -  Elsan Prévention - Stage](https://fr.linkedin.com/jobs/view/business-developer-elsan-pr%C3%A9vention-stage-at-elsan-4494163250) — ELSAN — Paris, Île-de-France, France — date de début ? — LinkedIn
+- **71** · [YTD - Stage PFE Chargé du développement commercial F/H](https://fr.linkedin.com/jobs/view/ytd-stage-pfe-charg%C3%A9-du-d%C3%A9veloppement-commercial-f-h-at-vinci-energies-4494426566) — VINCI Energies — Pont-de-Metz, Hauts-de-France, France — date de début ? — LinkedIn
 
 
 Liste complète et filtres : ton dashboard (lien GitHub Pages dans le README).

@@ -1,5 +1,21 @@
 [
 {
+"id": "dassault-systemes-partenariats-strategiques",
+"a": "2026-11-25",
+"src": "Veille 25/11",
+"c": "Dassault Systèmes",
+"t": "Stage Analyste des partenariats stratégiques",
+"l": "Vélizy-Villacoublay",
+"u": "https://www.3ds.com/fr/careers/jobs/stage-analyste-des-partenariats-strategiques-juin-2027-f-h-550793",
+"why": "Équipe Strategic Partnerships : partenariats IA et cloud, business cases, présentations pour la direction.",
+"chk": "Début en juin 2027 d'après l'intitulé ; 2e dossier chez Dassault Systèmes.",
+"st0": "Dossier prêt",
+"dos": "candidatures/2026-11-25/01_Dassault_Systemes_Partenariats_Strategiques/",
+"dl": "",
+"deb": "2027-06",
+"did": "main:dassault-syst-mes-stage-analyste-des-partenariats-strat-giqu"
+},
+{
 "id": "forvia-corporate-strategy",
 "a": "2026-11-22",
 "src": "Veille 22/11",
@@ -381,7 +397,7 @@
 "dos": "",
 "dl": "",
 "deb": "",
-"did": "li:4484376714"
+"did": ""
 },
 {
 "id": "avanade-digital-advisory",
