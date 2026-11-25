@@ -126,6 +126,8 @@ footer .btn{font-size:12px;padding:4px 8px}
 .kbd{font-family:ui-monospace,monospace;font-size:11px;border:1px solid var(--line);border-radius:4px;padding:0 4px}
 @media (max-width:640px){
   .wrap{padding:10px}
+  nav.tabs{flex-wrap:wrap;overflow-x:visible;gap:2px 0}
+  nav.tabs button{padding:8px 9px}
   .offer{flex-direction:column;gap:8px}
   .actions{width:100%;flex-wrap:wrap}
   .actions .btn{flex:1 1 auto;text-align:center}
@@ -237,6 +239,7 @@ function toast(msg, undo){
 var CHIPS = [
   ['ideal', 'Idéal', function(o){ return o.ideal; }],
   ['new', 'Nouveautés', function(o){ return o.n; }],
+  ['man', 'Ajouts à la main', function(o){ return o.man; }],
   ['vie', 'VIE', function(o){ return o.vie; }],
   ['stage', 'Stage', function(o){ return /intern|stage|stagiaire/i.test(o.ct + ' ' + o.t); }],
   ['grad', 'Graduate', function(o){ return o.grad; }],
@@ -792,9 +795,9 @@ def write_reports(offers, programs=None, health=None, kept_by_source=None, drops
 </header>
 <nav class="tabs">
   <button data-tab="todo">À voir<span class="n"></span></button>
+  <button data-tab="star">⭐ Star<span class="n"></span></button>
   <button data-tab="saved">★ Gardées<span class="n"></span></button>
   <button data-tab="applied">✓ Candidatures<span class="n"></span></button>
-  <button data-tab="star">⭐ Star<span class="n"></span></button>
   <button data-tab="hidden">Masquées<span class="n"></span></button>
   <button data-tab="programs">Graduate programs</button>
   <button data-tab="sources">Sources</button>
