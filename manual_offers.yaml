@@ -62,3 +62,44 @@
   pourquoi: "Cadrage et suivi des projets IA et data de la direction Technologies, Innovation et Streaming, veille sur les cas d'usage IA."
   a_verifier: "Lien = recherche LinkedIn. Date de début non vérifiée."
   ajoutee: 2026-11-24
+
+# --- Gouvernance IA / IA responsable / AI policy (fil du 28/11/2026) ---
+- entreprise: Alstom
+  poste: "Stage 6 mois, Gouvernance IA et Développement des Compétences (F/H/NB)"
+  lieu: Saint-Ouen
+  contrat: Stage
+  lien: https://freehire.me/jobs/stage-6-mois-gouvernance-ia-et-developpement-des-competences-f-h-nb-alstom-ytq57sob
+  score: 82
+  pourquoi: "Direction Data & IA : intégrer la gouvernance IA (AI Act) dans les parcours de formation et d'adoption des équipes IA, cartographie des rôles. Bac+5."
+  a_verifier: "Lien = agrégateur (annonce officielle non indexée) : chercher la Req ID 531200 sur jobsearch.alstom.com. Date de début non indiquée."
+  ajoutee: 2026-11-28
+
+- entreprise: Airbus Protect
+  poste: "Stage 2027, Assistant à la coordination IA, Gouvernance et usages"
+  lieu: Toulouse
+  contrat: Stage
+  lien: https://www.the-intelligence-academy.com/job-board/offre/stage-2027-assistant-a-la-coordination-ia-gouvernance-et-usages-all-gender-airbu-53022
+  score: 74
+  pourquoi: "Département Cybersécurité : mise en pratique de la gouvernance IA, suivi de l'adoption des outils IA par les consultants, conformité AI Act et politiques IA Airbus."
+  a_verifier: "Lien = agrégateur, à retrouver sur le site carrières Airbus. Toulouse. Début non indiqué. Airbus Protect (pas Defence and Space) mais l'équipe cyber peut avoir des clients défense : à vérifier vu ton filtre."
+  ajoutee: 2026-11-28
+
+- entreprise: Wavestone
+  poste: "AI Strategy and Governance, stage de fin d'études (Puteaux)"
+  lieu: Puteaux
+  contrat: Stage
+  lien: https://www.welcometothejungle.com/fr/companies/wavestone/jobs/ai-strategy-and-governance-stage-de-fin-d-etudes-h-f_puteaux
+  score: 85
+  pourquoi: "Offre AI Digital Foundations : études stratégiques, modèles de gouvernance et modèles opérationnels de l'IA."
+  a_verifier: "Tu as déjà une offre Wavestone (TIME) : demande plutôt à la RH si ton stage peut être orienté gouvernance IA, au lieu de repostuler."
+  ajoutee: 2026-11-28
+
+- entreprise: OCDE
+  poste: "Programme de stages (Direction Science, technologie et innovation, IA)"
+  lieu: Paris
+  contrat: Stage
+  lien: https://www.oecd.org/en/about/careers/internships.html
+  score: 70
+  pourquoi: "Recrutement en continu, l'IA fait partie des domaines de stage (OECD.AI, politiques numériques). Cœur du métier AI policy."
+  a_verifier: "Il faut rester inscrit à l'école pendant tout le stage. Très sélectif, profils éco/politiques publiques favorisés. Pas de candidature spontanée : passer par le portail."
+  ajoutee: 2026-11-28

@@ -13,6 +13,36 @@
 #           Offre, Refusé, Pas pour moi, Expirée.
 # dossier = dossier CV/lettre dans les fichiers du projet (/mnt/project-files/).
 
+- id: wavestone-nantes-gouvernance-ia-responsable
+  ajoutee: '2026-11-28'
+  source: Fil gouvernance IA 28/11
+  entreprise: Wavestone
+  poste: "Stage de fin d'études Nantes, CIO/CYB : structurer une gouvernance IA responsable et inclusive (AI Act, biais, accessibilité)"
+  lieu: Nantes
+  lien: https://www.welcometothejungle.com/fr/companies/wavestone/jobs/consultant-e-s-stage-de-fin-d-etudes-nantes-cio-cyb-comment-structurer-une-gouvernance-ia-responsable-et-inclusive-ai-act-biais-accessibilite-adaptation-culturelle_nantes
+  pourquoi: "Construire un kit Wavestone de gouvernance IA responsable (comitologie, charte, registre des SIA, cartographie des risques, AI Act / ISO 42001) et le tester sur un cas client."
+  a_verifier: "Tu as déjà une offre Wavestone (TIME, Paris) : en parler à la RH avant de candidater. Date de début non indiquée."
+  statut: À postuler
+- id: wavestone-nantes-ia-responsable-kpi
+  ajoutee: '2026-11-28'
+  source: Fil gouvernance IA 28/11
+  entreprise: Wavestone
+  poste: "Stage de fin d'études Nantes, CIO : IA responsable, KPI et outils pour l'explicabilité et les biais"
+  lieu: Nantes
+  lien: https://www.welcometothejungle.com/fr/companies/wavestone/jobs/consultant-e-s-stage-de-fin-d-etudes-nantes-cio-ia-responsable-quels-kpi-et-outils-pour-suivre-et-implementer-explicabilite-biais-censure_nantes
+  pourquoi: "Sujet IA responsable : indicateurs et outils pour suivre explicabilité, biais et censure des modèles."
+  a_verifier: "Plus technique que le sujet gouvernance. Même remarque sur ton offre Wavestone existante."
+  statut: À postuler
+- id: alstom-gouvernance-ia-competences
+  ajoutee: '2026-11-28'
+  source: Fil gouvernance IA 28/11
+  entreprise: Alstom
+  poste: "Stage 6 mois, Gouvernance IA et Développement des Compétences"
+  lieu: Saint-Ouen
+  lien: https://freehire.me/jobs/stage-6-mois-gouvernance-ia-et-developpement-des-competences-f-h-nb-alstom-ytq57sob
+  pourquoi: "Gouvernance IA (AI Act) + parcours d'adoption et de compétences IA : proche de ton déploiement IA chez Amazon."
+  a_verifier: "Lien agrégateur : Req ID 531200 sur jobsearch.alstom.com. Début non indiqué."
+  statut: À postuler
 - id: dassault-systemes-partenariats-strategiques
   ajoutee: '2026-11-25'
   source: Veille 25/11

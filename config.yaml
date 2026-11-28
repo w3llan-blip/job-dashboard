@@ -5,6 +5,19 @@
 # Words that make an offer relevant (title matching, case-insensitive)
 keywords:
   include:
+    # AI governance / responsible AI / AI policy / foresight (added 28/11/2026)
+    - ai governance
+    - gouvernance ia
+    - gouvernance de l'ia
+    - responsible ai
+    - ia responsable
+    - ia de confiance
+    - trustworthy ai
+    - ai act
+    - ai policy
+    - ai risk
+    - prospective
+    - foresight
     - product manager
     - project manager
     - program manager
@@ -185,6 +198,16 @@ ideal:
     - agentic
     - agents ia
     - ai agents
+    # AI governance / responsible AI (added 28/11/2026)
+    - ai governance
+    - gouvernance ia
+    - gouvernance de l'ia
+    - responsible ai
+    - ia responsable
+    - ia de confiance
+    - trustworthy ai
+    - ai act
+    - ai policy
   international:
     - international
     - worldwide
@@ -686,6 +709,10 @@ welcome_to_the_jungle:
     - stage consultant transformation
     - stage consultant IA
     - stage consultant intelligence artificielle
+    - stage gouvernance IA
+    - stage IA responsable
+    - stage AI Act
+    - AI governance internship
     - stage consultant strategie
     - stage conseil en strategie
     - stage conseil transformation digitale
@@ -746,3 +773,7 @@ linkedin:
       location: "Paris, France"
     - keywords: "AI transformation"
       location: "European Union"
+    - keywords: "AI governance"
+      location: "European Union"
+    - keywords: "stage gouvernance IA"
+      location: "France"
